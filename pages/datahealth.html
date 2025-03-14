@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="../assets/css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+	<script>
+		// block developper console to avoid bots
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			document.addEventListener('contextmenu', function(e)
+			{
+				e.preventDefault();
+			});
+			document.addEventListener('keydown', function(e)
+			{
+				if (e.which === 123 ||
+				(e.ctrlKey && e.shiftKey && e.which === 73) ||
+				(e.ctrlKey && e.shiftKey && e.which === 74) ||
+				(e.ctrlKey && e.which === 85)
+				)
+				{
+					e.preventDefault();
+					return false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
+			</div>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+			<ul class="nav-menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="presentation.html">Présentation</a></li>
+				<li class="dropdown">
+					<a href="competences.html">Compétences</a>
+					<ul class="dropdown-content">
+						<li class="sub-dropdown">
+							<a href="#">Techniques</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="bash.html">Langage Bash</a></li>
+								<li><a href="python.html">Langage Python</a></li>
+								<li><a href="supervision.html">Supervision</a></li>
+								<li><a href="git.html">Git</a></li>
+								<li><a href="html.html">HTML</a></li>
+								<li><a href="php.html">PHP</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown">
+							<a href="#">Humaines</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="communication-virale.html">Communication virale</a></li>
+								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+								<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								<li><a href="evenementiel.html">Évènementiel</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="realisations.html">Réalisations</a>
+					<ul class="dropdown-content">
+						<li><a href="winperf.html">WinPerf</a></li>
+						<li><a href="pentech.html">Pentech</a></li>
+						<li><a href="datahealth.html">DataHealth</a></li>
+						<li><a href="wixlearn.html">WixLearn</a></li>
+						<li><a href="autopen.html">Autopen</a></li>
+					</ul>
+				</li>
+				<li><a href="parcours.html">Parcours</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+		<h2>DataHealth - Supervision d'un parc informatique</h2>
+
+<!-- I. AVANT-PROPOS -->
+		<section>
+			<h3>Avant-propos</h3>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;Un projet visant à mettre en place la supervision d’un parc informatique n’est pas quelque chose auquel on va être confronté tous les jours, puisqu’une fois la supervision mise en place et automatisée, c’est le genre de système sur lequel il y aura peu de maintenance à faire. Pour cette raison, je pense que ce projet a été pour moi une très belle opportunité de découvrir et de m’intéresser à la supervision informatique [insérer lien vers la compétence].
+				</p>
+					</br>
+				<p>
+					Grâce à ce projet, j’ai donc pu comprendre comment fonctionne un système de supervision, comment le mettre en place et comment le maintenir au cours du temps. Ce projet m’a également permis de renforcer mes compétences en Bash [insérer lien vers la compétence] en réalisant des scripts de supervision et en PHP [insérer lien vers la compétence] en corrigeant des failles de sécurité présente dans le système actuellement mis en place au sein de l’établissement dans lequel nous avons agi.
+				</p>
+		</section>
+
+
+
+<!-- II. DEFINITIONS -->
+		<section>
+			<h3>Définitions</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;La supervision [insérer lien vers la compétence] étant un domaine très important, mais aussi très vaste, il y a quelques termes que j’aimerais expliquer avant de passer à la présentation du projet.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Une métrique est très simplement une statistique. La façon la plus simple d’expliquer serait de parler d’une lumière. Une lumière a deux états, elle va être allumée ou éteinte, c’est la même chose pour un serveur en informatique, l’état d’un serveur (allumé ou éteint) est une métrique. De la même façon, on pourrait dire que l’intensité de lumière qu’émet une lumière est une métrique. Dans le cas d’un parc informatique, les métriques peuvent être très diversifiées. On peut mesurer si un site internet est accessible, combien d’utilisateurs sont connectés, le niveau de luminosité d’un écran, le niveau de batterie restant pour un équipement donné, etc.
+			</p>
+			<p>
+				En règle générale, une métrique est donc une statistique mesurable soit par un état (allumé ou éteint), par un pourcentage (niveau de batterie) ou par une valeur (intensité d’une lumière).
+			</p>
+				</br>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Une sonde est l’objet qui va récupérer et contrôler la métrique. On a précédemment vu qu’une métrique pouvait se présenter sous la forme d’un état, comme celui d’une lumière allumée ou éteinte.
+			</p>
+			<p>
+				Dans le cas d’un humain, ce sont ses sens et notamment ses yeux qui lui permettent de récupérer cette information. Dans le cas d’un système informatique, ce sont des petits bouts de codes qui vont récupérer cette information, on appelle cela une sonde. Par ailleurs, la sonde ne va pas uniquement récupérer la métrique, elle va aussi la traiter. En effet, si on est capable de savoir qu’avoir 0% n’est pas une bonne chose, alors qu’avoir 100% de batterie est une bonne chose, le système informatique lui ne le sait pas de lui-même. C’est pour cette raison qu’en plus de récupérer la métrique, une sonde va aussi interpréter la valeur en fonction de la configuration qu’on lui donne. Par exemple, on va pouvoir configurer la sonde pour que lorsqu’elle rencontre un équipement avec moins de 20% de batterie, elle alerte la personne.
+			</p>
+			<p>
+				En somme, une sonde est donc l’objet qui va récupérer la métrique et qui va interpréter si c’est un état jugé comme « normal » ou comme critique.
+			</p>
+		</section>
+
+
+<!-- III. INTRODUCTION PROJET -->
+		<section>
+			<h3>Introduction projet</h3>
+
+	<!-- 1. CONTEXTE -->
+			<h4>Contexte</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le projet a été réalisé lors de ma troisième année d’études informatiques et a été commandité par une structure du service public. Pour des raisons de sécurité et de confidentialité, le nom de la structure ne sera pas divulgué.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un système de supervision nommé Eyes of Network (EON) était déjà en place au sein de l’établissement, toutefois l’équipe réseaux de l’établissement étant débordée, l’outil avait été laissé à l’abandon et n’a jamais réellement été configuré. Par conséquent, il était question, pour nous, de configurer et d’améliorer le système de supervision ainsi que de créer des sondes permettant de superviser différentes métriques des équipements du parc informatique. Le projet était d’une importance capitale puisque la majorité des équipements portaient des services critiques au bon fonctionnement de l’établissement. De ce fait, il était impératif que nous opérions avec le plus grand soin lors de nos tests.
+			</p>
+
+
+
+	<!-- 2. OBJECTIFS -->
+			<h4>Objectifs</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Afin de mener à bien le projet, nous nous sommes fixés plusieurs objectifs qui correspondent directement aux attentes de notre commanditaire.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En premier lieu, nous devions configurer EON. Cet objectif nous a, dans un premier temps, permis de nous familiariser avec la plateforme en regardant chacun des paramètres disponibles. Suite à cette première découverte, nous devions créer les utilisateurs ayant accès à la plateforme de supervision, déterminer à quelle fréquence nos sondes vérifierons l’état d’une machine, qui recevra un e-mail ou un SMS lorsqu’une machine tombe en panne, etc. Le but était de se familiariser avec la plateforme avant de passer au vif du sujet.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Notre deuxième objectif était le plus conséquent de tous. Nous devions enregistrer chaque équipement sur l’outil de supervision et créer les sondes permettant de récolter les métriques des équipements. La première étape consistait à automatiser la recherche d’équipement sur le réseau et automatiquement les ajouter à EON. La seconde étape consistait à lister les métriques que notre commanditaire voulait récupérer sur chaque équipement, puis développer un script par métrique demandée.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Notre troisième et dernier objectif était d’améliorer l’outil EON en modifiant son code. C’était un objectif optionnel, mais il restait cependant très important puisqu’en modifiant le code d’EON, nous pouvions développer nous-mêmes des tableaux de bord. On pouvait par exemple créer un tableau de bord n’affichant que les équipements réseaux tels que les routeurs, un autre n’affichant que les ordinateurs des salariés ou encore un affichant les équipements nécessitant une mise à jour. L’objectif était de fournir un moyen de personnaliser l’outil en fonction des besoins de notre commanditaire.
+			</p>
+			<p>
+				Par ailleurs, et cela sera présenté plus en détail dans les sections suivantes, en modifiant le code de l’outil, nous nous sommes également fixés comme objectif de renforcer la sécurité d’EON en corrigeant les failles de sécurité que l’outil pourrait avoir.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En somme, on pourrait dire que nos objectifs se résument en un seul et même objectif, mettre en place un moyen, personnalisable et sécurisé, de superviser les équipements de la structure.
+			</p>
+
+	<!-- 3. ENJEUX & RISQUES -->
+			<h4>Enjeux & Risques</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;C’était un projet complexe, mais les enjeux étaient nombreux et très importants pour l’établissement. En effet, superviser le parc informatique est très important pour une grande entreprise, mais l’est d’autant plus pour une structure du service public qui ne peut pas se permettre d’avoir des équipements qui ne fonctionnent pas. C’était donc notre premier enjeu, superviser le parc pour permettre aux équipes de rapidement agir en cas de pannes et ainsi assurer la continuité des services.
+			</p>
+			<p>
+				Par ailleurs, superviser un parc donne également l’occasion de faire un inventaire des équipements présents sur le réseau. Il peut y avoir des équipements obsolètes ou même complètement inutilisés. Cela engendre deux problèmes, un risque de sécurité si on ne surveille pas les mises à jour des équipements et un souci d’optimisation du parc. Si le premier problème est assez explicite, le second peut l’être un peu moins. Concrètement, on parle ici d’une mauvaise répartition des ressources. Certaines des machines non utilisées pourraient être réapprovisionnées et utilisées pour d’autres tâches. Cela permet de limiter les coûts en évitant d’acheter du matériel supplémentaire.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Mais bien sûr, chaque projet vient avec son lot de risques, et d’autant plus lorsque l’on travaille avec un établissement public. Dans un premier temps, le risque le plus évident restait de perturber l’activité de l’établissement lors de la mise en place des sondes. En effet, si une sonde va, en général, uniquement récupérer une information en contactant un équipement, elle peut aussi agir sur l’équipement en lui-même. Par exemple, si une machine est détectée comme éteinte alors qu’elle devrait être allumée, EON va avoir la possibilité de tenter de rallumer cette machine. Mais il se peut, si la sonde a été mal développée, qu’EON tente de redémarrer une machine déjà allumée et que cela génère une interruption de service.
+			</p>
+			<p>
+				De plus, nous nous étions fixés comme objectif de renforcer la sécurité de l’outil en modifiant son code. Toutefois, nous courrions toujours le risque d’introduire involontairement de nouvelles vulnérabilités et de rendre vulnérable la machine sur laquelle est installé EON.
+			</p>
+			<p>
+				Enfin, un risque qui est commun à un grand nombre de projets est la mauvaise gestion du temps. Nous étions limités à un total de quatre mois, ce qui est plutôt court pour découvrir et mettre en place la supervision d’une telle structure. D’autant plus que le projet ne s’avérait pas simple du tout, nous devions non seulement obtenir des compétences en supervision, mais également mettre à profit nos compétences en script Bash [insérer lien vers la compétence] et PowerShell, en développement web avec PHP [insérer lien vers la compétence] et aussi apprendre un nouveau langage nommé Perl. À cause de la complexité d’un tel projet, nous courrions le risque de ne pas réussir à terminer le projet à temps, ce qui n’était pas vraiment une option puisque le commanditaire comptait sur nous pour mettre en place cet outil qu’ils ont dû abandonner par manque de temps.
+			</p>
+		</section>
+
+
+<!-- IV. LE PROJET -->
+		<section>
+			<h3>Le projet</h3>
+
+		<!-- 1. ORGANISATION -->
+			<h4>Organisation</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Les enjeux du projet étant très important, il fallait que nous réalisions des réunions régulières afin de rendre compte de l’avancée, mais surtout pour s’assurer que nous ne nous éloignions pas de l’objectif principal et que nous répondions aux attentes de notre commanditaire. C’est pour cela que nous avons décidé d’implémenter la méthode agile au sein du projet.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Par ailleurs, nous avions déjà pour habitude d’utiliser l’outil de planification projet « Jira », mais dans le but de diversifier les outils que nous maitrisions, j’ai cherché une alternative à Jira. Je suis tombé sur un outil en ligne nommé « Taiga.io » qui s’avérait être plus simple d’utilisation que Jira tout en ayant les mêmes fonctionnalités. Enfin, afin de mettre en commun les scripts réalisés, nous avons utilisé l’outil GitLab [insérer lien vers la compétence].
+			</p>
+
+
+
+		<!-- 2. MISE EN PLACE D'EON -->
+			<h4>Mise en place d'EON</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Afin de débuter directement le projet, et notre commanditaire n’ayant pas encore eu le temps de nous donner un accès au serveur EON de leur établissement, j’ai pris l’initiative d’utiliser nos machines afin d’installer l’outil Eyes of Network. J’ai donc réalisé une première installation sur mon poste puis j’ai aidé mes collègues à installer EON sur leur poste ce qui nous a permis de commencer à prendre en main et à nous familiariser avec l’outil.
+			</p>
+			<p>
+				Par la suite, j’ai commencé à m’entraîner à réaliser des tableaux de bord personnalisés en supervisant les machines présentes sur le réseau de l’école.
+			</p>
+
+
+
+		<!-- 3. SONDE DE SERVICE WINDOWS -->
+			<h4>Sonde de services Windows</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Après avoir appris à maîtriser l’outil, il nous fallait mettre en place les sondes permettant de récupérer les informations concernant les équipements du parc informatique. Chacun d’entre nous s’est occupé d’un script de sonde différent, pour ma part, je me suis occupé de la sonde permettant de récupérer l’état d’un service sur un serveur Windows.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Avant de parler directement de la sonde, il me faut définir ce qu’est un service. Sur un ordinateur ou serveur Windows, il y a plusieurs centaines de services qui tournent. Ces services peuvent être comparés à des applications qu’on installerait sur un poste. Par exemple, pour naviguer sur internet, on va utiliser un navigateur tel que Google Chrome ou Mozilla Firefox, c’est la fonctionnalité principale du logiciel. Un service, quant à lui, va être une application qu’on ne voit pas, mais qui est exécuté en tâche de fond sur notre ordinateur, le service peut permettre d’accéder à internet, de contacter une imprimante lorsque l’on veut imprimer un document, de contrôler les ventilateurs de notre ordinateur lorsqu’il chauffe trop.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Dans le cas de la sonde que je devais mettre en place, il fallait surveiller l’état d’un service qui permet de rendre accessible le site internet de l’établissement. En faisant mes recherches sur Internet, j’ai découvert que le seul moyen de réaliser cette tâche était d’utiliser un logiciel nommé NSClient++. En effet, sous un système Windows, nous sommes obligés d’installer ce que l’on appelle un agent de supervision qui permet à la machine sur lequel le site internet est installé de répondre au serveur de supervision.
+			</p>
+			<p>
+				En supervision informatique, on va toujours avoir un serveur de supervision qui supervise un parc informatique. Les équipements du parc sont appelés « clients » et le serveur de supervision est tout simplement appelé « serveur ». Le serveur va utiliser les sondes pour contacter un par un chacun des clients et chacun des clients va répondre au serveur en lui donnant les informations qu’il attend. C’est ce que l’on appelle l’architecture « client-serveur ».
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Après avoir réalisé le script permettant de superviser le service hébergeant le site internet, j’ai ensuite configuré l’agent installé sur le serveur Windows.
+			</p>
+			<pre><code class="language-python">[/settings/NRPE/server]
+allow arguments = true
+allow nasty characters = true
+allowed hosts = 1.2.3.4
+port = 5666
+
+[/settings/external scripts/scripts]
+check_iis_status = powershell.exe -Command "& {Get-Service -Name W3SVC | Select-Object -ExpandProperty Status}"
+)</code></pre>
+
+
+
+		<!-- 4. DECOUVERTE AUTOMATIQUE DES EQUIPEMENTS -->
+			<h4>Découverte automatique des équipements</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Toutefois, la réalisation de sondes n’était pas la seule tâche que nous devions accomplir. En effet, les sondes permettent de superviser chaque équipement, mais il fallait d’abord enregistrer chacune des machines dans l’outil de supervision. Le problème étant que l’établissement avait plusieurs centaines de machines, il était donc impossible de les ajouter toutes manuellement. Par conséquent, il nous fallait développer un outil qui listerait les machines du parc et les ajouterait automatiquement.
+			</p>
+			<p>
+				C’est une tâche que j’avais déjà réalisée dans le cadre d’un projet personnel afin de superviser, non pas des machines, mais des sites internet. Je me suis donc attribué la tâche et ai commencé à travailler dessus.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Pour accomplir cet objectif, j’ai utilisé un outil, libre de droits et gratuit, nommé nmap. Nmap est un outil plutôt populaire dans le monde de l’informatique puisqu’il est le seul permettant de scanner un réseau, un site internet ou même des routeurs. De plus, nmap permet également de détecter quelques vulnérabilités présentes sur une machine.
+			</p>
+			<p>
+				Dans le cas de ma tâche, il fallait réussir à scanner le réseau et savoir quel type de machine était détectée, à savoir une machine Windows, une machine Linux, un routeur, un téléphone, etc. La première partie de la tâche était exactement ce pour quoi nmap existait. Par conséquent, il suffisait d’utiliser la commande
+			</p>
+			<pre><code class="language-python">nmap -sn 10.0.0.1	# pour vérifier si la machine '10.0.0.1'
+					# est présente sur le réseau</code></pre>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;La seconde étape était aussi prévue par l’outil nmap, toutefois, j’étais confronté à une autre problématique. En effet, une machine ne va pas annoncer facilement si c’est une machine Windows, Linux, un routeur ou un téléphone. Par conséquent, nmap doit tester une par une chacune des possibilités.
+			</p>
+			<p>
+				C’est-à-dire que l’outil nmap va demander à la machine si c’est une machine Linux. Si ce n’est pas le cas, nmap demande si c’est une machine Windows, si ce n’est toujours pas le cas, nmap demande si c’est un téléphone portable, etc. Par ailleurs, il n’existe pas qu’un seul type de machine Windows. En effet, il existe Windows XP, Windows 7, Windows 10, etc.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le processus est donc très fastidieux et peut prendre plus de cinq minutes par équipement. À l’échelle d’un parc de plus de 500 équipements, on arrive à 42 heures pour scanner le réseau, soit presque deux jours entiers.
+			</p>
+			<p>
+				Toutefois, même en utilisant cette option, on ne réduisait la durée du scan qu’à une journée entière, soit 24 heures. Pour réduire davantage la durée du scan, j’ai contacté notre commanditaire pour qu’il nous fournisse une liste du type de machines qu’il sait sont présentes et ne sont pas présentes dans son parc. Par exemple, on pouvait éliminer des options du scan telles que Windows 95 ou Windows 2000. De la même façon, on pouvait retirer Debian 3 qui est sortie il y a plus de 20 ans. En retirant un bon nombre d’options, cela a permis de réduire la durée du scan à quatre heures, ce qui permettrait de réaliser au moins un scan chaque jour. Par la suite, j’ai ajouté à mon script pour intégrer les machines détectées au sein d’EON.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Cela concluait l’une de mes tâches, la réalisation d’un script de découverte automatique d’équipement au sein du parc informatique.
+			</p>
+
+
+
+		<!-- 6. CORRECTIONS DE FAILLES DE SECURITE -->
+			<h4>Correction de failles de sécurité</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;À ce point du projet, j’avais pu réaliser une des sondes demandées ainsi que le script de détection automatique permettant d’ajouter les plus de 500 machines du parc informatique au sein de l’outil de supervision EON. Pendant ce temps, mes collègues s’occupaient de réaliser les autres sondes demandées par notre commanditaire. Nous arrivions ainsi à la fin du projet. Toutefois, nous avions également parlé d’améliorer l’outil et de corriger les potentielles failles de sécurité présentes.
+			</p>
+			<p>
+				Ce sont deux tâches qui avaient été listées comme optionnelles au début du projet, mais comme nous avions encore suffisamment de temps pour les réaliser, un de mes collègues a débuté la tâche d’amélioration des tableaux de bords de l’outil et j’ai commencé la recherche de faille de sécurité au sein d’EON.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Rechercher une faille de sécurité dans un outil de l’envergure d’Eyes of Network n’est pas aisé puisqu’il y a plusieurs milliers de lignes de code et il était impossible en si peu de temps de s’assurer que l’outil était sécurisé dans son entièreté. Par conséquent, j’ai commencé par m’occuper des pages dans lesquelles du texte peut être entré par l’utilisateur. Cela incluait la page de connexion et la page qui permettait d’enregistrer des machines dans EON.
+			</p>
+			<p>
+				En lisant le code de l’outil et en tentant des techniques fréquemment employées par les hackers, je me suis rendu compte que toutes les pages dans lesquelles l’on pouvait rentrer du texte étaient vulnérables à une attaque appelée « l’injection de commande ». Lorsque l’on se connecte à une machine, on peut utiliser un clavier et une souris pour interagir avec l’ordinateur, toutefois il est également possible d’utiliser des commandes. Par exemple, pour aller sur le bureau de notre ordinateur, on peut utiliser la commande « cd C:\Users\NomDutilisateur\Desktop ».
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Chacune des zones dans lesquelles du texte pouvait être sur l’outil EON étaient vulnérables à ce type d’attaque qui consiste à écrire « ;" commande_malveillante ». L’attaquant pouvait accéder au serveur en tant qu’administrateur, détruire la machine, attaquer l’ensemble du parc ou encore récupérer des informations confidentielles telles que des mots de passe. C’est une vulnérabilité majeure et très connue par les hackers, par conséquent, il était très important de la corriger.
+			</p>
+			<p>
+				En me renseignant sur internet, j’ai donc trouvé plusieurs solutions pour corriger la faille et j’ai appliqué le correctif sur l’ensemble du code d’EON.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, d’autres utilisateurs d’EON avaient également trouvé d’autres failles de sécurité sur les forums et avaient partagé les correctifs, je me suis donc fixé comme objectif de corriger un maximum de ces failles jusqu’à la fin du projet.
+			</p>
+
+
+
+<!-- V. L'IMPACT DU PROJET -->
+		<section>
+			<h3>L'impact du projet</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet a eu de nombreux impacts sur le parc informatique de l’établissement. En effet, la supervision était, auparavant, complètement inexistante et par conséquent, un grand nombre de machines étaient encore sur le réseau, mais n’étaient plus utilisées depuis plusieurs années. Le script de découverte automatique que nous avons mis en place a donc permis une grosse économie des coûts, ce qui est cruciale pour une structure du service public et cela occasionne également un gain de temps pour les équipes infrastructure réseaux puisqu’ils n’ont pas besoin d’ajouter eux-mêmes les machines à l’outil de supervision.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Hormis le gain de temps et le gain financier, les équipes ont désormais une meilleure visibilité sur leur parc et cela leur permet de prendre plus facilement des décisions concernant les mises à jour des équipements par exemple. Avoir une supervision permet également de réagir et d’être alerté plus rapidement en cas de pannes et ainsi d’avoir une meilleure disponibilité de services.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;On peut donc dire que la réalisation de ce projet a été fortement bénéfique autant sur le plan financier pour l’ensemble de l’établissement que pour les équipes réseaux. Ce projet leur permet d’avoir aujourd’hui une meilleure visibilité et une meilleure gestion sur l’ensemble du parc, et ce, sur le long terme.
+			</p>
+		</section>
+
+
+
+
+
+
+<!-- VI. UN RETOUR SUR EXPERIENCE -->
+		<section>
+			<h3>Un retour sur expérience</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Je considère que ce projet a été très formateur pour moi. J’avais déjà des compétences en Bash [insérer lien vers la compétence], en PowerShell et en PHP [insérer lien vers la compétence], mais ce projet m’a permis de les développer davantage dans un contexte différent de ce dont j’ai l’habitude. En effet, j’utilise généralement ces langages pour réaliser des scripts afin d’automatiser des petites actions assez redondantes, mais je n’avais jamais eu l’occasion de les utiliser dans un contexte de supervision d’un parc informatique.
+			</p>
+			<p>
+				Par ailleurs, je n’avais encore jamais utilisé un outil de supervision, c’était par conséquent une expérience très nouvelle pour moi et qui s’est avérée très enrichissante puisque c’est une compétence que j’ai eu l’occasion de mettre à profit à plusieurs reprises par la suite, notamment lors de mon alternance.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, je n’ai pas seulement acquis de nouvelles compétences, j’ai également eu l’occasion d’utiliser des outils nouveaux comme Eyes of Network pour la supervision, NSClient++ afin de récupérer des métriques sur un serveur Windows et l’outil de gestion de projet en ligne Taiga.io.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En somme, j’ai beaucoup apprécié ce projet et j’ai pu découvrir de nouvelles compétences qui me servent dans mon emploi actuel. Je considère donc que ce projet a été une expérience très enrichissante pour mon équipe et moi.
+			</p>
+		</section>
+
+
+
+<!-- VII. UN RETOUR SUR EXPERIENCE -->
+		<section>
+			<h3>Bilan du projet</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Globalement, le projet a été un succès ! La supervision étant une compétence nouvelle pour nous, il nous est arrivé de mal comprendre les demandes de notre commanditaire. Toutefois, grâce à la méthode agile et à de fréquentes réunions, nous avons rapidement pu corriger le tir. Par ailleurs, malgré la limite de temps qui nous était imposée ainsi que la complexité de l’outil EON, je pense que notre équipe a su rapidement monter en compétence afin de réaliser le projet.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Pour finir, le projet nous a permis d’acquérir une précieuse expérience dans le domaine de la supervision informatique et a également fortement aidé notre commanditaire. Dans l’ensemble, c’est un projet réussi et les impacts n’ont été que positifs pour les deux parties.
+			</p>
+		</section>
+
+
+
+		<section>
+			<h3>Compétences liées</h3>
+			<ul>
+				<li><a href="competence-technique1.html">Compétence Technique 1</a></li>
+				<li><a href="competence-humaine2.html">Compétence Humaine 2</a></li>
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p class="footer-name">Prénom Nom</p>
+		<p>&copy; 2025 Prénom Nom. Tous droits réservés.</p>
+	</footer>
+
+</body>
+</html>

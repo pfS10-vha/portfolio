@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prénom Nom - Parcours</title>
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<script>
+		// block developper console to avoid bots
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			document.addEventListener('contextmenu', function(e)
+			{
+				e.preventDefault();
+			});
+			document.addEventListener('keydown', function(e)
+			{
+				if (e.which === 123 ||
+				(e.ctrlKey && e.shiftKey && e.which === 73) ||
+				(e.ctrlKey && e.shiftKey && e.which === 74) ||
+				(e.ctrlKey && e.which === 85)
+				)
+				{
+					e.preventDefault();
+					return false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img src="./assets/img/main-logo.png" alt="Logo" width="150" height="50">
+			</div>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+			<ul class="nav-menu">
+				<li><a href="./index.html">Accueil</a></li>
+				<li><a href="./pages/presentation.html">Présentation</a></li>
+				<li class="dropdown">
+					<a href="./pages/competences.html">Compétences</a>
+					<ul class="dropdown-content">
+						<li class="sub-dropdown">
+							<a href="#">Techniques</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="./pages/bash.html">Langage Bash</a></li>
+								<li><a href="./pages/python.html">Langage Python</a></li>
+								<li><a href="./pages/supervision.html">Supervision</a></li>
+								<li><a href="./pages/git.html">Git</a></li>
+								<li><a href="./pages/html.html">HTML</a></li>
+								<li><a href="./pages/php.html">PHP</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown">
+							<a href="#">Humaines</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="./pages/communication-virale.html">Communication virale</a></li>
+								<li><a href="./pages/gestion-de-projet.html">Gestion de projet</a></li>
+								<li><a href="./pages/vulgarisation.html">Vulgarisation</a></li>
+								<li><a href="./pages/evenementiel.html">Évènementiel</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="./pages/realisations.html">Réalisations</a>
+					<ul class="dropdown-content">
+						<li><a href="./pages/winperf.html">WinPerf</a></li>
+						<li><a href="./pages/pentech.html">Pentech</a></li>
+						<li><a href="./pages/datahealth.html">DataHealth</a></li>
+						<li><a href="./pages/wixlearn.html">WixLearn</a></li>
+						<li><a href="./pages/autopen.html">Autopen</a></li>
+					</ul>
+				</li>
+				<li><a href="./pages/parcours.html">Parcours</a></li>
+				<li><a href="./pages/contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+    <main>
+    </main>
+
+    <footer>
+        <p class="footer-name">Prénom Nom</p>
+        <p>&copy; 2025 Prénom Nom. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

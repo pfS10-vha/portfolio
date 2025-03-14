@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="../assets/css/styles.css">
+	<script>
+		// block user-agent from bots
+		(function()
+		{
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+			{
+				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+			}
+		})();
+
+		// block developper console to avoid bots
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			document.addEventListener('contextmenu', function(e)
+			{
+				e.preventDefault();
+			});
+			document.addEventListener('keydown', function(e)
+			{
+				if (e.which === 123 ||
+				(e.ctrlKey && e.shiftKey && e.which === 73) ||
+				(e.ctrlKey && e.shiftKey && e.which === 74) ||
+				(e.ctrlKey && e.which === 85)
+				)
+				{
+					e.preventDefault();
+					return false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
+			</div>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+			<ul class="nav-menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="presentation.html">Présentation</a></li>
+				<li class="dropdown">
+					<a href="competences.html">Compétences</a>
+					<ul class="dropdown-content">
+						<li class="sub-dropdown">
+							<a href="#">Techniques</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="bash.html">Langage Bash</a></li>
+								<li><a href="python.html">Langage Python</a></li>
+								<li><a href="supervision.html">Supervision</a></li>
+								<li><a href="git.html">Git</a></li>
+								<li><a href="html.html">HTML</a></li>
+								<li><a href="php.html">PHP</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown">
+							<a href="#">Humaines</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="communication-virale.html">Communication virale</a></li>
+								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+								<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								<li><a href="evenementiel.html">Évènementiel</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="realisations.html">Réalisations</a>
+					<ul class="dropdown-content">
+						<li><a href="winperf.html">WinPerf</a></li>
+						<li><a href="pentech.html">Pentech</a></li>
+						<li><a href="datahealth.html">DataHealth</a></li>
+						<li><a href="wixlearn.html">WixLearn</a></li>
+						<li><a href="autopen.html">Autopen</a></li>
+					</ul>
+				</li>
+				<li><a href="parcours.html">Parcours</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+		<h2>Pentech - Compétition de Cybersécurité</h2>
+		<section>
+
+<!-- I. AVANT-PROPOS -->
+			<h3>Avant-propos</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet d’organisation évènementielle m’a beaucoup appris et m’a permis d’acquérir des compétences que je n’avais pas déjà. J’ai pu me rendre compte des différentes étapes lors de la réalisation d’un évènement telles que la budgétisation, la recherche de fonds, la communication [insérer lien vers la compétence] ainsi que le bilan post-évènement. De plus, le fait de travailler en équipe m’a permis de me rendre compte de l’importance d’une bonne gestion de projet [insérer lien vers la compétence] et d’une attribution des rôles et tâches. Néanmoins, nous avons rencontré plusieurs difficultés qui ont freiné le projet, la plus impactante a été notre difficulté à vulgariser [insérer lien vers la compétence] suffisamment notre communication afin d’attirer un public non-technique tout en intéressant aussi des professionnels de l’informatique.
+			</p>
+		</section>
+
+<!-- II. DEFINITIONS -->
+		<section>
+			<h3>Définitions</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Avant de procéder à la présentation de l’organisation d’un tel évènement, il y a quelques termes qui méritent d’être définis puisqu’ils sont, tout de même, au cœur du projet.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un budget prévisionnel est un registre, qui peut se présenter sous la forme d’un tableur Excel, où sont inscrites les différentes dépenses que l’on pense vont être nécessaires afin de réaliser le projet. Cela va inclure les dépenses matérielles, les fournitures, la nourriture, les coûts de sous-traitance, de location, d’assurance, de communication, de déplacement, etc. Par ailleurs, le budget prévisionnel peut également inclure les potentiels bénéfices ou le montant à obtenir lors d’une collecte de fonds par exemple. Un tel document permet donc d’estimer, en amont d’un projet, des dépenses et rentrées d’argent afin de se rendre compte de la charge de travail et de la faisabilité du projet.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un budget réel est, tout comme un budget prévisionnel, un registre dans lequel sont tracés les flux d’argent du projet. Ce document peut servir de traces des entrées et sorties d’argent ou bien de moyen de communiquer avec les autres collaborateurs les achats ou collectes restant à réaliser. Dans notre cas, ce document a été utilisé en tant que rétrospective budgétaire du projet. En effet, si le budget prévisionnel permet d’estimer les potentiels charges et bénéfices d’un projet, le budget réel, quant à lui, vise à mettre en évidence les charges et bénéfices réels. Par conséquent, ces deux registres sont souvent réunis dans un même document, permettant ainsi de mesurer l’écart entre le prévisionnel et le réel. Cela permet de faire une rétrospective budgétaire du projet pour faire le point sur les aléas rencontrés et apprendre à mieux estimer un projet.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un plan de communication permet de coordonner et d’établir des règles concernant la communication. Ce plan va se caractériser le plus souvent par un document au format texte comprenant un rapide descriptif du projet, les objectifs de communication attendus ; tels que le nombre de participants pour un évènement, le nombre d’abonnés ou de vues ; le type de public que nous souhaitons attirer, les thèmes à évoquer, le ton à employer dans notre communication, la charte graphique à utiliser, etc. C’est donc un document très important qui va permettre de se mettre d’accord, en amont du projet, sur la façon de communiquer l’évènement à un public.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un calendrier éditorial est, comme son nom l’indique, tout simplement un calendrier dans lequel sont recensées les informations concernant les prochaines publications. Il va souvent s’apparenter à un tableau à plusieurs colonnes qui permettront d’indiquer la date et l’heure à laquelle une publication doit paraître, sa thématique, le public visé spécifiquement par cette publication, le texte et ou visuel prévu et son support de communication, que ce soit format papier, par voie orale ou via les réseaux sociaux. Cet élément pourrait paraître superflu au premier abord, toutefois, ce document peut s’avérer fort utile en tant qu’outil de planification et afin de coordonner les membres de l’équipe communication.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un Capture The Flag (CTF), ou « Capturez Le Drapeau » en français, est une compétition lors de laquelle plusieurs participants s’affrontent dans des défis de cybersécurité. Le but est de résoudre les énigmes une-à-une afin d’arriver au défi final qui permettra de débloquer un code secret et de remporter la victoire. Si on devait l’illustrer par un exemple, on pourrait dire qu’un CTF s’apparente à un marathon. En effet, dans un marathon, l’objectif est d’arriver à la ligne d’arrivée en franchissant plusieurs étapes intermédiaires. De la même manière, dans un CTF, il va falloir résoudre chaque défi dans l’ordre avant d’arriver au défi final et à la récompense. Quelques exemples de défi pourraient être ; déchiffrer un fichier à l’aide d’indices, découvrir un message caché dans une image ou encore infiltrer une fausse machine malveillante. C’est une compétition dont le but n’est pas seulement d’obtenir la récompense, mais également de repousser ses limites et de mettre en pratique ses connaissances en informatique.
+			</p>
+		</section>
+
+
+<!-- III. INTRODUCTION PROJET -->
+		<section>
+			<h3>Introduction projet</h3>
+
+	<!-- 1. CONTEXTE -->
+			<h4>Contexte</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le projet a été réalisé lors de ma deuxième année d’étude à INTECH afin de valider notre semestre et d’affiner nos compétences dans le domaine de l’évènementiel [insérer lien vers la compétence].
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Notre projet était d’organiser une petite compétition de cybersécurité sous forme de CTF dans le but de sensibiliser les participants aux bases du piratage informatique. Les participants devaient tenter de s’introduire dans de faux serveurs prévus pour l’évènement et décoder un code secret leur permettant d’avancer dans l’épreuve. Pour mener à bien ce projet, nous avons formé le groupe « Pentech », composé de cinq étudiants, et nous nous sommes attribués un rôle à chacun. Si le concept de l’évènement semble simple, notre projet visait à réaliser l’évènement de A à Z. Cela signifie que nous devions nous occuper nous-mêmes de la budgétisation, de la recherche de fonds, de la logistique, de la communication, d’obtenir les récompenses ainsi que de l’évènement en lui-même.
+			</p>
+
+
+
+	<!-- 2. ACTEURS -->
+			<h4>Acteurs</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Notre équipe était donc composée de cinq étudiants. Mais nous avons également reçu l’aide de deux formateurs informatiques.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Monsieur Michel Kartner, diplômé en Master Informatique, a commencé sa carrière en tant que blogueur et vulgarisateur en sécurité informatique avec le site « Le Blog du Hacker » puis est devenu formateur. Il a acquis une certaine notoriété au fil des années et est petit à petit devenu une personnalité emblématique du secteur. Il a, par ailleurs, créé en 2017 une formation nommée Cyberini, visant à construire un monde numérique plus sécurisé.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Dr. Firass est un jeune formateur en informatique et doctorant en informatique. Il enseigne le marketing, le développement web ainsi que la sécurité informatique. Il exerce et transmet sa passion depuis plusieurs années via le site de formations en ligne Udemy.
+			</p>
+
+
+	<!-- 3. OBJECTIFS -->
+			<h4>Objectifs</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Afin de réaliser cet évènement, nous avons décomposé notre projet en trois grands objectifs. 
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Notre premier objectif concernait notre communication et la promotion de notre évènement. Afin de réussir notre évènement, il fallait que nous attirions suffisamment de participants tout en incitant un intérêt autour de la cybersécurité. Pour cela, il nous fallait décider d’une identité ainsi que d’une charte graphique adaptée au sujet de notre évènement. Par ailleurs, il nous fallait réaliser un plan de communication efficace et s’appuyer sur nos connaissances des réseaux sociaux. Nous nous sommes ainsi fixés pour objectif de réaliser un nombre suffisant de publications et d’attirer au minimum 20 participants. Parallèlement à notre communication virale, nous avons également entrepris la recherche de sponsors afin d’alléger les besoins financiers et matériels de l’évènement.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un de nos seconds objectifs concernait le contenu de la compétition elle-même. Effectivement, puisque nous réalisions l’évènement de A à Z, il nous fallait également produire les défis prévus pour la compétition nous-mêmes. Nous devions par conséquent réfléchir à des défis qui pousseraient les participants à réfléchir, tout en augmentant la difficulté en fonction de son avancement afin de donner une sensation de progression au cours des défis. Par ailleurs, il a aussi été question de préparer le programme de l’évènement puisque nous prévoyons des petits moments de formation pour donner indirectement des indices aux participants.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, notre objectif final portait sur la gestion financière ainsi que la logistique de l’évènement. Bien que tous nos objectifs soient indépendants l’un de l’autre et aient tous une grande importance pour la réalisation de notre projet, cet objectif était de loin le plus important. Le premier aspect, la budgétisation, était un défi majeur. Si nous n’avions pas suffisamment de fonds, nous ne pourrions pas poursuivre l’évènement. Il nous fallait donc récolter suffisamment d’argent et cela passait par des ventes, des collectes de fonds et la réception de dons. Par ailleurs, si la récolte de fonds financiers était déjà un défi qui pouvait s’avérer compliqué, l’aspect logistique en était un autre. La première difficulté résultait dans l’obtention d’une salle afin d’avoir un lieu physique pour notre évènement. Et la seconde résultait dans la préparation du matériel puisqu’il fallait l’agencer en fonction du nombre de participants, des conditions de la salle et des possibles problèmes pouvant survenir durant l’évènement tout en tenant compte du budget que nous avions.
+			</p>
+
+
+
+	<!-- 4. ENJEUX & RISQUES -->
+			<h4>Enjeux & Risques</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;	Ces trois objectifs nous ont également permis de dégager plusieurs enjeux pour nous, tout comme pour les participants de la compétition. Dans un premier temps, bien que ce soit une compétition informatique avec des lots à gagner, l’enjeu principal restait tout de même éducatif. En effet, notre compétition CTF visait à sensibiliser un maximum de gens à la cybersécurité et aux dangers de l’Internet et cela passait par des publications rappelant des bonnes pratiques concernant l’utilisation de mots de passe ou comment détecter les tentatives d’arnaques par e-mail. En réalisant ces publications, notre objectif était d’éduquer les participants tout en suscitant un intérêt pour la cybersécurité.
+			</p>
+			<p>
+				Un autre enjeu que nous avions très à cœur était l’accessibilité de notre évènement. Nous n’avions pas pour objectif d’attirer uniquement des experts en sécurité informatique. Nous souhaitions aussi attirer des personnes novices, voire totalement étrangères à l’informatique. De plus, que la personne gagne ou non la compétition, chaque participant repartira tout de même avec une formation en ligne à la cybersécurité.
+			</p>
+			<p>
+				Concernant notre équipe, les enjeux étaient multiples. En tout premier lieu, l’organisation de cet évènement nous donnait l’opportunité d’apprendre à gérer un tel évènement et ainsi développer nos compétences en communication virale, en budgétisation et en gestion de projet [insérer lien vers la compétence] évènementiel. De plus, la recherche de sponsor spécialisé dans la sécurité et la rencontre avec les participants à l’évènement était une occasion de développer notre réseau professionnel.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;	 Cependant, plusieurs risques étaient directement liés à ces enjeux. Le premier risque est lié à notre capacité à réaliser des défis engageants pour notre compétition. En effet, le but était de ne pas décourager les débutants avec des défis trop complexes, tout en jaugeant la difficulté pour que les défis restent suffisamment intéressants pour les autres participants.
+			</p>
+			<p>
+				Un autre risque se pose en amont de l’évènement. Nous nous étions fixés comme objectif d’organiser un évènement avec au minimum 20 participants. Toutefois, malgré les efforts que nous pouvions mettre dans notre communication, il y avait toujours un risque que nous n’atteignions pas ce nombre de participants. Par ailleurs, notre objectif principal étant de sensibiliser et d’éduquer à la cybersécurité, il était aussi possible que nous n’arrivions pas à diversifier suffisamment notre public et n’arrivions qu’à intéresser des personnes techniques.
+			</p>
+			<p>
+				Enfin, un dernier risque, et non des moindres, concernait le budget. En effet, nous devions nous-mêmes récolter les fonds nécessaires pour promouvoir et organiser l'évènement. Par conséquent, il était possible que nous n'arrivions pas à récolter assez d'argent pour réaliser l'évènement. De plus, malgré la réalisation d'un budget prévisionnel, des charges supplémentaires pouvaient toujours apparaitre à cause d'imprévus, ce qui pouvait mettre en péril notre projet.
+			</p>
+		</section>
+
+
+
+<!-- IV. LE PROJET -->
+		<section>
+			<h3>Le projet</h3>
+
+		<!-- 1. GESTION DE BUDGET -->
+			<h4>Gestion de budget</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Avant de commencer notre projet, nous avons réalisé un budget prévisionnel. Il nous fallait estimer le coût de la salle, des fournitures, des collations, des lots gagnants, de nos déplacements, etc. C'est donc une étape cruciale qui a initialement été réalisé en groupe et auquel nous avons consacré plusieurs jours.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ayant une bonne expérience de l'outil Excel, que j'utilise fréquemment dans mes projets personnels, je me suis occupé de tout ce qui touchait à la gestion budgétaire tout au long du projet.
+			</p>
+
+
+
+		<!-- 2. PLAN DE COMMUNICATION -->
+			<h4>Plan de communication</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Toutefois, qui dit budget, dit dépenses, mais qui dit dépenses, dit récolte de fonds. Mais, avant de parler de récolte de fonds, il faut parler de la promotion de notre évènement. En effet, afin de faire connaître notre évènement, nous avons réfléchi à un plan de communication. Je me suis donc attelé à cette tâche avec un de mes camarades.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le plan de communication visait à établir le public que nous souhaitions attirer ainsi que la façon dont nous allions communiquer. Notre public principal étant des personnes intéressées par l'informatique, nous avons convenu qu'une communication sur les réseaux sociaux était notre meilleur moyen. Néanmoins, nous ne souhaitions pas uniquement attirer des personnes techniques. Par conséquent, nous avons décidé de ne pas nous concentrer uniquement sur les réseaux sociaux, mais aussi à l'aide de publications placées sur les panneaux dans la ville et également par bouche-à-oreille.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Après avoir réalisé le plan de communication, mon collègue et moi avons mis à disposition le document aux autres membres de l'équipe qui se sont par la suite occupé de réaliser le calendrier éditorial et de produire les publications.
+			</p>
+
+
+
+		<!-- 3. DOSSIERS DE SPONSORING -->
+			<h4>Dossiers de sponsoring</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, après avoir réalisé le dossier de sponsoring, mon collègue et moi avons entamé la rédaction de dossiers de sponsoring dans lesquels nous présentons notre évènement, ce que nous avons déjà entrepris ainsi que les avantages que nous pouvions offrir aux sponsors.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ayant pris contact avec les IUTs des alentours afin de promouvoir notre évènement, nous avons appuyé sur cet argument en promettant de les promouvoir auprès de jeunes intéressés par l’informatique. De plus, INTECH étant composé de plus de 250 élèves, j’ai eu l’idée d’ajouter aux avantages que nous pouvions promettre à nos sponsors de réaliser une promotion en interne afin de faire davantage connaître notre potentiel sponsor.
+			</p>
+			<p>
+				J’ai également pris l’initiative de contacter des plateformes de formations en cybersécurité telles que TryHackMe, HackTheBox et Vulnhub en leur promettant de promouvoir leur plateforme en échange de bons de formation qui serviraient de récompenses pour les gagnants de l’évènement. La plupart des grandes plateformes ayant, le plus souvent, un support anglais, je me suis occupé de traduire l’intégralité des dossiers de sponsoring en anglais.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Suite à nos efforts, nous avons pu obtenir un lot de formations pour chacun des participants, ce qui nous a grandement aidé pour le financement de l’évènement.
+			</p>
+
+
+
+		<!-- 4. RECOLTE DE FONDS -->
+			<h4>Récolte de fonds</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Même si nous avions désormais les récompenses pour l’évènement, il nous fallait tout de même récolter suffisamment de fonds pour acheter la logistique nécessaire à l’évènement.
+			</p>
+			<p>
+				Nous avons réfléchi pour trouver un moyen de gagner suffisamment d’argent afin de financer l’évènement. En listant les produits que nous pouvions facilement réaliser, j’ai réalisé un comparatif pour savoir lequel aurait le meilleur rendement. Notre choix s’est ainsi porté sur la préparation de crêpes nature avec complément, sucre ou Nutella, ce qui nous donnait un très bon profit.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Nous avons réalisé deux ventes de crêpes au sein de l’école. La première a été réalisée par mon collègue et la seconde par moi. J’ai pu cuisiner et vendre un total de 80 crêpes et récolter près d’une centaine d’euros. Ces deux ventes nous ont ainsi permis de récolter suffisamment d’argent pour l’achat du matériel nécessaire à l’évènement.
+			</p>
+
+
+
+		<!-- 5. L'EVENEMENT -->
+			<h4>L'évènement</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Nous avions ainsi récolté suffisamment d’argent, mis en place une bonne communication sur les réseaux sociaux et déjà obtenu les lots des gagnants à la compétition. Par ailleurs, un de nos collègues avait réussi à obtenir un lieu pour réaliser l’évènement. Il ne nous restait donc plus qu’à aménager la salle puis réaliser notre évènement.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Même si nous avions désormais les récompenses pour l’évènement, il nous fallait encore acheter la logistique nécessaire à l’évènement. Après visite de la salle, pour se rendre compte du matériel nécessaire, j’ai donc recherché sur internet les fournitures nous permettant d’équiper la salle, telles que des multiprises et des câbles réseaux. Par ailleurs, ayant suffisamment d’argent, nous avons décidé d’acheter des collations et des boissons pour les participants.
+			</p>
+			<p>
+				La date de l’évènement approchant, nous avons équipé la salle du matériel nécessaire et j’ai également eu l’idée de simuler, entre nous, l’évènement pour s’assurer qu’il n’y ait aucun problème. Deux d’entre nous se sont mis à la place d’un participant qui réalisait les défis dans la salle et pendant ce temps, je me suis entraîné avec un collègue à réaliser la partie formation de l’évènement. Cela nous a permis de nous assurer qu’il n’y aurait aucun problème lors de l’évènement et cela nous a également permis de corriger les quelques erreurs restantes dans nos défis.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Lors de l’évènement, je me suis occupé d’aider les participants, de mettre à jour, en temps réel, le classement ainsi que de l’aspect formation. Tout compte fait, il n’y a eu aucun problème et les participants ont fortement apprécié l’évènement. Par ailleurs, la majorité des participants ont atteint les deux derniers niveaux et ont appris des informations utiles suite à notre mini-formation sur la cybersécurité.
+			</p>
+		</section>
+
+
+
+
+<!-- V. L'IMPACT DU PROJET -->
+		<section>
+			<h3>L'impact du projet</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet a apporté beaucoup de connaissances à l’ensemble des membres du groupe, nous avons pu apprendre comment se déroulait la préparation d’un évènement auto-financé, nous avons également enrichi notre réseau professionnel puisque nous avons pu prendre contact avec les participants ainsi qu’avec, dans le cadre de notre recherche de sponsors, des professionnels du monde de l’informatique.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Mais ce projet n’a pas été bénéfique que pour notre équipe. En effet, nous avons pu promouvoir les formations de nos sponsors sur les réseaux sociaux et aux élèves de notre école, ce qui leur a permis de gagner en visibilité. De plus, la mini-formation réalisée lors de l’évènement a été très bénéfique pour les participants et les a intéressés, puisque certains d’entre eux nous ont contactés à la suite de notre évènement pour que nous leur donnions des conseils en cybersécurité. Certains se sont même intéressés davantage aux CTFs informatiques en ligne afin d’apprendre.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le projet ayant été réalisé dans le cadre d’un projet d’étude à INTECH, il ne sera pas reconduit. Toutefois, nous sommes satisfaits de l’impact que notre évènement a eu sur les participants et des connaissances que nous avons acquises et qui pourraient nous permettre d’organiser, à l’avenir, un évènement similaire à celui-ci, mais d’une plus grande envergure.
+			</p>
+		</section>
+
+
+
+<!-- VI. UN RETOUR SUR EXPERIENCE -->
+		<section>
+			<h3>Un retour sur expérience</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet d’évènementiel m’a également été très profitable puisque je n’avais, précédemment, aucune expérience dans le domaine de l’évènementiel.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En premier lieu, j’ai pu prendre conscience des différentes étapes pour réaliser un évènement. Même si cela me paraît aujourd’hui évident, je ne me rendais pas compte qu’il fallait maîtriser plusieurs compétences telles que la budgétisation, la communication virale et également l’aspect commercial avec la vente de produits afin de réaliser un évènement. Par ailleurs, ce projet m’a permis d’acquérir de nouvelles compétences en termes de budgétisation à travers l'estimation et la comparaison entre notre budget prévisionnel et notre budget réel. J'ai, de plus, pu consolider les compétences que j'avais déjà acquises, notamment en communication virale [insérer lien vers la compétence], puis j’ai eu l’occasion de former les participants qui n'étaient pas familiers aux outils utilisés tels que RootMe ou Wireshark.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le projet ayant été réalisé dans le cadre d’un projet d’étude à INTECH, il ne sera pas reconduit. Toutefois, nous sommes satisfaits de l’impact que notre évènement a eu sur les participants et des connaissances que nous avons acquises et qui pourraient nous permettre d’organiser, à l’avenir, un évènement similaire à celui-ci, mais d’une plus grande envergure.
+			</p>
+		</section>
+
+
+
+<!-- VII. UN RETOUR SUR EXPERIENCE -->
+		<section>
+			<h3>Bilan du projet</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet d’évènementiel m’a également été très profitable puisque je n’avais, précédemment, aucune expérience dans le domaine de l’évènementiel.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En premier lieu, j’ai pu prendre conscience des différentes étapes pour réaliser un évènement. Même si cela me paraît aujourd’hui évident, je ne me rendais pas compte qu’il fallait maîtriser plusieurs compétences telles que la budgétisation, la communication virale et également l’aspect commercial avec la vente de produits afin de réaliser un évènement. Par ailleurs, ce projet m’a permis d’acquérir de nouvelles compétences en termes de budgétisation à travers l'estimation et la comparaison entre notre budget prévisionnel et notre budget réel. J'ai, de plus, pu consolider les compétences que j'avais déjà acquises, notamment en communication virale [insérer lien vers la compétence], puis j’ai eu l’occasion de former les participants qui n'étaient pas familiers aux outils utilisés tels que RootMe ou Wireshark.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Au final, j’ai pu acquérir des compétences humaines nouvelles dans le domaine de l’évènementiel et renforcer, encore une fois, mes compétences en termes de vulgarisation [insérer lien vers la compétence], ce qui me rend aujourd’hui capable de réaliser moi-même un évènement auto-financé.
+			</p>
+		</section>
+
+
+
+<section class="related-skills">
+    <h3>Compétences liées</h3>
+    <div class="mini-cards-container">
+        <a href="communication-virale.html" class="mini-card humaine">
+            <img src="../assets/img/communication-virale-logo.png" alt="communication-virale" class="mini-card-icon">
+            <span>Communication virale</span>
+        </a>
+        <a href="gestion-de-projet.html" class="mini-card humaine">
+            <img src="../assets/img/gestion-projet-logo.png" alt="gestion-projet" class="mini-card-icon">
+            <span>Gestion de projet</span>
+        </a>
+        <a href="supervision.html" class="mini-card humaine">
+            <img src="../assets/img/supervision-logo.png" alt="supervision" class="mini-card-icon">
+            <span>Supervision</span>
+        </a>
+		<a href="git.html" class="mini-card technique">
+            <img src="../assets/img/git-logo.png" alt="git" class="mini-card-icon">
+            <span>Git</span>
+        </a>
+        <a href="communication-virale.html" class="mini-card humaine">
+            <img src="../assets/img/communication-virale-logo.png" alt="communication-virale" class="mini-card-icon">
+            <span>Communication virale</span>
+        </a>
+    </div>
+</section>
+	</main>
+
+	<footer>
+		<p class="footer-name">Prénom Nom</p>
+		<p>&copy; 2025 Prénom Nom. Tous droits réservés.</p>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prénom Nom - Compétences</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+			<div class="logo">
+				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
+			</div>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+			<ul class="nav-menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="presentation.html">Présentation</a></li>
+				<li class="dropdown">
+					<a href="competences.html">Compétences</a>
+					<ul class="dropdown-content">
+						<li class="sub-dropdown">
+							<a href="#">Techniques</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="bash.html">Langage Bash</a></li>
+								<li><a href="python.html">Langage Python</a></li>
+								<li><a href="supervision.html">Supervision</a></li>
+								<li><a href="git.html">Git</a></li>
+								<li><a href="html.html">HTML</a></li>
+								<li><a href="php.html">PHP</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown">
+							<a href="#">Humaines</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="communication-virale.html">Communication virale</a></li>
+								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+								<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								<li><a href="evenementiel.html">Évènementiel</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="realisations.html">Réalisations</a>
+					<ul class="dropdown-content">
+						<li><a href="winperf.html">WinPerf</a></li>
+						<li><a href="pentech.html">Pentech</a></li>
+						<li><a href="datahealth.html">DataHealth</a></li>
+						<li><a href="wixlearn.html">WixLearn</a></li>
+						<li><a href="autopen.html">Autopen</a></li>
+					</ul>
+				</li>
+				<li><a href="parcours.html">Parcours</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <main>
+        <h1>Mes Compétences</h1>
+
+        <div class="skills-container">
+            <div class="skill-card technique" data-type="Technique">
+                <img src="../assets/img/bash-logo.png" alt="Bash">
+                <h3>Langage Bash</h3>
+                <p class="skill-level level-expert">Expert</p>
+                <a href="./bash.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card technique" data-type="Technique">
+                <img src="../assets/img/python-logo.png" alt="Python">
+                <h3>Langage Python</h3>
+                <p class="skill-level level-expert">expert</p>
+                <a href="./python.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card technique" data-type="Technique">
+                <img src="../assets/img/supervision-logo.png" alt="Supervision">
+                <h3>Supervision</h3>
+                <p class="skill-level level-expert">Expert</p>
+                <a href="./supervision.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card technique" data-type="Technique">
+                <img src="../assets/img/git-logo.png" alt="Git">
+                <h3>Git</h3>
+                <p class="skill-level level-intermediaire">Intermédiaire</p>
+                <a href="./git.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card technique" data-type="Technique">
+                <img src="../assets/img/html-logo.png" alt="HTML">
+                <h3>HTML</h3>
+                <p class="skill-level level-expert">Expert</p>
+                <a href="./html.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card technique" data-type="Technique">
+                <img src="../assets/img/php-logo.png" alt="PHP">
+                <h3>PHP</h3>
+                <p class="skill-level level-intermediaire">Intermédiaire</p>
+                <a href="./php.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card humaine" data-type="Humaine">
+                <img src="../assets/img/communication-virale-logo.png" alt="Communication virale">
+                <h3>Communication virale</h3>
+                <p class="skill-level level-intermediaire">Intermédiaire</p>
+                <a href="./communication-virale.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card humaine" data-type="Humaine">
+                <img src="../assets/img/gestion-projet-logo.png" alt="Gestion de projet">
+                <h3>Gestion de projet</h3>
+                <p class="skill-level level-intermediaire">Intermédiaire</p>
+                <a href="./gestion-de-projet.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card humaine" data-type="Humaine">
+                <img src="../assets/img/vulgarisation-logo.png" alt="Vulgarisation">
+                <h3>Vulgarisation</h3>
+                <p class="skill-level level-intermediaire">Intermédiaire</p>
+                <a href="./vulgarisation.html" class="btn-details">Plus de détails</a>
+            </div>
+
+            <div class="skill-card humaine" data-type="Humaine">
+                <img src="../assets/img/evenementiel-logo.png" alt="Évènementiel">
+                <h3>Évènementiel</h3>
+                <p class="skill-level level-intermediaire">Intermédiaire</p>
+                <a href="./evenementiel.html" class="btn-details">Plus de détails</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-name">Prénom Nom</p>
+        <p>&copy; 2025 Prénom Nom. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

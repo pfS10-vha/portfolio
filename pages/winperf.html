@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="../assets/css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+	<script>
+		// block developper console to avoid bots
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			document.addEventListener('contextmenu', function(e)
+			{
+				e.preventDefault();
+			});
+			document.addEventListener('keydown', function(e)
+			{
+				if (e.which === 123 ||
+				(e.ctrlKey && e.shiftKey && e.which === 73) ||
+				(e.ctrlKey && e.shiftKey && e.which === 74) ||
+				(e.ctrlKey && e.which === 85)
+				)
+				{
+					e.preventDefault();
+					return false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="logo">
+				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
+			</div>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+			<ul class="nav-menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="presentation.html">Présentation</a></li>
+				<li class="dropdown">
+					<a href="competences.html">Compétences</a>
+					<ul class="dropdown-content">
+						<li class="sub-dropdown">
+							<a href="#">Techniques</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="bash.html">Langage Bash</a></li>
+								<li><a href="python.html">Langage Python</a></li>
+								<li><a href="supervision.html">Supervision</a></li>
+								<li><a href="git.html">Git</a></li>
+								<li><a href="html.html">HTML</a></li>
+								<li><a href="php.html">PHP</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown">
+							<a href="#">Humaines</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="communication-virale.html">Communication virale</a></li>
+								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+								<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								<li><a href="evenementiel.html">Évènementiel</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="realisations.html">Réalisations</a>
+					<ul class="dropdown-content">
+						<li><a href="winperf.html">WinPerf</a></li>
+						<li><a href="pentech.html">Pentech</a></li>
+						<li><a href="datahealth.html">DataHealth</a></li>
+						<li><a href="wixlearn.html">WixLearn</a></li>
+						<li><a href="autopen.html">Autopen</a></li>
+					</ul>
+				</li>
+				<li><a href="parcours.html">Parcours</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<main>
+		<h2>WinPerf - Projet de Benchmark</h2>
+
+<!-- I. AVANT-PROPOS -->
+		<section>
+			<h3>Avant-propos</h3>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;Ce projet de benchmark a été une expérience très enrichissante qui m’a permis de développer mes compétences dans de multiples domaines à la fois intéressants et utiles pour mes projets futurs, dont notamment la programmation Python [insérer lien vers la compétence]. Un aspect que j’ai tout particulièrement apprécié a été la demande de notre commanditaire. Il était imposé que le projet n’utilise que des librairies libres de droits et ne pas réutiliser des projets de benchmark déjà existants.
+				</p>
+					</br>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;En effet, l’objectif était de pouvoir se détacher des solutions existantes et ainsi avoir son propre logiciel de benchmark personnalisé afin de pouvoir s’adapter à n’importe quelle machine ou système d’exploitation. Outre cet aspect technique, ce projet m’a permis de mettre en avant mes connaissances des langages Batch et Python [insérer lien vers la compétence] ainsi que mes connaissances du fonctionnement des logiciels de benchmark réputés dans le milieu professionnel.
+				</p>
+		</section>
+
+<!-- II. DEFINITIONS -->
+		<section>
+			<h3>Définitions</h3>
+			<p>
+			Avant de procéder à l’explication du déroulement de ce projet de benchmark, il y a quelques termes qui méritent d’être définis, puisqu’ils sont, tout de même, au cœur du projet.
+			</p>
+				</br>
+			<p>
+			&nbsp;&nbsp;&nbsp;&nbsp;Un benchmark ou « point de référence » en français. C’est un terme qui peut paraître très abstrait et semble englober plusieurs définitions, mais dans le cas de notre projet, la définition pourrait se rapporter à une unité permettant de mesurer les performances d’un composant. Par exemple, lors d’une course, le facteur déterminant est le temps qu’un athlète met pour atteindre la ligne d’arrivée. Plus le temps est faible, plus l’athlète est performant. Dans notre cas, c’est à peu près le même principe, on mesure le temps que chacun des composants de l’ordinateur met à effectuer une tâche précise et en changeant l’ordinateur ou simplement un composant, on compare la différence pour savoir quel composant est le plus performant. Un benchmark est donc, en fait, un moyen de comparer plusieurs éléments en se référant à une unité de mesure définie au préalable.			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un CPU (Central Processing Unit), aussi appelé « processeur » en français, est tout simplement le cerveau d’un ordinateur. Lorsque l’on va lancer une application, le premier composant de l’ordinateur à réagir est le processeur. Plus il est puissant, plus l’application va se lancer rapidement. Certaines opérations étant plus gourmandes que d’autres, il va parfois être surchargé et, étant le cerveau, générer des ralentissements assez conséquents pour tout le système.			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;La RAM (Random Access Memory), ou mémoire vive en français, est en quelque sorte la mémoire « à court terme » de notre ordinateur. Le processeur va permettre de faire les calculs nécessaires pour lancer des applications, mais c’est la mémoire vive qui va garder en mémoire quelles applications sont lancées et quels onglets ouverts sur notre navigateur. Plus il y a de mémoire vive, plus le nombre d’applications pouvant être ouvertes simultanément augmente. Lorsque cette mémoire vive atteint son maximum, en ayant ouvert 400 onglets sur notre navigateur par exemple, les fameux « écrans bleus » de Windows apparaissent. Il est donc évident que la mémoire vive est, au même titre que le processeur, un composant qui mérite d’être performant pour éviter, non pas de ralentir l’ordinateur, mais qu’il plante complètement.			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un terme un peu plus technique cette fois-ci est l’IO disque. C’est un terme anglais qui se traduit approximativement par « entrée-sortie disque », mais concrètement, on peut dire que c’est le nombre d’opérations et la vitesse à laquelle on peut lire et/ou écrire sur un disque dur. Plus clairement, même si les applications ouvertes sont stockées dans la mémoire vive, comme expliqué précédemment, ces applications ont parfois besoin d’accéder à des données sur le disque dur de l’ordinateur. Par exemple, lorsque l’on visionne un film avec un lecteur tel que VLC, Windows Lecteur ou d’autres outils, le logiciel va avoir besoin d’accéder au film qui est stocké sur notre disque dur, et si le disque dur est trop lent ou reçoit une charge de travail trop élevée, la lecture va être saccadée et parfois échouer.			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, la bandwidth, ou bande passante réseau en français, est un peu plus simple à visualiser. On peut la comparer à un tuyau dans lequel traverse de l’eau, plus le tuyau est large, plus le débit d’eau est important. C’est la même chose avec la bande passante réseau, plus notre débit est large, plus nos recherches et vidéos chargeront vite. Toutefois, il est important de noter que ; contrairement aux autres composants tels que le processeur, la mémoire vive ou le disque ; la bande passante d’un réseau est partagée entre tous les ordinateurs sur un même réseau. Ce qui veut dire que si quelqu’un utilise tout le débit, le débit des autres machines par conséquent réduit. Il est donc important d’être conscient que réaliser un benchmark sur la bande passante aura un impact négatif sur les autres machines présentes sur le réseau.			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En résumé, un benchmark permet donc d’avoir une unité de mesure pour comparer plusieurs choses entre elles. On a également vu que le processeur va définir la vitesse de notre ordinateur, la mémoire vive définie le nombre d’applications pouvant être exécuté simultanément, l’IO disque régit la vitesse à laquelle les applications peuvent accéder aux données sur le disque et la bande passante définie la vitesse à laquelle on peut naviguer sur internet.
+			</p>
+		</section>
+
+
+<!-- III. INTRODUCTION PROJET -->
+		<section>
+			<h3>Introduction projet</h3>
+
+	<!-- 1. CONTEXTE -->
+			<h4>Contexte</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En ce qui concerne le projet en lui-même, l’entreprise souhaitait étudier la faisabilité de la migration d’un environnement de machines sous Linux vers des machines sous Windows. Cela permettrait aux clients utilisant déjà la solution d’avoir le choix entre déployer le logiciel sous un système Linux ou un système Windows. Mais cela permettrait également d’étendre les services de l’entreprise à un public plus large. Toutefois, la migration n’était pas la seule difficulté. En effet, la difficulté principale résidait dans le fait que l’entreprise fournissait des solutions de vidéosurveillance. Ce sont des systèmes critiques qui se doivent d’être accessibles 24/24h 7/7j, par conséquent, la fiabilité et les performances devaient être maîtres mots tout au long du processus.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Afin de réaliser ce projet, nous avons ainsi formé une équipe de trois étudiants. Un professeur de l’école faisait office de suiveur et était disponible par e-mail afin de valider nos rendus et de nous aider en cas de difficulté. Par ailleurs, le lieu de travail de notre commanditaire étant très proche de l’école, nous communiquions avec lui par réunion physique, et ce, à une fréquence d’environ une à deux fois par mois.
+			</p>
+
+
+	<!-- 2. OBJECTIFS -->
+			<h4>Objectifs</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Lors du projet, il a d’ailleurs été question de plusieurs objectifs qui ont, au final, déterminé les différentes étapes du projet.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Notre premier objectif, et non des moindres, a été de déterminer la procédure à adopter pour « benchmarker » le matériel ainsi que pour développer nous-mêmes un programme permettant de mesurer les performances du matériel. La procédure était un élément crucial puisque, les systèmes de vidéosurveillances étant très sensibles, il nous fallait absolument uniformiser la façon dont nous faisions notre test afin de minimiser au maximum la marge d’erreur. Par la suite, il était idée de développer notre propre outil permettant de mesurer le matériel, cela permettrait de se détacher et de ne pas dépendre des solutions existantes qui pourraient être abandonnées d’un jour à l’autre et rendre inutilisable la solution de benchmark que nous développions.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Un second objectif que nous avons défini était la réalisation d’une interface graphique facilitant l’utilisation de notre outil de benchmark. Bien que notre commanditaire travaille lui aussi dans le monde de l’informatique et ait des compétences dans ce domaine, il a exprimé le besoin d’avoir une interface graphique lui permettant d’utiliser plus facilement l’outil. De plus, la solution que nous développions ne serait pas uniquement vouée à sa propre utilisation, il était prévu que des gens moins techniques que lui puissent l’utiliser à leur tour.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, le troisième objectif que nous avons défini était sur la demande personnelle du commanditaire du projet. Il souhaitait qu’il soit possible de visualiser en temps réel les résultats des benchmarks sur ses machines. En effet, l’outil que nous devions concevoir avait pour but de lancer un benchmark du matériel puis fournir un résultat à la fin de ce dernier. Toutefois, la taille du parc informatique de notre commanditaire étant assez conséquente, le benchmark du matériel ne serait pas lancé que sur une dizaine de serveurs, l’objectif final était pouvoir lancer les benchmarks sur tout son parc informatique et de voir en temps réel quel matériel était le plus performant.
+			</p>
+
+
+	<!-- 3. ENJEUX & RISQUES -->
+			<h4>Enjeux & Risques</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ces trois objectifs nous ont également permis de dégager plusieurs enjeux pour notre projet. Dans un premier temps, la précision et la fiabilité de l’outil de benchmark étaient des éléments cruciaux. En effet, les systèmes de vidéosurveillance étant critiques, le script devait fournir des résultats fiables et précis pour aider les équipes techniques à choisir le matériel à acheter. La complétion de cette tâche permettrait à l’entreprise de réaliser des économies de budget en comparant le matériel et ainsi estimer le meilleur rapport qualité-prix selon leur propre besoin.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, de ce premier enjeu en résultait un second. En ayant un outil permettant de benchmarker le matériel, l’entreprise obtiendrait un avantage compétitif en ayant la possibilité de rapidement mettre à jour son matériel et utiliser les dernières technologies pour améliorer ses services.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, le dernier enjeu était tout simplement le gain de temps. En effet, l’objectif initial du projet était d’étudier la faisabilité de la migration d’un environnement de systèmes Linux vers un environnement Windows. Cette étude pourrait prendre un temps conséquent et ralentir fortement l’activité de l’entreprise. Un outil de benchmark automatisé pallierait donc ce problème et l’entreprise bénéficierait donc grandement à l’entreprise. Cela équivaudrait à un gain de temps à l’aide d’un outil efficace permettant de mesurer le gain ou la perte de performance sur ses systèmes en fonction du matériel.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Malgré tous ces points positifs, le projet ne se voulait pas sans risques. Évidemment, le premier facteur se reportait directement au premier enjeu, la fiabilité de l’outil. Comme expliqué à de multiples reprises, les systèmes de vidéosurveillance sont très sensibles, par conséquent un des risques les plus importants était de ne pas être assez rigoureux lors de l’établissement de la procédure de benchmark et ainsi fausser les résultats, voire pire, dégrader les performances actuelles des systèmes au point de les rendre inutilisables.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le second risque était que, le projet dépendant de la collaboration et de la communication entre l’équipe et le commanditaire, les objectifs et les contraintes ne soient pas assez clairement définis. Par conséquent, le projet ne remplirait pas tous les critères nécessaires à une utilisation en production et rendrait l’outil inutilisable en production.
+			</p>
+		</section>
+
+
+<!-- IV. LE PROJET -->
+		<section>
+			<h3>Le projet</h3>
+
+		<!-- 1. ORGANISATION -->
+			<h4>Organisation</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Durant le début du projet, il a d’abord été question de définir la méthode de travail de l’équipe. Nous avons rapidement convenu que la méthode agile [insérer lien vers compétence gestion de projet] serait la plus appropriée à ce projet étant donné que, au vu de la criticité du matériel pour lequel était destiné notre outil, les différentes étapes du projet étaient vouées à régulièrement changer en réponse au comportement imprédictible du matériel. De plus, cette méthode de travail nous permet également de rapidement fixer les objectifs et contraintes dès le début du projet, tout en se laissant la possibilité de modifier ces derniers en fonction de notre avancée et des besoins du commanditaire. Étant chef de projet de l’équipe, j’étais donc en charge d’effectuer les modifications lorsque nécessaire et de coordonner les actions avec notre commanditaire afin que les objectifs restent en accord avec la mission initiale. Voici, à titre d’exemple, une représentation graphique des tâches qui ont été définies :
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, étant un groupe de trois étudiants, il nous fallait mettre en commun le code que nous développions. Pour ce faire, un répertoire Git a été mis en place [insérer lien vers la compétence] :
+			</p>
+
+
+
+		<!-- 2. CHOIX DU LANGAGE -->
+			<h4>Choix du langage de programmation</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Une deuxième décision à laquelle nous avons été confrontés a été le choix des technologies nous permettant de développer l’outil de benchmark. Après un long moment de réflexion, notre choix s’est porté sur un langage que nous maitrisions tous les trois, le langage Python [insérer lien vers la compétence]. Cependant, un premier souci s’imposait à nous ; les serveurs sur lesquels la solution serait installée avaient déjà un environnement, et il n’est normalement pas possible de faire cohabiter plusieurs versions différentes de Python sur un même environnement. Il nous fallait donc, soit changer de langage de programme, soit trouver une solution pour intégrer le script aux environnements déjà présents sur les serveurs.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Heureusement, ayant déjà une certaine connaissance de Python, je connaissais une fonctionnalité qui pourrait pallier cette contrainte, les « virtualenv » (ou venv). En effet, comme dit précédemment, il n’est normalement pas possible de faire cohabiter plusieurs versions de Python sur une même machine. Toutefois, afin de contrer ce problème, deux solutions existent : Anaconda et les « venv ».
+			</p>
+			<p>
+				Anaconda est une application permettant d’avoir plusieurs installations de Python à l’aide de ce que l’on appelle, la virtualisation. La virtualisation étant le fait d’émuler un deuxième serveur dans un serveur. Grâce à cette technologie, c’est comme si l’on avait deux machines et cela permet donc d’avoir une deuxième installation de Python. De plus, le grand atout d’Anaconda est son interface graphique, cela permet de facilement ajouter des extensions à Python, d’une façon similaire au Microsoft Store.
+Toutefois, Anaconda est très coûteux en ressources et n’est pas intégré directement à Python, par conséquent, il ne remplit pas les critères que notre commanditaire nous a imposés.
+			</p>
+			<p>
+				La deuxième solution, avec laquelle j’ai déjà une certaine expérience, est « venv ». Sur la finalité, cet outil est identique à Anaconda, il va nous permettre d’avoir une deuxième installation de Python. Toutefois, le processus par lequel ce but est accompli est assez différent. En effet, « venv » va en réalité copier l’installation déjà existante de Python et modifier les fichiers de configuration pour que les deux versions de Python fonctionnent. Cela revient un peu à faire une photocopie d’une page d’un livre sans crainte de détruire l’original. De plus, venv n’utilisait pas la virtualisation et, par conséquent, ne consommait pas de ressources supplémentaires. Ce gain de performance était déjà suffisant pour faire pencher notre choix vers « venv », mais en plus de cela, l’outil est déjà directement intégré à Python. C’était donc le choix parfait pour s’intégrer à notre projet.
+			</p>
+			<p>
+				Par ailleurs, ayant déjà utilisé à de nombreuses reprises cette fonctionnalité, j’ai pu la présenter et former mes collègues à son utilisation et ainsi, le choix du langage Python a été retenu pour débuter notre projet.
+			</p>
+
+
+
+		<!-- 3. INFRASTRUCTURE DE NOTRE OUTIL -->
+			<h4>Infrastructure de notre outil</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Durant le début du projet, il a d’abord été question de définir la méthode de travail de l’équipe. Nous avons rapidement convenu que la méthode agile [insérer lien vers compétence gestion de projet] serait la plus appropriée à ce projet étant donné que, au vu de la criticité du matériel pour lequel était destiné notre outil, les différentes étapes du projet étaient vouées à régulièrement changer en réponse au comportement imprédictible du matériel. De plus, cette méthode de travail nous permet également de rapidement fixer les objectifs et contraintes dès le début du projet, tout en se laissant la possibilité de modifier ces derniers en fonction de notre avancée et des besoins du commanditaire. Étant chef de projet de l’équipe, j’étais donc en charge d’effectuer les modifications lorsque nécessaire et de coordonner les actions avec notre commanditaire afin que les objectifs restent en accord avec la mission initiale. Voici, à titre d’exemple, une représentation graphique des tâches qui ont été définies :
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le langage de développement de l’outil désormais défini, il ne nous restait plus qu’à commencer le développement. J’ai attribué les tâches en fonction de leur charge et des aptitudes de chacun et nous avons débuté le développement. Comme on a pu le voir sur le schéma du product backlog, notre projet était découpé en deux grandes sections.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;La procédure de benchmark regroupe les différents scripts permettant de mesurer les performances du matériel serveur. C’est la partie la plus importante de notre outil. Quatre scripts séparés vont tester les différentes ressources matérielles du serveur : script CPU, script RAM, script IO disk et script bandwidth ; et un script principal, appelé « main », va appeler les autres scripts et calculer le score. Tandis que la seconde section va se concentrer sur le formatage de ces résultats afin de les rendre visuellement plaisants à l’aide de graphiques ou de tableaux.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Comme on peut le voir, les quatre scripts nommés « stresseur » sont séparés et appelés par le « main » qui est représenté dans le schéma par l’interface utilisateur. Cette interface permettra au commanditaire de simplement sélectionner la tâche qu’il souhaite accomplir. Le but de ces « stresseurs » est de faire monter l’utilisation du composant à 100%. Pourquoi ? Tout simplement pour voir comment le serveur réagit et à quelle vitesse il est capable de réaliser ses tâches lorsqu’il est utilisé à 100%. C’est un principe assez fréquent dans les benchmarks et cela permet de comparer différents processeurs par exemple. Pour ma part, je me suis donc occupé, dans un premier temps, du script de benchmark du CPU.
+			</p>
+
+
+
+		<!-- 4. BENCHMARK DU CPU -->
+			<h4>Benchmark du CPU</h4>
+
+			<!-- a. LE MULTIPROCESSING -->
+			<h5>Le multiprocessing</h5>
+			<p>
+				Le principe était assez simple dans l’idée. Il fallait que la charge du processeur monte à 100% lors de l’exécution du script. J’ai donc réalisé un premier jet :
+			</p>
+			<pre><code class="language-python">import time
+
+def cpu_stress(duration):
+    start_time = time.time()
+    while time.time() - start_time < duration:
+        # benchmark the cpu
+        [x**2 for x in range(10000)]
+
+def run_benchmark(duration):
+    print(f"Running CPU benchmark for {duration} seconds..")
+
+    # record start time
+    start_time = time.time()
+
+    # run the benchmark
+    cpu_stress(duration)
+
+    # record end time
+    end_time = time.time()
+
+    # calculate total duration
+    total_time = end_time - start_time
+    print(f"Benchmark completed in {total_time:.2f} seconds")
+
+if __name__ == "__main__":
+    duration = 10
+    run_benchmark(duration)</code></pre>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Toutefois, j’ai rapidement été confronté à une première difficulté. En effet, le script que j’avais réalisé ne permettait de benchmark qu’un seul cœur du processeur. Comme expliqué, le processeur est le cerveau d’un ordinateur, mais il possède lui-même plusieurs petits cerveaux appelés « cœurs ». Plus il a de cœurs, plus il est performant.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Si dans les années 2000, il était fréquent qu’une machine n’ait qu’un seul cœur, aujourd’hui, quasiment tous les ordinateurs ont plusieurs cœurs à leur disposition afin d’augmenter la puissance de calcul de la machine. Mon premier jet ne représentait donc pas correctement les performances globales d’un processeur moderne, et encore moins les performances d’un serveur possédant plus d’une quarantaine de cœurs. J’ai donc commencé la recherche de solutions pour améliorer mon script et j’ai rapidement pris conscience qu’il était nécessaire d’utiliser ce que l’on appelle, le « multiprocessing ». Par défaut, quand un logiciel est lancé, il ne va utiliser qu’un seul des cœurs du processeur, c’est un fonctionnement qui est le plus souvent constaté avec les vieilles applications. Toutefois, le multiprocessing est une fonctionnalité qui permet d’autoriser le programme à utiliser un nombre de cœurs définis. C’est un peu comme réaliser un projet à plusieurs plutôt que de le réaliser seul, on va répartir la charge de travail sur plusieurs et ainsi être plus performant.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;J’ai ainsi fait plusieurs recherches sur son implémentation au sein d’un script Python [insérer lien vers la compétence] et ai découvert une extension appelée « multiprocessing ». Cette extension permet ainsi de lancer mon script sur plusieurs cœurs, garantissant une utilisation maximale de toutes les ressources du processeur.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Néanmoins, cela impliquait obligatoirement la modification et l’ajout de plusieurs nouvelles étapes. Dans un premier temps, j’ai dû déterminer dynamiquement le nombre de cœurs présents sur le serveur sous lequel s’exécutait le script à l’aide de la fonction « cpu.count() ». Par la suite, j’ai adapté mon script afin de pouvoir gérer le multiprocessing. Voici un exemple du résultat final :
+			</p>
+
+			<pre><code class="language-python">import multiprocessing
+import time
+
+def cpu_stress(duration):
+    start_time = time.time()
+    while time.time() - start_time < duration:
+        # benchmark the cpu
+        [x**2 for x in range(10000)]
+
+def run_benchmark(duration, num_processes):
+    print(f"Running CPU benchmark for {duration} seconds using {num_processes} processes")
+    
+    processes = []
+    start_time = time.time()
+
+    # start multiple processes
+    for _ in range(num_processes):
+        p = multiprocessing.Process(target=cpu_stress, args=(duration,))
+        p.start()
+        processes.append(p)
+
+    for p in processes:
+        p.join()
+
+    end_time = time.time()
+    total_time = end_time - start_time
+
+    print(f"Benchmark completed in {total_time:.2f} seconds")
+
+if __name__ == "__main__":
+    duration = 10
+
+    # use all available CPUs
+    num_processes = multiprocessing.cpu_count()
+    run_benchmark(duration, num_processes)
+</code></pre>
+
+			<p>
+				Cette nouvelle approche m'a permis de créer un benchmark beaucoup plus représentatif des performances réelles du serveur en sollicitant tous les cœurs simultanément. J’avais ainsi complété le script de benchmark du processeur.
+			</p>
+
+
+
+		<!-- 5. BENCHMARK DE LA RAM -->
+			<h4>Benchmark de la RAM</h4>
+
+			<!-- a. LA GESTION DE LA MEMOIRE -->
+			<h5>La gestion de la mémoire</h5>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Après avoir finalement résolu le problème et finalisé le script de benchmark CPU, j’ai pu me tourner vers la réalisation du script de benchmark de la RAM. Le but de ce script était de mesurer les performances du serveur lorsque sa mémoire vive était sollicitée de manière intensive.
+			</p>
+			<p>
+				Le principe du script était donc plus simple que celui pour le processeur, il fallait que le script utilise et libère la mémoire vive du serveur, de manière continue. Un peu comme si on ouvrait et fermait une application assez lourde plusieurs fois par seconde. J’ai donc réalisé un premier jet permettant d’effectuer ce processus :
+			</p>
+			<pre><code class="language-python">import time
+import random
+
+
+
+def ram_stress(duration):
+    start_time = time.time()
+    while time.time() - start_time < duration:
+        # use a large amount of memory
+        data = [random.random() for _ in range(1000000)]
+        del data
+
+
+
+def run_benchmark(duration):
+    print(f"Running RAM benchmark for {duration} seconds..")
+
+    # record start time
+    start_time = time.time()
+
+    # run the benchmark
+    ram_stress(duration)
+
+    # record end time
+    end_time = time.time()
+
+    # calculate total duration
+    total_time = end_time - start_time
+    print(f"Benchmark completed in {total_time:.2f} seconds")
+
+
+
+if __name__ == "__main__":
+    duration = 10
+    run_benchmark(duration)
+</code></pre>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le script était ainsi fonctionnel et utilisait bien toute la mémoire vive du serveur. Toutefois, j’ai, une nouvelle fois, été confronté à une limitation, cette fois-ci, non de mon script, mais de Windows. En effet, en testant mon script sur un serveur de test, je me suis aperçu qu’il arrivait parfois que le serveur plante avec un « écran bleu de la mort » ou « BSOD » :
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;C’est un phénomène normal sous un système Windows lorsque la mémoire vive est sollicitée à 100%. En effet, Windows a implémenté des limites de sécurité pour éviter que la mémoire vive de l’ordinateur soit utilisée à 100% et empêche le lancement d’applications système telles que les mises à jour ou l’application gérant la connexion au compte Microsoft.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;JUne solution évidente était donc de désactiver cette limitation des systèmes Windows. Toutefois, cela pouvait provoquer un dysfonctionnement du système et le rendre inutilisable à l’avenir, cette solution a donc rapidement été écartée. La deuxième solution qui s’offrait à moi était de limiter la quantité de mémoire vive que mon script utiliserait. Cela impliquait d’imposer une limite fixe à mon script lors de son utilisation. Après plusieurs modifications, j’en suis ainsi arrivé à ce script :
+			</p>
+			<p>
+				Le script permettait ainsi de limiter l’utilisation de la mémoire à 90% et ainsi réaliser un réel benchmark de la RAM du serveur.
+			</p>
+
+
+
+		<!-- 6. EXCEL - UN PREMIER APERCU DU RENDU -->
+			<h4>Excel - Un premier aperçu du rendu</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Étant satisfait des scripts que nous avions réalisés, j’ai réuni les travaux de chacun pour compléter notre script principal et le rendre finalement fonctionnel. J’ai, par la suite, réalisé deux derniers scripts permettant de récupérer les résultats de chacun de nos quatre scripts (CPU, RAM, disque et bande passante) afin de les agréger dans un même résultat. L’objectif était de générer un rapport au format Excel, dans un format standardisé et facilement exploitable.
+			</p>
+			<p>
+				Le premier script, écrit en langage Batch, était dédié aux systèmes Windows. Il collectait les résultats générés par les scripts de benchmark et les formatait pour rendre les données compatibles avec le format Excel en compilant ces dernières sous forme de tableaux.
+			</p>
+			<p>
+				Le second script, écrit en langage Bash [insérer lien vers la compétence], remplissait la même fonction, mais pour un système Linux. Bien que la syntaxe soit différente, le principe restait le même. Lire et agréger les données pour les afficher sous un format de tableaux Excel.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Le choix de ces deux langages, Batch et Bash [insérer lien vers la compétence], était logique pour notre projet. En effet, notre outil de benchmark devait pouvoir fonctionner indifféremment sur des serveurs Linux ou Windows, afin de s'adapter aux environnements des clients. Il était donc essentiel de réaliser deux scripts multiplateformes afin que les systèmes Windows et Linux puissent utiliser notre outil.
+			</p>
+
+
+
+		<!-- 7. BONUS: UN MOYEN DE SURVEILLER LES RESSOURCES -->
+			<h4>Bonus: un moyen de surveiller les ressources</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Pour répondre à notre troisième objectif, j’ai mis en place un outil de supervision [insérer lien vers la compétence] des ressources serveurs. Pour des raisons de simplicité, j’ai sélectionné un outil avec lequel j’avais déjà travaillé auparavant, « Prometheus ». Prometheus est un outil de récolte de « métriques », c’est-à-dire qu’il va récupérer chaque seconde le pourcentage d’utilisation des ressources matérielles des serveurs. Néanmoins, Prometheus récolte les données, mais ne les traite pas. Ce qui veut dire qu’il va nous donner en résultat un fichier texte avec des données du style :
+			</p>
+			<p>cpuUsage:0.97;ramUsage:16267;ioDisk:13200t, etc.</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Toutefois, le but était de fournir un moyen de visualiser ces données, j’ai donc couplé Prometheus à un autre outil nommé « Grafana ». Grafana est un outil permettant de transformer des métriques assez brutes, comme celles fournies Prometheus, en tableaux de bords, ce qui fait qu’il s’harmonisait parfaitement avec Prometheus.
+			</p>
+			<p>
+				Nous avons donc proposé l’idée à notre commanditaire et j’ai mis en place la solution que l’on peut voir ci-dessous :
+			</p>
+
+
+
+		<!-- 8. FORMER NOTRE COMMANDITAIRE -->
+			<h4>Former notre commanditaire</h4>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En plus d’un outil permettant de visualiser en temps réel l’utilisation des ressources matérielles de ses machines, et ayant déjà accompli la plupart des objectifs demandés, notre commanditaire nous a demandé s’il était possible que nous lui préparions une formation [insérer lien vers la compétence vulgarisation] pour utiliser notre outil.
+			</p>
+			<p>
+				Ayant déjà réalisé une partie de la documentation de l’outil que nous développions et ayant le temps avant la date de fin du projet, nous avons accepté l’idée. La rédaction et la préparation de cette formation ont tout de même duré environ deux semaines grâce au travail de notre équipe.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Pour ma part, je me suis principalement occupé des exemples de commandes et d’une partie du contenu de la présentation orale. Pour la rédaction, nous avons décidé d’utiliser la syntaxe Markdown, qui est la syntaxe la plus utilisée pour réaliser des documentations au sein des projets informatiques. Voici un aperçu d’une partie du support réalisé :
+			</p>
+			<p>
+				J’ai ensuite planifié la réunion de formation qui a tout de même duré une après-midi complète. Notre commanditaire étant de nature à aimer comprendre le fonctionnement précis d’un outil, la formation ne s’est pas faite sans qu’il y ait un grand nombre d’interactions et de questions auxquelles nous avons pu répondre. Après avoir réalisé cette dernière tâche, nous avons livré la version finale de l’outil et le projet s’est conclu sur un succès.
+			</p>
+		</section>
+
+
+
+
+
+
+<!-- V. L'IMPACT DU PROJET -->
+		<section>
+			<h3>L'impact du projet</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet a apporté de nombreux avantages à court terme et à long terme pour l’entreprise de notre commanditaire. Tout d’abord, ce dernier lui a permis de disposer d’un outil de benchmark fiable et précis afin de mesurer en détail les performances de son matériel. De plus, l’aspect supervision [insérer lien vers la compétence] de l’outil lui a donné une visibilité plus accrue de l’utilisation des ressources matérielles au sein de son parc informatique. Par conséquent, ces deux points ont généré un gain financier important en lui permettant d’identifier les composants les plus performants et ainsi optimiser ses dépenses.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Hormis le gain financier direct, l’objectif principal, fournir un outil permettant d’étudier la faisabilité d’une migration d’un environnement Linux vers un environnement Windows, a été accompli avec succès. Par conséquent, cela permettra au commanditaire de réaliser des benchmarks précis et d’estimer, à l’avance, le gain ou la perte de performances selon les différents services qu’il propose et ainsi faciliter la migration de son parc.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, la génération d’un rapport au format Excel lui permet de présenter une première base à ses clients et de les aiguiller dans le choix d’un environnement Linux ou Windows selon les performances désirées. Ce qui lui donne un avantage compétitif considérable.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Au final, la réalisation de ce projet a apporté un gain financier et de temps en permettant d’avoir une plus nette visibilité de son parc et d’évaluer les performances de ses machines tout en renforçant la compétitivité de son offre en migrant ses services d’un environnement Linux à Windows plus aisément. 
+			</p>
+		</section>
+
+
+
+
+
+
+<!-- VI. UN RETOUR SUR EXPERIENCE -->
+		<section>
+			<h3>Un retour sur expérience</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Ce projet de développement n’a pas profité qu’à notre commanditaire. Le développement d’un outil de benchmark m’a également permis d’acquérir de nombreuses compétences techniques et transverses.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Tout d’abord, j’ai pu approfondir mes connaissances en programmation Python [insérer lien vers la compétence], notamment en découvrant la librairie multiprocessing qui permet, non seulement, de paralléliser des tâches en les faisant fonctionner sur plusieurs processeurs et utiliser efficacement l’ensemble du processeur, mais également afin d’améliorer les performances d’un programme. Effectivement, bien que dans le cadre du projet, nous n’ayons utilisé la librairie que dans le but d’augmenter la charge du processeur, la librairie multiprocessing est également très utilisée dans le monde professionnel afin de faire fonctionner les scripts sur plusieurs cœurs et ainsi réduire leur temps d’exécution, ce qui résulte en un gain de performance important.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Par ailleurs, j’ai aussi pu apprendre à générer un Excel à l’aide d’un script en langage Batch et Bash [insérer lien vers la compétence]. Au même titre que l’utilisation de la librairie multiprocessing, la génération de fichier Excel à l’aide de script est, presque, un incontournable dans le monde professionnel. En effet, si les scripts sont un bon moyen d’automatiser des tâches, il est par ailleurs très important d’obtenir un rapport à la fin du script afin de s’assurer de la bonne exécution de ce dernier, et il se trouve que la génération de tableaux est la façon la plus simple de réaliser cette tâche.
+			</p>
+				</br>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, j’ai pu mettre en pratique un certain nombre de connaissances transverses. Ayant été chef de projet pour l’équipe, j’ai pu améliorer mon rôle de chef de projet, mes compétences de gestion de projet ainsi que ma communication. Cela s’est principalement fait par un contact très régulier avec le commanditaire et la transmission des informations aux membres de l’équipe.
+			</p>
+				&nbsp;&nbsp;&nbsp;&nbsp;De plus, la vulgarisation a été une compétence assez importante lors de ce projet. Bien que notre commanditaire ait des compétences techniques très avancées, son domaine d’expertise n’était pas entièrement similaire au nôtre. Il était donc très intéressant d’adapter notre niveau de vulgarisation à quelqu’un ayant des compétences en informatique, mais dans un domaine différent du nôtre.
+			</p>
+				</br>
+			</p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Au final, ce projet m'a apporté un bagage technique et humain solide, qui m’est aujourd’hui très précieux et l’est encore plus pour la suite de mon parcours.
+			</p>
+		</section>
+
+<!-- VII. UN RETOUR SUR EXPERIENCE -->
+		<section>
+			<h3>Bilan du projet</h3>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Bien que les apports pour les différents acteurs de ce projet soient positifs, le projet ne s’est pas déroulé sans quelques soucis. Dû à un manque de communication entre notre équipe et le commanditaire, nous avons, au début, mal compris l’objectif du projet et pensions que nous allions nous occuper d’étudier la procédure de migration du parc. Ce quiproquo a ainsi résulté en une perte d’environ une semaine de travail. Bien heureusement, j’ai pu rectifier le tir en planifiant une réunion avec notre commanditaire pour délimiter plus précisément le but du projet. Toutefois, même si les dégâts ont été moindres, je me suis rendu compte, à ce moment-là, que la communication et la planification lors d’un projet étaient des bases cruciales pour s’assurer du bon déroulement d’un projet.
+			</p>
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Suite à cela, j’ai augmenté la fréquence à laquelle les réunions avaient lieu afin d’éviter à notre équipe de dévier des attentes finales de notre commanditaire.
+			</p>
+			
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Par ailleurs, étant déjà familier et ayant étudié les principaux outils de benchmark présents sur le marché pour mon usage personnel, j’avais déjà connaissance de leur fonctionnement interne. Ces connaissances m’ont permis d’avoir une meilleure vue d’ensemble sur la charge de travail à réaliser et de mieux planifier la suite du projet. De plus, j’ai pu faire part de ces connaissances aux membres de mon équipe afin que chacun ait une compréhension du fonctionnement des outils et soit capable de reproduire leur fonctionnement à l’aide de scripts, ce qui nous a donnés un coup d’avance et nous a permis de rapidement rattraper notre retard.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;En conclusion, ce projet a été un réel succès, autant par le développement de l’outil en lui-même que par l’apport que l’entreprise a pu recevoir. De plus, j’ai acquis de nombreuses qui me sont aujourd’hui très utiles et que je n’aurais peut-être pas pu acquérir sans la réalisation de ce projet. Pour cette raison, j’estime être fier du projet que mon équipe et moi avons réalisé durant ces six mois et de la confiance que notre commanditaire nous a accordée tout au long de cette mission.
+			</p>
+		</section>
+
+
+
+<section class="related-skills">
+    <h3>Compétences liées</h3>
+    <div class="mini-cards-container">
+        <a href="bash.html" class="mini-card technique">
+            <img src="../assets/img/bash-logo.png" alt="bash" class="mini-card-icon">
+            <span>Langage Bash</span>
+        </a>
+        <a href="python.html" class="mini-card technique">
+            <img src="../assets/img/python-logo.png" alt="python" class="mini-card-icon">
+            <span>Langage Python</span>
+        </a>
+        <a href="supervision.html" class="mini-card technique">
+            <img src="../assets/img/supervision-logo.png" alt="supervision" class="mini-card-icon">
+            <span>Supervision</span>
+        </a>
+		<a href="git.html" class="mini-card technique">
+            <img src="../assets/img/git-logo.png" alt="git" class="mini-card-icon">
+            <span>Git</span>
+        </a>
+        <a href="communication-virale.html" class="mini-card humaine">
+            <img src="../assets/img/communication-virale-logo.png" alt="communication-virale" class="mini-card-icon">
+            <span>Communication virale</span>
+        </a>
+    </div>
+</section>
+
+	</main>
+
+	<footer>
+		<p class="footer-name">Prénom Nom</p>
+		<p>&copy; 2025 Prénom Nom. Tous droits réservés.</p>
+	</footer>
+
+</body>
+</html>
