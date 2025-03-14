@@ -9,6 +9,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
 	<script>
+		// block user-agent from bots
+		(function()
+		{
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+			{
+				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+			}
+		})();
+
 		// block developper console to avoid bots
 		document.addEventListener('DOMContentLoaded', function()
 		{

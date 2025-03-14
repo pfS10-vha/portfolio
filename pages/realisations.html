@@ -3,29 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Prénom Nom - Réalisations</title>
+	<title>Portfolio</title>
 	<link rel="stylesheet" href="../assets/css/styles.css">
 	<script>
+		// block user-agent from bots
+		(function()
+		{
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+			{
+				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+			}
+		})();
+
 		// block developper console to avoid bots
-		<!-- document.addEventListener('DOMContentLoaded', function() -->
-		<!-- { -->
-			<!-- document.addEventListener('contextmenu', function(e) -->
-			<!-- { -->
-				<!-- e.preventDefault(); -->
-			<!-- }); -->
-			<!-- document.addEventListener('keydown', function(e) -->
-			<!-- { -->
-				<!-- if (e.which === 123 || -->
-				<!-- (e.ctrlKey && e.shiftKey && e.which === 73) || -->
-				<!-- (e.ctrlKey && e.shiftKey && e.which === 74) || -->
-				<!-- (e.ctrlKey && e.which === 85) -->
-				<!-- ) -->
-				<!-- { -->
-					<!-- e.preventDefault(); -->
-					<!-- return false; -->
-				<!-- } -->
-			<!-- }); -->
-		<!-- }); -->
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			document.addEventListener('contextmenu', function(e)
+			{
+				e.preventDefault();
+			});
+			document.addEventListener('keydown', function(e)
+			{
+				if (e.which === 123 ||
+				(e.ctrlKey && e.shiftKey && e.which === 73) ||
+				(e.ctrlKey && e.shiftKey && e.which === 74) ||
+				(e.ctrlKey && e.which === 85)
+				)
+				{
+					e.preventDefault();
+					return false;
+				}
+			});
+		});
 	</script>
 </head>
 
