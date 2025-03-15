@@ -1,143 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
+
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	<main>
+		<h1>Mes Réalisations</h1>
+		
+		<div class="realisations-container">
+			<div class="realisation-card">
+				<img src="../assets/img/autopen.png" alt="Autopen">
+				<h3>Autopen</h3>
+				<p>Autopen est projet visant à générer un inventaire journalier des serveurs d'un parc informatique</p>
+				<a href="autopen.html" class="btn-details">Plus de détails</a>
 			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-    <main>
-        <h1>Mes Réalisations</h1>
-        
-        <div class="realisations-container">
-            <div class="realisation-card">
-                <img src="../assets/img/winperf.png" alt="WinPerf">
-                <h3>WinPerf</h3>
-                <p>WinPerf est un outil permettant de mesurer les performances de virtualisation Docker d'un serveur</p>
-                <a href="winperf.html" class="btn-details">Plus de détails</a>
-            </div>
-            
-            <div class="realisation-card">
-                <img src="../assets/img/pentech.png" alt="Pentech">
-                <h3>Pentech</h3>
-                <p>Pentech est une compétition de cybersécurité visant à sensibiliser aux dangers de l'Internet</p>
-                <a href="pentech.html" class="btn-details">Plus de détails</a>
-            </div>
-            
-            <div class="realisation-card">
-                <img src="../assets/img/datahealth.png" alt="DataHealth">
-                <h3>DataHealth</h3>
-                <p>DataHealth est un projet visant à mettre en place la supervision interne dans un établissement public</p>
-                <a href="datahealth.html" class="btn-details">Plus de détails</a>
-            </div>
-            
-            <div class="realisation-card">
-                <img src="../assets/img/wixlearn.png" alt="WixLearn">
-                <h3>WixLearn</h3>
-                <p>WixLearn est une action de formation visant à enseigner l'utilisation de l'outil de création de site Wix.</p>
-                <a href="wixlearn.html" class="btn-details">Plus de détails</a>
-            </div>
-            
-            <div class="realisation-card">
-                <img src="../assets/img/autopen.png" alt="Autopen">
-                <h3>Autopen</h3>
-                <p>Autopen est projet visant à générer un inventaire journalier des serveurs d'un parc informatique</p>
-                <a href="autopen.html" class="btn-details">Plus de détails</a>
-            </div>
-        </div>
-    </main>
+			<div class="realisation-card">
+				<img src="../assets/img/datahealth.png" alt="DataHealth">
+				<h3>DataHealth</h3>
+				<p>DataHealth est un projet visant à mettre en place la supervision interne dans un établissement public</p>
+				<a href="datahealth.html" class="btn-details">Plus de détails</a>
+			</div>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+			<div class="realisation-card">
+				<img src="../assets/img/pentech.png" alt="Pentech">
+				<h3>Pentech</h3>
+				<p>Pentech est une compétition de cybersécurité visant à sensibiliser aux dangers de l'Internet</p>
+				<a href="pentech.html" class="btn-details">Plus de détails</a>
+			</div>
+
+			<div class="realisation-card">
+				<img src="../assets/img/winperf.png" alt="WinPerf">
+				<h3>WinPerf</h3>
+				<p>WinPerf est un outil permettant de mesurer les performances de virtualisation Docker d'un serveur</p>
+				<a href="winperf.html" class="btn-details">Plus de détails</a>
+			</div>
+			
+			<div class="realisation-card">
+				<img src="../assets/img/wixlearn.png" alt="WixLearn">
+				<h3>WixLearn</h3>
+				<p>WixLearn est une action de formation visant à enseigner l'utilisation de l'outil de création de site Wix.</p>
+				<a href="wixlearn.html" class="btn-details">Plus de détails</a>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

@@ -1,134 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-    <main>
- <h2>Compétence Technique 3 : Supervision Informatique</h2>
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	<main>
+ <h2>Compétence Technique - Supervision</h2>
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;La supervision informatique comprend la mise en place, la configuration et la maintenance d'une solution, le plus souvent logicielle, d'un système permettant de superviser l'ensemble du parc informatique. Cela peut aller de simplement vérifier l'espace disque d'une machine à vérifier si une page internet est accessible ou encore mesurer le taux de disponibilité d'un serveur. C'est une compétence que n'importe quel administrateur système doit avoir pour gérer un parc informatique et afin de détecter, être alerté et réagir rapidement en cas d'incident, ainsi que pour s'assurer que l'on respecte le taux de disponibilité prévu au contrat lorsque l'on est prestataire de services.</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;La supervision informatique comprend la mise en place, la configuration et la maintenance d'une solution, le plus souvent logicielle, d'un système permettant de superviser l'ensemble du parc informatique. Cela peut aller de simplement vérifier l'espace disque d'une machine à vérifier si une page internet est accessible ou encore mesurer le taux de disponibilité d'un serveur. C'est une compétence que n'importe quel administrateur système doit avoir pour gérer un parc informatique et afin de détecter, être alerté et réagir rapidement en cas d'incident, ainsi que pour s'assurer que l'on respecte le taux de disponibilité prévu au contrat lorsque l'on est prestataire de services.</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Dans le cours de ma troisième année d'étude, nous avons été contactés par un établissement du secteur public afin de mettre en place des sondes de supervision à l'aide de l'outil Eyes of Network (EON). L'outil avait déjà été mis en place auparavant, mais avait été délaissé par manque de temps pour réaliser la mise en place de sondes. Par conséquent, l'objectif d'un tel projet était de redonner une visibilité sur l'entièreté du parc, et notamment sur les équipements critiques. Cela permettra également de faire de la détection préventive de pannes afin d'agir avant qu'un problème n'arrive. Nous avons donc réalisé plusieurs scripts permettant de superviser les équipements du parc et d'obtenir différentes statistiques. Ces scripts ont permis de mettre en place les sondes et de superviser l'environnement. Cela leur permet aujourd'hui d'être alertés lorsqu'une panne est sur le point de se produire et ainsi d'éviter d'avoir à agir en urgence. Mais cela permet aussi une meilleure gestion du parc, d'avoir un historique en cas d'incident et de gagner du temps plutôt que d'avoir à réaliser une supervision manuelle.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Dans le cours de ma troisième année d'étude, nous avons été contactés par un établissement du secteur public afin de mettre en place des sondes de supervision à l'aide de l'outil Eyes of Network (EON). L'outil avait déjà été mis en place auparavant, mais avait été délaissé par manque de temps pour réaliser la mise en place de sondes. Par conséquent, l'objectif d'un tel projet était de redonner une visibilité sur l'entièreté du parc, et notamment sur les équipements critiques. Cela permettra également de faire de la détection préventive de pannes afin d'agir avant qu'un problème n'arrive. Nous avons donc réalisé plusieurs scripts permettant de superviser les équipements du parc et d'obtenir différentes statistiques. Ces scripts ont permis de mettre en place les sondes et de superviser l'environnement. Cela leur permet aujourd'hui d'être alertés lorsqu'une panne est sur le point de se produire et ainsi d'éviter d'avoir à agir en urgence. Mais cela permet aussi une meilleure gestion du parc, d'avoir un historique en cas d'incident et de gagner du temps plutôt que d'avoir à réaliser une supervision manuelle.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère avoir un plutôt bon niveau en ce qui concerne la supervision informatique. Je suis capable de mettre en place un système de supervision, de le configurer, d'ajouter des sondes et ai également une bonne compréhension générale du fonctionnement d'un système de supervision. Toutefois, je n'ai que mis en place des systèmes de supervision dans des parcs de 50 à 200 équipements et ce, manuellement. Il faudrait donc que j'apprenne à automatiser le processus au cas où je sois face à un parc informatique de plusieurs milliers de machines.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Je pense que la compétence de supervision devient de plus en plus importante proportionnellement à la taille du parc informatique auquel on est face, ce qui la rend selon moi essentielle. Le seul cas où je vois cette compétence être un peu moins utile serait dans le cas d'une start-up qui ne prévoit pas de s'étendre, ce qui me semble assez peu commun. Par conséquent, je recommande vivement la maîtrise de cette compétence qui va faire gagner du temps à l'ensemble de l'équipe en automatisant la supervision, mais qui va aussi permettre de réduire le taux d'incident.</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère avoir un plutôt bon niveau en ce qui concerne la supervision informatique. Je suis capable de mettre en place un système de supervision, de le configurer, d'ajouter des sondes et ai également une bonne compréhension générale du fonctionnement d'un système de supervision. Toutefois, je n'ai que mis en place des systèmes de supervision dans des parcs de 50 à 200 équipements et ce, manuellement. Il faudrait donc que j'apprenne à automatiser le processus au cas où je sois face à un parc informatique de plusieurs milliers de machines.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Je pense que la compétence de supervision devient de plus en plus importante proportionnellement à la taille du parc informatique auquel on est face, ce qui la rend selon moi essentielle. Le seul cas où je vois cette compétence être un peu moins utile serait dans le cas d'une start-up qui ne prévoit pas de s'étendre, ce qui me semble assez peu commun. Par conséquent, je recommande vivement la maîtrise de cette compétence qui va faire gagner du temps à l'ensemble de l'équipe en automatisant la supervision, mais qui va aussi permettre de réduire le taux d'incident.</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;En termes d'évolution, j'aimerais apprendre à maîtriser d'autres systèmes de supervision. En effet, il existe un grand nombre de systèmes de supervision similaires à Eyes of Network tels que Centreon ou Zabbix et que je souhaiterais être capable de maîtriser pleinement. Par ailleurs, j'aimerais atteindre un réel niveau d'expert en supervision et être capable d'automatiser la mise en place et la configuration d'un système de supervision de A à Z dans un parc informatique d'une envergure plus grande que ce à quoi j'ai pu faire face jusqu'à présent. Cela me permettra d'être capable de gérer de plus grandes infrastructures informatiques et de m'assurer de superviser l'ensemble du parc et pas seulement que quelques machines en minimisant l'erreur humaine. À cet effet, j'ai prévu de me former à l'outil Zabbix qui est l'un des outils de supervision les plus prisés dans le monde professionnel.</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;En termes d'évolution, j'aimerais apprendre à maîtriser d'autres systèmes de supervision. En effet, il existe un grand nombre de systèmes de supervision similaires à Eyes of Network tels que Centreon ou Zabbix et que je souhaiterais être capable de maîtriser pleinement. Par ailleurs, j'aimerais atteindre un réel niveau d'expert en supervision et être capable d'automatiser la mise en place et la configuration d'un système de supervision de A à Z dans un parc informatique d'une envergure plus grande que ce à quoi j'ai pu faire face jusqu'à présent. Cela me permettra d'être capable de gérer de plus grandes infrastructures informatiques et de m'assurer de superviser l'ensemble du parc et pas seulement que quelques machines en minimisant l'erreur humaine. À cet effet, j'ai prévu de me former à l'outil Zabbix qui est l'un des outils de supervision les plus prisés dans le monde professionnel.</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="datahealth.html" class="mini-project">
+            <img src="../assets/img/datahealth.png" alt="DataHealth" class="mini-project-icon">
+            <span>DataHealth</span>
+        </a>
+        <a href="winperf.html" class="mini-project">
+            <img src="../assets/img/winperf.png" alt="WinPerf" class="mini-project-icon">
+            <span>WinPerf</span>
+        </a>
+    </div>
 </section>
-    </main>
+	</main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

@@ -1,134 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-    <main>
-<h2>Compétence Technique 6 : PHP</h2>
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	<main>
+<h2>Compétence Technique - PHP</h2>
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;PHP est un langage de programmation web. Il permet d'afficher du contenu sur une page web de façon dynamique, c'est-à-dire en fonction de certains paramètres tels que le langage du navigateur de la personne visitant le site ou du compte auquel elle est connectée. Par ailleurs, PHP est aussi utilisé pour réaliser des formulaires de contact ou pour filtrer des produits par couleur sur un site de vente par exemple. C'est un langage quasi omniprésent dans le monde professionnel, et bien qu'il soit souvent prisé des développeurs web, il peut également s'avérer utile pour un administrateur système lorsqu'il veut afficher des données qui changent régulièrement, telles que des métriques de supervision[1][2].</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;PHP est un langage de programmation web. Il permet d'afficher du contenu sur une page web de façon dynamique, c'est-à-dire en fonction de certains paramètres tels que le langage du navigateur de la personne visitant le site ou du compte auquel elle est connectée. Par ailleurs, PHP est aussi utilisé pour réaliser des formulaires de contact ou pour filtrer des produits par couleur sur un site de vente par exemple. C'est un langage quasi omniprésent dans le monde professionnel, et bien qu'il soit souvent prisé des développeurs web, il peut également s'avérer utile pour un administrateur système lorsqu'il veut afficher des données qui changent régulièrement, telles que des métriques de supervision[1][2].</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Dans le cadre de mon alternance par exemple, nous avions un inventaire des serveurs mis à jour manuellement. Étant manuellement mis à jour, lorsque nous le consultions, il arrivait que des données soient manquantes ou incorrectes, ce qui le rendait peu fiable, voire inutile. J'ai donc entamé la réalisation d'un projet d'inventaire automatisé. Pour cela, j'ai réalisé un script Python afin de récupérer les informations et de les stocker dans une base de données SQL. Dès lors cette partie terminée, j'ai commencé le développement d'un petit site web interne qui appelait cette base de données, traitait les informations et les affichait sous forme de tableau avec une barre de recherche. Ce site web interne est peu à peu devenu un « hub » où sont recensées diverses informations telles que la liste des attaquants bannis sur nos serveurs ou encore, la liste des serveurs nécessitant une mise à jour. Grâce à PHP, j'ai donc pu afficher des données statistiques en temps réel et réaliser mon objectif principal qui était d'obtenir un inventaire automatique de nos serveurs[3]. Aujourd'hui, ce site web nous fait gagner du temps en centralisant les statistiques récupérées par nos scripts et en évitant l'erreur humaine lors de la mise à jour des données.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Dans le cadre de mon alternance par exemple, nous avions un inventaire des serveurs mis à jour manuellement. Étant manuellement mis à jour, lorsque nous le consultions, il arrivait que des données soient manquantes ou incorrectes, ce qui le rendait peu fiable, voire inutile. J'ai donc entamé la réalisation d'un projet d'inventaire automatisé. Pour cela, j'ai réalisé un script Python afin de récupérer les informations et de les stocker dans une base de données SQL. Dès lors cette partie terminée, j'ai commencé le développement d'un petit site web interne qui appelait cette base de données, traitait les informations et les affichait sous forme de tableau avec une barre de recherche. Ce site web interne est peu à peu devenu un « hub » où sont recensées diverses informations telles que la liste des attaquants bannis sur nos serveurs ou encore, la liste des serveurs nécessitant une mise à jour. Grâce à PHP, j'ai donc pu afficher des données statistiques en temps réel et réaliser mon objectif principal qui était d'obtenir un inventaire automatique de nos serveurs[3]. Aujourd'hui, ce site web nous fait gagner du temps en centralisant les statistiques récupérées par nos scripts et en évitant l'erreur humaine lors de la mise à jour des données.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère mon niveau actuel en PHP comme intermédiaire. En effet, je suis capable de créer des petits sites web permettant d'afficher des données issues d'une base de données SQL ou de fichiers texte. Toutefois, de la même manière que pour le langage HTML, il faut que je m'intéresse aux notions de sécurité web et que j'apprenne à réaliser un portail de connexion pour sécuriser un minimum l'accès à ces données[4].</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, je conseille la maîtrise du langage PHP, puisque c'est un langage plutôt simple d'apprentissage permettant d'afficher des données qui changent régulièrement. C'est donc un atout dans la vie d'un administrateur et ce langage me permet de développer des applications web sur-mesure en fonction de nos besoins[5].</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère mon niveau actuel en PHP comme intermédiaire. En effet, je suis capable de créer des petits sites web permettant d'afficher des données issues d'une base de données SQL ou de fichiers texte. Toutefois, de la même manière que pour le langage HTML, il faut que je m'intéresse aux notions de sécurité web et que j'apprenne à réaliser un portail de connexion pour sécuriser un minimum l'accès à ces données[4].</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, je conseille la maîtrise du langage PHP, puisque c'est un langage plutôt simple d'apprentissage permettant d'afficher des données qui changent régulièrement. C'est donc un atout dans la vie d'un administrateur et ce langage me permet de développer des applications web sur-mesure en fonction de nos besoins[5].</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Pour progresser dans cette compétence, je souhaiterais approfondir mes connaissances en termes de sécurité web et ainsi être capable de réaliser un portail de connexion pour protéger l'accès aux données. Par la suite, j'aimerais m'intéresser à l'optimisation des performances PHP, puisque je vais peu à peu être amené à traiter un grand nombre de données et il ne faudrait pas que mes sites web prennent plusieurs dizaines de secondes à charger les pages. En maitrisant ces deux domaines, j'enrichirai mes connaissances en sécurité web et serai capable de réaliser des pages web avec des données plus complexes. Afin d'atteindre ce niveau de maîtrise, je vais suivre deux formations, l'une sur la façon d'écrire un code sécurisé en PHP ainsi qu'une autre formation plus spécifiquement sur l'optimisation PHP[6].</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Pour progresser dans cette compétence, je souhaiterais approfondir mes connaissances en termes de sécurité web et ainsi être capable de réaliser un portail de connexion pour protéger l'accès aux données. Par la suite, j'aimerais m'intéresser à l'optimisation des performances PHP, puisque je vais peu à peu être amené à traiter un grand nombre de données et il ne faudrait pas que mes sites web prennent plusieurs dizaines de secondes à charger les pages. En maitrisant ces deux domaines, j'enrichirai mes connaissances en sécurité web et serai capable de réaliser des pages web avec des données plus complexes. Afin d'atteindre ce niveau de maîtrise, je vais suivre deux formations, l'une sur la façon d'écrire un code sécurisé en PHP ainsi qu'une autre formation plus spécifiquement sur l'optimisation PHP[6].</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="autopen.html" class="mini-project">
+            <img src="../assets/img/autopen.png" alt="Autopen" class="mini-project-icon">
+            <span>Autopen</span>
+        </a>
+        <a href="datahealth.html" class="mini-project">
+            <img src="../assets/img/datahealth.png" alt="Datahealth" class="mini-project-icon">
+            <span>Datahealth</span>
+        </a>
+    </div>
 </section>
-    </main>
+	</main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

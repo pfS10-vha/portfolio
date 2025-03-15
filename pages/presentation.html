@@ -1,141 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-    <main>
-        <h1>Présentation</h1>
-        
-        <section>
-            <h2>Mon parcours</h2>
-            <p>Passionné d'informatique depuis mon plus jeune âge, je me suis progressivement tourné vers la sécurité des systèmes d'information, un domaine qui me passionne. J'ai été amené à développer plusieurs compétences allant du développement de petits outils d'automatisation à la gestion des réseaux et enfin la cybersécurité. Cette passion m'a amené à me tourner vers l'informatique. À l'heure actuelle, je suis en fin de première année d'alternance [à changer pour le portfolio final] au sein de l'entreprise SEI LKS en tant que responsable cybersécurité.</p>
-            <p>Ce qui me plaît tout particulièrement en informatique c'est la résolution de problèmes, le fait de pouvoir protéger le parc informatique et surtout l'automatisation de tâches. C'est avec cette motivation que j'arrive à m'améliorer et à approfondir mes connaissances dans le domaine de la cybersécurité.</p>
-        </section>
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
 
-        <section>
-            <h2>Mes valeurs</h2>
-            <h3>La confiance</h3>
-            <p>La confiance, en premier lieu, est, que ce soit en amitié, en amour, ou au travail, une valeur que je considère comme primordiale dans une relation. Le degré de confiance va varier d'une personne à une autre, certaines personnes vont très facilement faire confiance aux autres, d'autres vont être plus méfiantes, c'est, d'après moi, un facteur qui va complètement changer la façon dont on parle à quelqu'un et notre proximité avec les gens. Sur le plan professionnel, il est très important de faire confiance aux membres de son équipe, cela favorise l'échange de connaissances et permet de consolider l'esprit d'équipe.</p>
-            
-            <h3>La bienveillance et la tolérance</h3>
-            <p>Deux autres valeurs qui me semblent très importantes sont la bienveillance et la tolérance. Tout le monde a un niveau professionnel et des domaines de spécialisation différents, par conséquent, n'importe qui est voué à commettre des erreurs. C'est quelque chose que je trouve tout particulièrement important dans le contexte d'une équipe. Lorsque l'on fait une erreur, il est toujours plus appréciable qu'elle nous soit expliquée plutôt que reprochée, et c'est d'ailleurs une valeur que j'essaie d'appliquer au mieux au quotidien lorsque j'explique quelque chose à quelqu'un. Cela permet à la personne d'apprendre plus efficacement et favorise la confiance qui est, comme dit précédemment, la valeur à laquelle j'accorde le plus d'importance.</p>
-        </section>
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
 
-        <section>
-            <h2>Mes qualités</h2>
-            <h3>Rigueur</h3>
-            <p>Lors d'un projet, ou même dans la vie de tous les jours, j'aime bien pouvoir planifier chacune des tâches à réaliser à l'avance et m'y tenir. C'est quelque chose que je fais constamment, que ce soit lors d'un projet. À titre d'exemple, lors de mon stage de 6 mois que j'ai récemment réalisé, il m'avait été confié une multitude de tâches dans le but, d'à la fois, évaluer mes compétences, mais également afin de monter en compétences. Afin de réaliser ces différents objectifs, j'ai pris l'initiative de les organiser par ordre d'importance et d'estimer le temps de travail nécessaire à chacune des tâches. Cela m'a permis de me fixer des délais et de rendre compte de mon travail.</p>
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 
-            <h3>Autonomie</h3>
-            <p>L'automatisation de tâches étant un élément que j'affectionne tout particulièrement en informatique, j'ai très souvent été amené à réaliser des scripts ou des mini projets afin d'automatiser des actions que je réalisais régulièrement. J'ai ainsi pris l'habitude de me documenter par moi-même et ai ainsi acquis une certaine autonomie concernant mon travail, ce qui m'a permis de réaliser divers projets, autant sur le plan professionnel que personnel.</p>
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
 
-            <h3>Persévérance</h3>
-            <p>Certains projets sont parfois très compliqués, que ce soit les objectifs du client qui peuvent paraître inatteignables, un projet sans presque aucune directive ou "tout simplement" un débogage à réaliser, tous nécessitent de ne pas abandonner. Dans les métiers de l'informatique, ce sont des difficultés que l'on rencontre tous les jours et qu'il faut savoir surmonter. C'est d'ailleurs pour ça que j'ai appris à ne pas baisser les bras facilement.</p>
-        </section>
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-        <section>
-            <h2>Mes centres d'intérêt</h2>
-            <h3>L'informatique</h3>
-            <p>Bien que j'aie voulu mettre le travail de côté en parlant de mes centres d'intérêts, il faut reconnaître que, même si cela peut paraître un peu cliché, l'informatique me passionne. C'est mon projet professionnel et aussi une passion que je cultive sur le plan personnel. Toutefois, dire que je suis passionné d'informatique en général reste une description un peu vague, je parlerais plutôt d'une passion pour 3 domaines en particulier : l'automatisation, la sécurité et la protection de la vie privée dans le monde de l'informatique.</p>
+	<main>
+		<h1>Présentation</h1>
+		
+		<section class="special">
+			<h2>Mon parcours</h2>
+			<p>Passionné d'informatique depuis mon plus jeune âge, je me suis progressivement tourné vers la sécurité des systèmes d'information, un domaine qui me passionne. J'ai été amené à développer plusieurs compétences allant du développement de petits outils d'automatisation à la gestion des réseaux et enfin la cybersécurité. Cette passion m'a amené à me tourner vers l'informatique. À l'heure actuelle, je suis en fin de première année d'alternance [à changer pour le portfolio final] au sein de l'entreprise SEI LKS en tant que responsable cybersécurité.</p>
+			<p>Ce qui me plaît tout particulièrement en informatique c'est la résolution de problèmes, le fait de pouvoir protéger le parc informatique et surtout l'automatisation de tâches. C'est avec cette motivation que j'arrive à m'améliorer et à approfondir mes connaissances dans le domaine de la cybersécurité.</p>
+		</section>
 
-            <h3>La culture japonaise</h3>
-            <p>Un autre domaine auquel je m'intéresse fortement concerne la culture japonaise et plus particulièrement les animés japonais et les manga. C'est une culture que j'affectionne depuis 2017 et que je vis au quotidien par les médias que je consomme. En effet, lorsque j'ai du temps libre, j'aime lire un manga, regarder un ou deux épisodes d'un animé japonais et parfois regarder des vidéos sur la culture japonaise et leurs coutumes.</p>
-        </section>
-    </main>
+		<section class="special">
+			<h2>Mes valeurs</h2>
+			<h3>La confiance</h3>
+			<p>La confiance, en premier lieu, est, que ce soit en amitié, en amour, ou au travail, une valeur que je considère comme primordiale dans une relation. Le degré de confiance va varier d'une personne à une autre, certaines personnes vont très facilement faire confiance aux autres, d'autres vont être plus méfiantes, c'est, d'après moi, un facteur qui va complètement changer la façon dont on parle à quelqu'un et notre proximité avec les gens. Sur le plan professionnel, il est très important de faire confiance aux membres de son équipe, cela favorise l'échange de connaissances et permet de consolider l'esprit d'équipe.</p>
+			
+			<h3>La bienveillance et la tolérance</h3>
+			<p>Deux autres valeurs qui me semblent très importantes sont la bienveillance et la tolérance. Tout le monde a un niveau professionnel et des domaines de spécialisation différents, par conséquent, n'importe qui est voué à commettre des erreurs. C'est quelque chose que je trouve tout particulièrement important dans le contexte d'une équipe. Lorsque l'on fait une erreur, il est toujours plus appréciable qu'elle nous soit expliquée plutôt que reprochée, et c'est d'ailleurs une valeur que j'essaie d'appliquer au mieux au quotidien lorsque j'explique quelque chose à quelqu'un. Cela permet à la personne d'apprendre plus efficacement et favorise la confiance qui est, comme dit précédemment, la valeur à laquelle j'accorde le plus d'importance.</p>
+		</section>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+		<section class="special">
+			<h2>Mes qualités</h2>
+			<h3>Rigueur</h3>
+			<p>Lors d'un projet, ou même dans la vie de tous les jours, j'aime bien pouvoir planifier chacune des tâches à réaliser à l'avance et m'y tenir. C'est quelque chose que je fais constamment, que ce soit lors d'un projet. À titre d'exemple, lors de mon stage de 6 mois que j'ai récemment réalisé, il m'avait été confié une multitude de tâches dans le but, d'à la fois, évaluer mes compétences, mais également afin de monter en compétences. Afin de réaliser ces différents objectifs, j'ai pris l'initiative de les organiser par ordre d'importance et d'estimer le temps de travail nécessaire à chacune des tâches. Cela m'a permis de me fixer des délais et de rendre compte de mon travail.</p>
+
+			<h3>Autonomie</h3>
+			<p>L'automatisation de tâches étant un élément que j'affectionne tout particulièrement en informatique, j'ai très souvent été amené à réaliser des scripts ou des mini projets afin d'automatiser des actions que je réalisais régulièrement. J'ai ainsi pris l'habitude de me documenter par moi-même et ai ainsi acquis une certaine autonomie concernant mon travail, ce qui m'a permis de réaliser divers projets, autant sur le plan professionnel que personnel.</p>
+
+			<h3>Persévérance</h3>
+			<p>Certains projets sont parfois très compliqués, que ce soit les objectifs du client qui peuvent paraître inatteignables, un projet sans presque aucune directive ou "tout simplement" un débogage à réaliser, tous nécessitent de ne pas abandonner. Dans les métiers de l'informatique, ce sont des difficultés que l'on rencontre tous les jours et qu'il faut savoir surmonter. C'est d'ailleurs pour ça que j'ai appris à ne pas baisser les bras facilement.</p>
+		</section>
+
+		<section class="special">
+			<h2>Mes centres d'intérêt</h2>
+			<h3>L'informatique</h3>
+			<p>Bien que j'aie voulu mettre le travail de côté en parlant de mes centres d'intérêts, il faut reconnaître que, même si cela peut paraître un peu cliché, l'informatique me passionne. C'est mon projet professionnel et aussi une passion que je cultive sur le plan personnel. Toutefois, dire que je suis passionné d'informatique en général reste une description un peu vague, je parlerais plutôt d'une passion pour 3 domaines en particulier : l'automatisation, la sécurité et la protection de la vie privée dans le monde de l'informatique.</p>
+
+			<h3>La culture japonaise</h3>
+			<p>Un autre domaine auquel je m'intéresse fortement concerne la culture japonaise et plus particulièrement les animés japonais et les manga. C'est une culture que j'affectionne depuis 2017 et que je vis au quotidien par les médias que je consomme. En effet, lorsque j'ai du temps libre, j'aime lire un manga, regarder un ou deux épisodes d'un animé japonais et parfois regarder des vidéos sur la culture japonaise et leurs coutumes.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 </body>
 </html>

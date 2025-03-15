@@ -1,137 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
+
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
 <main>
-<h2>Compétence Humaine 2 : Gestion de projet</h2>
+<h2>Compétence Humaine - Gestion de projet</h2>
 
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;La gestion de projet est le fait de coordonner les membres au sein d'une équipe, voire coordonner plusieurs équipes afin d'atteindre un ou plusieurs objectifs. Cela implique, un suivi régulier par le chef d'équipe, de la planification et généralement un livrable final attendu. C'est une compétence qui est plus que nécessaire pour un manager ou un chef de projet s'il veut que le projet soit mené à bien. Sans une bonne gestion de projet, le projet risque de ne jamais voir le jour. Dans le domaine informatique par exemple, une bonne gestion sera nécessaire pour coordonner les équipes d'infrastructures systèmes et réseaux, les développeurs ainsi que l'équipe cybersécurité.</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;La gestion de projet est le fait de coordonner les membres au sein d'une équipe, voire coordonner plusieurs équipes afin d'atteindre un ou plusieurs objectifs. Cela implique, un suivi régulier par le chef d'équipe, de la planification et généralement un livrable final attendu. C'est une compétence qui est plus que nécessaire pour un manager ou un chef de projet s'il veut que le projet soit mené à bien. Sans une bonne gestion de projet, le projet risque de ne jamais voir le jour. Dans le domaine informatique par exemple, une bonne gestion sera nécessaire pour coordonner les équipes d'infrastructures systèmes et réseaux, les développeurs ainsi que l'équipe cybersécurité.</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Lors d'un de mes projets scolaires, j'ai eu l'occasion d'être le Scrum Master de l'équipe et ainsi d'appliquer la méthodologie Agile. Le choix de ce type de méthodologie de projet avait pour but de répondre aux atteintes de notre commanditaire. Le projet étant important pour son entreprise, il lui fallait un retour régulier sur l'avancée de projet, des livraisons fréquentes afin de tester l'outil ainsi que, le projet se déroulant sur une courte durée, une communication fréquente avec l'équipe afin de nous faire part de nouvelles fonctionnalités qu'il pourrait être intéressant de rajouter. En clair, il fallait qu'il ait une bonne vue globale de l'avancée du projet et un contact régulier avec l'équipe. Pour satisfaire ces besoins, notre choix s'est porté sur la méthodologie agile grâce à laquelle nous avons rapidement établi un tableau des fonctionnalités demandées et avons défini à l'avance des dates de livraisons régulières. Étant Scrum Master du projet, c'est moi qui me suis occupé de planifier les réunions, de rendre compte de l'avancée ainsi que de faire correspondre le contenu des livraisons avec les attentes du commanditaire. Cette méthode de gestion de projet a eu pour effet de satisfaire toutes les attentes du commanditaire et de favoriser les relations entre l'équipe projet et ce dernier. Par conséquent, le produit attendu a pu être livré dans les délais imposés et avec des fonctionnalités supplémentaires.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Lors d'un de mes projets scolaires, j'ai eu l'occasion d'être le Scrum Master de l'équipe et ainsi d'appliquer la méthodologie Agile. Le choix de ce type de méthodologie de projet avait pour but de répondre aux atteintes de notre commanditaire. Le projet étant important pour son entreprise, il lui fallait un retour régulier sur l'avancée de projet, des livraisons fréquentes afin de tester l'outil ainsi que, le projet se déroulant sur une courte durée, une communication fréquente avec l'équipe afin de nous faire part de nouvelles fonctionnalités qu'il pourrait être intéressant de rajouter. En clair, il fallait qu'il ait une bonne vue globale de l'avancée du projet et un contact régulier avec l'équipe. Pour satisfaire ces besoins, notre choix s'est porté sur la méthodologie agile grâce à laquelle nous avons rapidement établi un tableau des fonctionnalités demandées et avons défini à l'avance des dates de livraisons régulières. Étant Scrum Master du projet, c'est moi qui me suis occupé de planifier les réunions, de rendre compte de l'avancée ainsi que de faire correspondre le contenu des livraisons avec les attentes du commanditaire. Cette méthode de gestion de projet a eu pour effet de satisfaire toutes les attentes du commanditaire et de favoriser les relations entre l'équipe projet et ce dernier. Par conséquent, le produit attendu a pu être livré dans les délais imposés et avec des fonctionnalités supplémentaires.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Mon niveau actuel en gestion de projet est plutôt intermédiaire, car bien que j'ai pu mener à bien plusieurs projets dans le rôle de chef de projet, je n'ai mené que de petites équipes de 4 à 5 personnes. Par ailleurs, il ne m'est encore jamais arrivé d'avoir à gérer plusieurs équipes différentes telles qu'une équipe de développeurs, de techniciens réseaux et d'experts cybersécurité, par conséquent je ne peux pas encore prétendre avoir un niveau de maîtrise avancée dans cette compétence et c'est un point sur lequel je sais que j'ai encore une marge de progression. Toutefois, je suis conscient que la compétence de gestion de projet est essentielle pour quiconque souhaite gérer une équipe efficacement. On pourrait presque comparer la personne ayant le rôle de chef de projet à un mur porteur, il doit correctement jouer son rôle au risque de faire échouer le projet.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, je recommande vivement, au moins, de s'intéresser à la gestion de projet, puisqu'elle n'est pas utile qu'aux chefs de projet. En effet, même en étant simplement membre d'une équipe, il est extrêmement important de pouvoir comprendre les bases de la gestion de projet pour mieux comprendre le cycle de développement du projet et les décisions prises par le chef de projet. De plus, cela permet à chaque membre de s'impliquer davantage en prenant des initiatives et en estimant plus efficacement sa charge de travail et la durée de chacune de ses tâches, ce qui bénéficie grandement à l'ensemble du groupe et au projet en lui-même.</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Mon niveau actuel en gestion de projet est plutôt intermédiaire, car bien que j'ai pu mener à bien plusieurs projets dans le rôle de chef de projet, je n'ai mené que de petites équipes de 4 à 5 personnes. Par ailleurs, il ne m'est encore jamais arrivé d'avoir à gérer plusieurs équipes différentes telles qu'une équipe de développeurs, de techniciens réseaux et d'experts cybersécurité, par conséquent je ne peux pas encore prétendre avoir un niveau de maîtrise avancée dans cette compétence et c'est un point sur lequel je sais que j'ai encore une marge de progression. Toutefois, je suis conscient que la compétence de gestion de projet est essentielle pour quiconque souhaite gérer une équipe efficacement. On pourrait presque comparer la personne ayant le rôle de chef de projet à un mur porteur, il doit correctement jouer son rôle au risque de faire échouer le projet.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, je recommande vivement, au moins, de s'intéresser à la gestion de projet, puisqu'elle n'est pas utile qu'aux chefs de projet. En effet, même en étant simplement membre d'une équipe, il est extrêmement important de pouvoir comprendre les bases de la gestion de projet pour mieux comprendre le cycle de développement du projet et les décisions prises par le chef de projet. De plus, cela permet à chaque membre de s'impliquer davantage en prenant des initiatives et en estimant plus efficacement sa charge de travail et la durée de chacune de ses tâches, ce qui bénéficie grandement à l'ensemble du groupe et au projet en lui-même.</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Concernant mon évolution, bien que je sois satisfait de mon niveau de maîtrise actuel, je pense qu'il me serait bénéfique d'évoluer dans cette compétence, notamment sur la gestion d'équipes faisant partie de différents corps de métier au sein d'une entreprise. Cela me permettrait d'atteindre un niveau plus qu'intermédiaire et d'être capable de gérer des projets plus complexes et surtout de bout en bout. Pour ce faire, je prévois de m'intéresser au premier niveau et potentiellement au deuxième niveau d'une certification Scrum Master.</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Concernant mon évolution, bien que je sois satisfait de mon niveau de maîtrise actuel, je pense qu'il me serait bénéfique d'évoluer dans cette compétence, notamment sur la gestion d'équipes faisant partie de différents corps de métier au sein d'une entreprise. Cela me permettrait d'atteindre un niveau plus qu'intermédiaire et d'être capable de gérer des projets plus complexes et surtout de bout en bout. Pour ce faire, je prévois de m'intéresser au premier niveau et potentiellement au deuxième niveau d'une certification Scrum Master.</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="pentech.html" class="mini-project">
+            <img src="../assets/img/pentech.png" alt="Pentech" class="mini-project-icon">
+            <span>Pentech</span>
+        </a>
+        <a href="wixlearn.html" class="mini-project">
+            <img src="../assets/img/wixlearn.png" alt="WixLearn" class="mini-project-icon">
+            <span>WixLearn</span>
+        </a>
+    </div>
 </section>
 
 
 </main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

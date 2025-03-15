@@ -1,135 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-    <main>
-<h2>Compétence Technique 4 : Git</h2>
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	<main>
+<h2>Compétence Technique - Git</h2>
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Git est ce que l'on appelle un « système de contrôle de version », il va permettre à chaque développeur de travailler sur un même projet tout en gardant un historique des modifications apportées au code par chacun. Cela permet, en cas de suppression accidentelle de code, de revenir en arrière. C'est ce que l'on appelle le « versionning ». Il n'est toutefois pas seulement utilisé par les développeurs, il est également utile pour les administrateurs système afin de garder une trace de leurs scripts et documentations. Git est ainsi devenu un incontournable dans le monde professionnel afin de faciliter le travail en équipe.</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Git est ce que l'on appelle un « système de contrôle de version », il va permettre à chaque développeur de travailler sur un même projet tout en gardant un historique des modifications apportées au code par chacun. Cela permet, en cas de suppression accidentelle de code, de revenir en arrière. C'est ce que l'on appelle le « versionning ». Il n'est toutefois pas seulement utilisé par les développeurs, il est également utile pour les administrateurs système afin de garder une trace de leurs scripts et documentations. Git est ainsi devenu un incontournable dans le monde professionnel afin de faciliter le travail en équipe.</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Au cours de mes projets, j'ai essentiellement utilisé Git afin de partager des scripts et des fichiers de configuration avec mes collègues. Notamment dans le cadre d'un projet d'étude, nous avons très souvent tendances à réaliser des scripts qui sont par la suite exécutés sur différentes machines et il arrive parfois que nous nous retrouvions avec plusieurs versions différentes du script et que nous ne sachions pas laquelle est la dernière version fonctionnelle. Pour remédier à cela, j'ai mis en place une tâche journalière qui permet d'envoyer le script dans un répertoire Git lorsqu'il y a eu un changement et de récupérer la dernière version de ce même script sur la machine. Cela nous permet, dans un premier temps, de synchroniser les scripts sur toutes nos machines, d'avoir un historique des versions, et aussi, de centraliser l'endroit où sont sauvegardés nos scripts.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Durant plusieurs autres projets d'études, nous avons eu l'occasion de travailler en équipe et par conséquent d'utiliser Git. Par exemple, lors de ma première année, nous devions, en équipe de trois personnes, réaliser un site internet pour une petite boutique. Étant un projet à réaliser en équipe, le choix d'utiliser Git nous a paru évident. Toutefois, centraliser notre travail n'a pas été le seul objectif. En effet, notre commanditaire pouvait parfois être un peu indécis et nous demander de revenir en arrière sur une fonctionnalité. C'est là où le versionning de Git s'est avéré utile, puisque nous avions la possibilité de facilement revenir en arrière lorsqu'il y en avait besoin. Par ailleurs, le fait de centraliser notre code nous a également permis de partager le lien d'accès au Git avec notre commanditaire afin qu'il puisse suivre l'avancée des travaux et tester en direct les modifications que nous effectuions.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Au cours de mes projets, j'ai essentiellement utilisé Git afin de partager des scripts et des fichiers de configuration avec mes collègues. Notamment dans le cadre d'un projet d'étude, nous avons très souvent tendances à réaliser des scripts qui sont par la suite exécutés sur différentes machines et il arrive parfois que nous nous retrouvions avec plusieurs versions différentes du script et que nous ne sachions pas laquelle est la dernière version fonctionnelle. Pour remédier à cela, j'ai mis en place une tâche journalière qui permet d'envoyer le script dans un répertoire Git lorsqu'il y a eu un changement et de récupérer la dernière version de ce même script sur la machine. Cela nous permet, dans un premier temps, de synchroniser les scripts sur toutes nos machines, d'avoir un historique des versions, et aussi, de centraliser l'endroit où sont sauvegardés nos scripts.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Durant plusieurs autres projets d'études, nous avons eu l'occasion de travailler en équipe et par conséquent d'utiliser Git. Par exemple, lors de ma première année, nous devions, en équipe de trois personnes, réaliser un site internet pour une petite boutique. Étant un projet à réaliser en équipe, le choix d'utiliser Git nous a paru évident. Toutefois, centraliser notre travail n'a pas été le seul objectif. En effet, notre commanditaire pouvait parfois être un peu indécis et nous demander de revenir en arrière sur une fonctionnalité. C'est là où le versionning de Git s'est avéré utile, puisque nous avions la possibilité de facilement revenir en arrière lorsqu'il y en avait besoin. Par ailleurs, le fait de centraliser notre code nous a également permis de partager le lien d'accès au Git avec notre commanditaire afin qu'il puisse suivre l'avancée des travaux et tester en direct les modifications que nous effectuions.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Bien que je maîtrise des fonctionnalités de base de Git telles que le clone, le commit, le push, le pull ainsi que le concept de branch, je suis conscient que mes compétences restent plutôt limitées par rapport à une utilisation plus avancée de cette technologie. Notamment le concept de Continous Integration/Continous Deployment (CI/CD) qui reste pour moi encore un peu vague. Le CI/CD est en fait une façon de configurer et d'utiliser Git qui permet de valider et d'automatiser les livraisons du projet au client. Je n'ai pas encore eu l'opportunité de le mettre en place puisque je n'ai, jusqu'à maintenant, utilisé Git que pour des petits projets, mais le CI/CD est un concept très important dans le cadre professionnel lorsqu'il y a un attendu client.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Par conséquent, je conseille fortement la maîtrise et la compréhension de l'outil Git, c'est un incontournable dans n'importe quel projet informatique et est même utile pour un petit projet personnel afin de garder une trace des modifications effectuées.</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Bien que je maîtrise des fonctionnalités de base de Git telles que le clone, le commit, le push, le pull ainsi que le concept de branch, je suis conscient que mes compétences restent plutôt limitées par rapport à une utilisation plus avancée de cette technologie. Notamment le concept de Continous Integration/Continous Deployment (CI/CD) qui reste pour moi encore un peu vague. Le CI/CD est en fait une façon de configurer et d'utiliser Git qui permet de valider et d'automatiser les livraisons du projet au client. Je n'ai pas encore eu l'opportunité de le mettre en place puisque je n'ai, jusqu'à maintenant, utilisé Git que pour des petits projets, mais le CI/CD est un concept très important dans le cadre professionnel lorsqu'il y a un attendu client.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Par conséquent, je conseille fortement la maîtrise et la compréhension de l'outil Git, c'est un incontournable dans n'importe quel projet informatique et est même utile pour un petit projet personnel afin de garder une trace des modifications effectuées.</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, comme précédemment expliqué, j'aimerais apprendre à mettre en place un système CI/CD pour en comprendre le fonctionnement et atteindre un niveau de maîtrise qui pourrait me permettre de réaliser et de livrer moi-même mes propres projets personnels. Afin d'atteindre cet objectif, j'aimerais tout d'abord suivre une formation reprenant quelques bases du fonctionnement de Git ainsi qu'une formation plus poussée et centrée sur le CI/CD.</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, comme précédemment expliqué, j'aimerais apprendre à mettre en place un système CI/CD pour en comprendre le fonctionnement et atteindre un niveau de maîtrise qui pourrait me permettre de réaliser et de livrer moi-même mes propres projets personnels. Afin d'atteindre cet objectif, j'aimerais tout d'abord suivre une formation reprenant quelques bases du fonctionnement de Git ainsi qu'une formation plus poussée et centrée sur le CI/CD.</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="datahealth.html" class="mini-project">
+            <img src="../assets/img/datahealth.png" alt="DataHealth" class="mini-project-icon">
+            <span>DataHealth</span>
+        </a>
+        <a href="winperf.html" class="mini-project">
+            <img src="../assets/img/winperf.png" alt="WinPerf" class="mini-project-icon">
+            <span>WinPerf</span>
+        </a>
+    </div>
 </section>
-    </main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	</main>
+
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

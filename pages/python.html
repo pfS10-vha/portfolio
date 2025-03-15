@@ -1,135 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-    <main>
- <h2>Compétence Technique 2 : Langage Python</h2>
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	<main>
+ <h2>Compétence Technique - Python</h2>
 
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Le langage Python est un langage permettant d'automatiser des tâches informatiques, de développer des sites web, des applications ou, plus récemment, d'utiliser des modèles d'intelligence artificielle. Python va être utilisé afin d'accomplir différents objectifs en fonction du poste de la personne. Un administrateur système et réseaux, par exemple, va principalement l'utiliser dans le but d'automatiser une ou plusieurs tâches sur l'ensemble du parc informatique, tandis qu'un développeur va l'utiliser pour développer un serveur web et un expert Intelligence Artificielle va l'utiliser afin d'améliorer son modèle. Si Python était, il y a plus de vingt ans, un langage peu utilisé, il est devenu, depuis ces quelques dernières années, l'un des langages les plus utilisés de par sa simplicité d'apprentissage et ses multiples champs d'application.</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Le langage Python est un langage permettant d'automatiser des tâches informatiques, de développer des sites web, des applications ou, plus récemment, d'utiliser des modèles d'intelligence artificielle. Python va être utilisé afin d'accomplir différents objectifs en fonction du poste de la personne. Un administrateur système et réseaux, par exemple, va principalement l'utiliser dans le but d'automatiser une ou plusieurs tâches sur l'ensemble du parc informatique, tandis qu'un développeur va l'utiliser pour développer un serveur web et un expert Intelligence Artificielle va l'utiliser afin d'améliorer son modèle. Si Python était, il y a plus de vingt ans, un langage peu utilisé, il est devenu, depuis ces quelques dernières années, l'un des langages les plus utilisés de par sa simplicité d'apprentissage et ses multiples champs d'application.</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Un projet dans lequel j'ai pu mettre en pratique mes compétences en Python a été la génération journalière de l'inventaire des machines d'un parc informatique. C'est un projet que j'ai pu réaliser lors de mon alternance et qui a permis de répondre à plusieurs problématiques auxquelles l'équipe système faisait face. En premier lieu, le nombre de machines augmentait au fil des années et il était devenu impossible de savoir où se trouvait chaque machine. Lorsqu'un dépannage était nécessaire, il fallait s'y reprendre à plusieurs fois avant de tomber sur la bonne machine, ce qui occasionnait une perte de temps lors des dépannages. La deuxième problématique était la mauvaise gestion de l'utilisation des ressources allouées à chacune de ces machines. En effet, nous n'avions aucune vue d'ensemble sur les machines et, par conséquent, certaines des machines étaient inutilisées depuis plusieurs années, d'autres avaient trop de puissances de calcul par rapport à ce dont elles avaient besoin, certaines étaient sous-alimentées, etc. J'ai donc décidé de mettre en place un script Python qui centraliserait sur un tableau de bord les informations concernant ces machines, à savoir leur nom, les ressources allouées, l'endroit où elle se trouve ainsi que leur dernière utilisation. Auparavant, il fallait acheter de nouveaux serveurs lorsque nous atteignons la limite d'utilisation de ressources, mais grâce à ce projet, nous avons pu mieux gérer l'utilisation des ressources par les machines en baissant les ressources de celles qui en avaient plus qu'il ne leur fallait, ce qui a indirectement engendré une économie des coûts d'infrastructure. Par ailleurs, le fait de pouvoir savoir facilement où se trouve chacune des machines nous a également fait gagner du temps lors des dépannages ou d'incidents réseaux.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Un projet dans lequel j'ai pu mettre en pratique mes compétences en Python a été la génération journalière de l'inventaire des machines d'un parc informatique. C'est un projet que j'ai pu réaliser lors de mon alternance et qui a permis de répondre à plusieurs problématiques auxquelles l'équipe système faisait face. En premier lieu, le nombre de machines augmentait au fil des années et il était devenu impossible de savoir où se trouvait chaque machine. Lorsqu'un dépannage était nécessaire, il fallait s'y reprendre à plusieurs fois avant de tomber sur la bonne machine, ce qui occasionnait une perte de temps lors des dépannages. La deuxième problématique était la mauvaise gestion de l'utilisation des ressources allouées à chacune de ces machines. En effet, nous n'avions aucune vue d'ensemble sur les machines et, par conséquent, certaines des machines étaient inutilisées depuis plusieurs années, d'autres avaient trop de puissances de calcul par rapport à ce dont elles avaient besoin, certaines étaient sous-alimentées, etc. J'ai donc décidé de mettre en place un script Python qui centraliserait sur un tableau de bord les informations concernant ces machines, à savoir leur nom, les ressources allouées, l'endroit où elle se trouve ainsi que leur dernière utilisation. Auparavant, il fallait acheter de nouveaux serveurs lorsque nous atteignons la limite d'utilisation de ressources, mais grâce à ce projet, nous avons pu mieux gérer l'utilisation des ressources par les machines en baissant les ressources de celles qui en avaient plus qu'il ne leur fallait, ce qui a indirectement engendré une économie des coûts d'infrastructure. Par ailleurs, le fait de pouvoir savoir facilement où se trouve chacune des machines nous a également fait gagner du temps lors des dépannages ou d'incidents réseaux.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Si aujourd'hui, je considère avoir une bonne expertise du langage Python dans l'un de ses domaines d'application, l'automatisation de tâches, j'aspire également à pouvoir réaliser des petites applications graphiques qui permettraient à des utilisateurs non-techniques d'utiliser ces scripts. Sur le plan de l'automatisation, un avantage majeur du langage Python dans le monde professionnel est son aspect dit « multiplateforme ». En effet, si l'on veut automatiser une tâche sous une machine Windows, on utilise le langage PowerShell et si l'on veut automatiser une tâche sous une machine Linux, on utilise le langage Bash. Cela fait réaliser à l'administrateur système et réseaux deux scripts là où le langage Python est multiplateforme, c'est-à-dire qu'au lieu de réaliser deux scripts distincts, on peut réaliser un seul et même script qui pourra être exécuté sous les deux environnements.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Si le langage Python est aussi utile et a tant de domaines d'applications, on pourrait penser que c'est un langage extrêmement difficile à apprendre, pourtant il est considéré comme l'un des langages les plus simples à apprendre. La syntaxe du langage ne change pas vraiment en fonction de ce que l'on veut faire et le code est facilement lisible. C'est aussi une des raisons pour lesquelles je recommande vivement l'apprentissage de ce langage. Il permet de facilement mettre un premier pas dans le monde des langages d'automatisation et s'avèrera utile dans de nombreux métiers informatiques.</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Si aujourd'hui, je considère avoir une bonne expertise du langage Python dans l'un de ses domaines d'application, l'automatisation de tâches, j'aspire également à pouvoir réaliser des petites applications graphiques qui permettraient à des utilisateurs non-techniques d'utiliser ces scripts. Sur le plan de l'automatisation, un avantage majeur du langage Python dans le monde professionnel est son aspect dit « multiplateforme ». En effet, si l'on veut automatiser une tâche sous une machine Windows, on utilise le langage PowerShell et si l'on veut automatiser une tâche sous une machine Linux, on utilise le langage Bash. Cela fait réaliser à l'administrateur système et réseaux deux scripts là où le langage Python est multiplateforme, c'est-à-dire qu'au lieu de réaliser deux scripts distincts, on peut réaliser un seul et même script qui pourra être exécuté sous les deux environnements.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Si le langage Python est aussi utile et a tant de domaines d'applications, on pourrait penser que c'est un langage extrêmement difficile à apprendre, pourtant il est considéré comme l'un des langages les plus simples à apprendre. La syntaxe du langage ne change pas vraiment en fonction de ce que l'on veut faire et le code est facilement lisible. C'est aussi une des raisons pour lesquelles je recommande vivement l'apprentissage de ce langage. Il permet de facilement mettre un premier pas dans le monde des langages d'automatisation et s'avèrera utile dans de nombreux métiers informatiques.</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;À l'avenir, j'aimerais approfondir mes connaissances en Python en termes d'automatisation de tâches, mais également apprendre à réaliser des applications graphiques interactives. Effectivement, même si je peux prétendre avoir un très bon niveau lorsque l'on parle d'automatisation, je suis conscient que je ne maîtrise pas encore toutes les facettes et possibilités qu'offre le langage Python. En termes d'automatisation, il y a tout de même un aspect sur lequel j'aimerais m'améliorer, le « multiprocessing ». C'est une technologie implémentée dans le langage Python qui permet d'accélérer la vitesse d'exécution des scripts. Lorsqu'un script est exécuté sur une seule machine, le gain de temps est négligeable, mais lorsqu'on parle d'un parc informatique entier, on peut gagner jusqu'à 100 fois ce gain de temps, ce qui est particulièrement utile lorsqu'il faut rapidement déployer une tâche sur l'ensemble du parc. Mes deux objectifs principaux sont par conséquent de maîtriser la réalisation d'applications graphiques en Python ainsi que la technologie de multiprocessing à son plein potentiel. Afin d'atteindre ces objectifs, j'ai sélectionné plusieurs formations auxquelles je voudrais prendre part à l'avenir, une formation d'introduction au multiprocessing ainsi qu'une formation sur la gestion des ressources mémoires et enfin une formation sur la création d'application graphique à l'aide PyQt.</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;À l'avenir, j'aimerais approfondir mes connaissances en Python en termes d'automatisation de tâches, mais également apprendre à réaliser des applications graphiques interactives. Effectivement, même si je peux prétendre avoir un très bon niveau lorsque l'on parle d'automatisation, je suis conscient que je ne maîtrise pas encore toutes les facettes et possibilités qu'offre le langage Python. En termes d'automatisation, il y a tout de même un aspect sur lequel j'aimerais m'améliorer, le « multiprocessing ». C'est une technologie implémentée dans le langage Python qui permet d'accélérer la vitesse d'exécution des scripts. Lorsqu'un script est exécuté sur une seule machine, le gain de temps est négligeable, mais lorsqu'on parle d'un parc informatique entier, on peut gagner jusqu'à 100 fois ce gain de temps, ce qui est particulièrement utile lorsqu'il faut rapidement déployer une tâche sur l'ensemble du parc. Mes deux objectifs principaux sont par conséquent de maîtriser la réalisation d'applications graphiques en Python ainsi que la technologie de multiprocessing à son plein potentiel. Afin d'atteindre ces objectifs, j'ai sélectionné plusieurs formations auxquelles je voudrais prendre part à l'avenir, une formation d'introduction au multiprocessing ainsi qu'une formation sur la gestion des ressources mémoires et enfin une formation sur la création d'application graphique à l'aide PyQt.</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="autopen.html" class="mini-project">
+            <img src="../assets/img/autopen.png" alt="Autopen" class="mini-project-icon">
+            <span>Autopen</span>
+        </a>
+        <a href="winperf.html" class="mini-project">
+            <img src="../assets/img/winperf.png" alt="WinPerf" class="mini-project-icon">
+            <span>WinPerf</span>
+        </a>
+    </div>
 </section>
-    </main>
+	</main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

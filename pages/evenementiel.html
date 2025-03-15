@@ -1,137 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
+
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
 <main>
-<h2>Compétence Humaine 4 : Évènementiel</h2>
+<h2>Compétence Humaine - Évènementiel</h2>
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;L'évènementiel couvre toutes les étapes de l'organisation d'un évènement comprenant la logistique, le contenu de l'évènement, la coordination des différents parties concernées, etc. Les types d'évènements peuvent être divers et variés tels qu'une simple réunion interne, une session de formation, une activité en extérieur ou bien d'autres. De la même manière, la visée de l'évènement va elle aussi être différentes en fonction du besoin, ce peut être dans le but de former ou sensibiliser une équipe, d'éduquer un public non-technique, de centraliser des informations ou rétablir le lien entre les membres d'une équipe par exemple. Dans un cadre professionnel, c'est un aspect très important de la communication entre les équipes et au sein des membres d'une équipe afin de travailler efficacement.</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;L'évènementiel couvre toutes les étapes de l'organisation d'un évènement comprenant la logistique, le contenu de l'évènement, la coordination des différents parties concernées, etc. Les types d'évènements peuvent être divers et variés tels qu'une simple réunion interne, une session de formation, une activité en extérieur ou bien d'autres. De la même manière, la visée de l'évènement va elle aussi être différentes en fonction du besoin, ce peut être dans le but de former ou sensibiliser une équipe, d'éduquer un public non-technique, de centraliser des informations ou rétablir le lien entre les membres d'une équipe par exemple. Dans un cadre professionnel, c'est un aspect très important de la communication entre les équipes et au sein des membres d'une équipe afin de travailler efficacement.</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Durant mes études, j'ai notamment eu l'occasion de coorganiser une petite compétition de cybersécurité ayant pour objectif de sensibiliser des personnes, étant issues ou non du domaine informatique, aux menaces et bonnes pratiques concernant Internet. En équipe, nous nous sommes occupés du projet de A à Z en récoltant des fonds à l'aide de vente de crêpes, en mettant en place un budget prévisionnel, en recherchant des sponsors, en faisant la communication de l'évènement sur les réseaux, en créant du contenu pour la compétition et en aménageant la logistique physique du lieu de l'évènement. Hormis notre objectif principal qui était d'éduquer aux menaces par des petits défis ludiques, nous avons également réalisés une formation aux bonnes pratiques lors de l'évènement tels qu'avoir un mot de passe différents sur les sites les plus sensibles, activer la double authentification, détecter les e-mails frauduleux et bien d'autres. Notre évènement a eu l'effet que nous attendions puisque la plupart des candidats non sensibilisés aux dangers évoqués ont pu prendre conscience des risques et de comment s'en protéger.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Durant mes études, j'ai notamment eu l'occasion de coorganiser une petite compétition de cybersécurité ayant pour objectif de sensibiliser des personnes, étant issues ou non du domaine informatique, aux menaces et bonnes pratiques concernant Internet. En équipe, nous nous sommes occupés du projet de A à Z en récoltant des fonds à l'aide de vente de crêpes, en mettant en place un budget prévisionnel, en recherchant des sponsors, en faisant la communication de l'évènement sur les réseaux, en créant du contenu pour la compétition et en aménageant la logistique physique du lieu de l'évènement. Hormis notre objectif principal qui était d'éduquer aux menaces par des petits défis ludiques, nous avons également réalisés une formation aux bonnes pratiques lors de l'évènement tels qu'avoir un mot de passe différents sur les sites les plus sensibles, activer la double authentification, détecter les e-mails frauduleux et bien d'autres. Notre évènement a eu l'effet que nous attendions puisque la plupart des candidats non sensibilisés aux dangers évoqués ont pu prendre conscience des risques et de comment s'en protéger.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère maitriser les différentes étapes de la préparation d'un évènement, de la planification à l'évènement en lui-même. Mais je suis conscient que je n'ai pas encore eu l'opportunité de réaliser un évènement de grande envergure s'étalant sur plusieurs jours et suis conscient que la complexité d'un tel évènement est très différente de ce que j'ai pu organiser jusqu'à présent. Par ailleurs, travaillant dans le domaine de la cybersécurité, je vais souvent avoir l'occasion de réaliser des actions de sensibilisations auprès des salariés de l'entreprise où je travaille, notamment afin de se protéger contre les tentatives d'e-mails frauduleux qui sont une des attaques les plus fréquentes. C'est donc pourquoi je pense que c'est une compétence que je dois perfectionner au cours du temps et par l'expérience.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, je pense qu'il est très important de maîtriser au moins la partie transmission de connaissances de cette compétence, et principalement dans les métiers qui touchent à la cybersécurité ou à l'informatique en règle générale puisque les menaces d'aujourd'hui sont principalement digitales et ce ne sont que les professionnels de l'informatique qui seront capables d'enseigner et former les corps de métiers non techniques.</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère maitriser les différentes étapes de la préparation d'un évènement, de la planification à l'évènement en lui-même. Mais je suis conscient que je n'ai pas encore eu l'opportunité de réaliser un évènement de grande envergure s'étalant sur plusieurs jours et suis conscient que la complexité d'un tel évènement est très différente de ce que j'ai pu organiser jusqu'à présent. Par ailleurs, travaillant dans le domaine de la cybersécurité, je vais souvent avoir l'occasion de réaliser des actions de sensibilisations auprès des salariés de l'entreprise où je travaille, notamment afin de se protéger contre les tentatives d'e-mails frauduleux qui sont une des attaques les plus fréquentes. C'est donc pourquoi je pense que c'est une compétence que je dois perfectionner au cours du temps et par l'expérience.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, je pense qu'il est très important de maîtriser au moins la partie transmission de connaissances de cette compétence, et principalement dans les métiers qui touchent à la cybersécurité ou à l'informatique en règle générale puisque les menaces d'aujourd'hui sont principalement digitales et ce ne sont que les professionnels de l'informatique qui seront capables d'enseigner et former les corps de métiers non techniques.</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;À moyen terme, j'aimerai être capable d'organiser des actions de sensibilisations plus impactante et sur une plus longue durée. Cela me permettrait notamment de former et sensibiliser des gens sur plusieurs sujets plutôt qu'un seul à la fois et également réaliser une formation plus complète. Par ailleurs, j'aimerai également me fixer comme objectif d'apprendre à rendre plus interactive ces séances afin qu'elles soient plus mémorables et moins impersonnelle. Afin d'atteindre ce niveau j'aimerai suivre une séance de formation sur le planning évènement en IT.</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;À moyen terme, j'aimerai être capable d'organiser des actions de sensibilisations plus impactante et sur une plus longue durée. Cela me permettrait notamment de former et sensibiliser des gens sur plusieurs sujets plutôt qu'un seul à la fois et également réaliser une formation plus complète. Par ailleurs, j'aimerai également me fixer comme objectif d'apprendre à rendre plus interactive ces séances afin qu'elles soient plus mémorables et moins impersonnelle. Afin d'atteindre ce niveau j'aimerai suivre une séance de formation sur le planning évènement en IT.</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="pentech.html" class="mini-project">
+            <img src="../assets/img/pentech.png" alt="Pentech" class="mini-project-icon">
+            <span>Pentech</span>
+        </a>
+        <a href="wixlearn.html" class="mini-project">
+            <img src="../assets/img/wixlearn.png" alt="WixLearn" class="mini-project-icon">
+            <span>WixLearn</span>
+        </a>
+    </div>
 </section>
 
 
 
 </main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

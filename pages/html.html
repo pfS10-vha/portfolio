@@ -1,135 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="stylesheet" href="../assets/css/styles.css">
-	<script>
-		// block user-agent from bots
-		(function()
-		{
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
 			{
-				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-			}
-		})();
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
 
-		// block developper console to avoid bots
-		document.addEventListener('DOMContentLoaded', function()
-		{
-			document.addEventListener('contextmenu', function(e)
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
 			{
-				e.preventDefault();
-			});
-			document.addEventListener('keydown', function(e)
-			{
-				if (e.which === 123 ||
-				(e.ctrlKey && e.shiftKey && e.which === 73) ||
-				(e.ctrlKey && e.shiftKey && e.which === 74) ||
-				(e.ctrlKey && e.which === 85)
-				)
+				document.addEventListener('contextmenu', function(e)
 				{
 					e.preventDefault();
-					return false;
-				}
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
 			});
-		});
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
-	<header>
-		<nav>
-			<div class="logo">
-				<img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50">
-			</div>
-			<input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-			<ul class="nav-menu">
-				<li><a href="../index.html">Accueil</a></li>
-				<li><a href="presentation.html">Présentation</a></li>
-				<li class="dropdown">
-					<a href="competences.html">Compétences</a>
-					<ul class="dropdown-content">
-						<li class="sub-dropdown">
-							<a href="#">Techniques</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="bash.html">Langage Bash</a></li>
-								<li><a href="python.html">Langage Python</a></li>
-								<li><a href="supervision.html">Supervision</a></li>
-								<li><a href="git.html">Git</a></li>
-								<li><a href="html.html">HTML</a></li>
-								<li><a href="php.html">PHP</a></li>
-							</ul>
-						</li>
-						<li class="sub-dropdown">
-							<a href="#">Humaines</a>
-							<ul class="sub-dropdown-content">
-								<li><a href="communication-virale.html">Communication virale</a></li>
-								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-								<li><a href="vulgarisation.html">Vulgarisation</a></li>
-								<li><a href="evenementiel.html">Évènementiel</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="realisations.html">Réalisations</a>
-					<ul class="dropdown-content">
-						<li><a href="winperf.html">WinPerf</a></li>
-						<li><a href="pentech.html">Pentech</a></li>
-						<li><a href="datahealth.html">DataHealth</a></li>
-						<li><a href="wixlearn.html">WixLearn</a></li>
-						<li><a href="autopen.html">Autopen</a></li>
-					</ul>
-				</li>
-				<li><a href="parcours.html">Parcours</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-    <main>
- <h2>Compétence Technique 5 : HTML</h2>
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+	<main>
+ <h2>Compétence Technique - HTML</h2>
 <section>
-    <h3>Définition</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;HTML est un langage de balisage web, c'est-à-dire qu'il va permettre de mettre du texte, des liens ou encore des images sur une page internet. C'est un langage principalement destiné aux développeurs web afin de réaliser des sites internet, mais il peut aussi être utilisé par tout autre corps de métiers qui souhaiterait présenter ses travaux à l'aide d'un site internet. Cela peut aller d'un administrateur système qui souhaiterait rendre compte de données sous forme d'un tableau sur une page web plutôt qu'utiliser un fichier Excel, d'un artiste souhaitant partager ses créations sur son propre site web ou d'un professionnel voulant rendre son portfolio accessible en ligne. C'est grâce à ces multiples possibilités qu'offre le langage HTML qu'il est devenu très prisé pour la création de sites web, ainsi que la base de beaucoup d'autres langages web, y compris dans le milieu professionnel.</p>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;HTML est un langage de balisage web, c'est-à-dire qu'il va permettre de mettre du texte, des liens ou encore des images sur une page internet. C'est un langage principalement destiné aux développeurs web afin de réaliser des sites internet, mais il peut aussi être utilisé par tout autre corps de métiers qui souhaiterait présenter ses travaux à l'aide d'un site internet. Cela peut aller d'un administrateur système qui souhaiterait rendre compte de données sous forme d'un tableau sur une page web plutôt qu'utiliser un fichier Excel, d'un artiste souhaitant partager ses créations sur son propre site web ou d'un professionnel voulant rendre son portfolio accessible en ligne. C'est grâce à ces multiples possibilités qu'offre le langage HTML qu'il est devenu très prisé pour la création de sites web, ainsi que la base de beaucoup d'autres langages web, y compris dans le milieu professionnel.</p>
 </section>
 
 <section>
-    <h3>Éléments de preuve</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Lors de ma première année d'études, j'ai eu l'opportunité de réaliser un site web pour une petite boutique de ventes de vêtements. L'objectif était d'exposer, en ligne, les différents vêtements disponibles dans la boutique en fonction des saisons. De plus, le site devait être le plus simple possible, de sorte que le site soit facile à déployer et que les commanditaires puissent facilement modifier le texte contenu dans le code lorsqu'ils le souhaitent. Pour ces raisons, nous sommes restés sur la combinaison des langages HTML et CSS. HTML permet d'afficher le texte sur un site, tandis que le langage CSS permet de changer la position du texte sur la page ou sa couleur. Cela a permis aux commanditaires de facilement déployer le site internet et de pouvoir modifier le texte et les images lorsqu'ils le souhaitaient.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Il m'est aussi arrivé à plusieurs reprises d'avoir recours au langage HTML. Lors de mon alternance par exemple, j'ai très souvent l'occasion de réaliser des scripts qui font des tâches de manière automatique. Toutefois, si certains vont uniquement réaliser la tâche de façon journalière, d'autres vont devoir générer un rapport que nous pourrons consulter. Le souci étant qu'un script n'a pas pour objectif d'être esthétique et va, par conséquent, renvoyer un résultat peu lisible sous forme de texte. Pour pallier cela, pour plusieurs de mes scripts, j'ai fait en sorte de générer une page web HTML montrant les résultats sous forme de tableau. Aujourd'hui, cela nous permet d'avoir un rapport quotidien du résultat de ces scripts.</p>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Lors de ma première année d'études, j'ai eu l'opportunité de réaliser un site web pour une petite boutique de ventes de vêtements. L'objectif était d'exposer, en ligne, les différents vêtements disponibles dans la boutique en fonction des saisons. De plus, le site devait être le plus simple possible, de sorte que le site soit facile à déployer et que les commanditaires puissent facilement modifier le texte contenu dans le code lorsqu'ils le souhaitent. Pour ces raisons, nous sommes restés sur la combinaison des langages HTML et CSS. HTML permet d'afficher le texte sur un site, tandis que le langage CSS permet de changer la position du texte sur la page ou sa couleur. Cela a permis aux commanditaires de facilement déployer le site internet et de pouvoir modifier le texte et les images lorsqu'ils le souhaitaient.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Il m'est aussi arrivé à plusieurs reprises d'avoir recours au langage HTML. Lors de mon alternance par exemple, j'ai très souvent l'occasion de réaliser des scripts qui font des tâches de manière automatique. Toutefois, si certains vont uniquement réaliser la tâche de façon journalière, d'autres vont devoir générer un rapport que nous pourrons consulter. Le souci étant qu'un script n'a pas pour objectif d'être esthétique et va, par conséquent, renvoyer un résultat peu lisible sous forme de texte. Pour pallier cela, pour plusieurs de mes scripts, j'ai fait en sorte de générer une page web HTML montrant les résultats sous forme de tableau. Aujourd'hui, cela nous permet d'avoir un rapport quotidien du résultat de ces scripts.</p>
 </section>
 
 <section>
-    <h3>Autocritique</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Par ces nombreuses fois où j'ai eu l'occasion d'utiliser le langage HTML, je pense pouvoir prétendre avoir un très bon niveau dans cette compétence. Un point sur lequel je pourrais toutefois m'améliorer serait la sécurité. En effet, j'ai souvent travaillé sur des petits sites web ou des pages permettant d'afficher un rapport ou un tableau contenant des informations non sensibles et n'ai jamais réellement eu besoin de sécuriser ces pages. Il me serait donc bénéfique, rien que pour mon enrichissement personnel, d'apprendre à sécuriser une page web et peut-être même de réaliser un portail de connexion par exemple.</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;En fin de compte, je recommande cette compétence non seulement à des personnes intéressées par l'informatique, mais également à quiconque souhaitant exposer ses travaux en ligne. C'est un langage assez simple à maîtriser et qui, dans le cas d'une candidature, donne un avantage considérable par rapport à un autre candidat qui n'aurait pas de site web pour présenter ses travaux.</p>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Par ces nombreuses fois où j'ai eu l'occasion d'utiliser le langage HTML, je pense pouvoir prétendre avoir un très bon niveau dans cette compétence. Un point sur lequel je pourrais toutefois m'améliorer serait la sécurité. En effet, j'ai souvent travaillé sur des petits sites web ou des pages permettant d'afficher un rapport ou un tableau contenant des informations non sensibles et n'ai jamais réellement eu besoin de sécuriser ces pages. Il me serait donc bénéfique, rien que pour mon enrichissement personnel, d'apprendre à sécuriser une page web et peut-être même de réaliser un portail de connexion par exemple.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;En fin de compte, je recommande cette compétence non seulement à des personnes intéressées par l'informatique, mais également à quiconque souhaitant exposer ses travaux en ligne. C'est un langage assez simple à maîtriser et qui, dans le cas d'une candidature, donne un avantage considérable par rapport à un autre candidat qui n'aurait pas de site web pour présenter ses travaux.</p>
 </section>
 
 <section>
-    <h3>Évolution</h3>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, mon objectif principal serait principalement d'améliorer mes compétences en sécurité web, telles que la prévention des attaques XSS par exemple. Cela est très important puisque, de la même façon qu'un téléphone posé sur un banc toute une journée est amené à se faire voler, un site web non sécurisé et exposé sur internet est amené à se faire pirater un jour ou l'autre. Il est donc essentiel d'apprendre à sécuriser un site internet, et cela passe par quelques connaissances en cybersécurité. À cet effet, je prévois de suivre une formation sur la sécurité web ainsi que d'apprendre à l'aide d'une plateforme en ligne nommée HackTheBox.</p>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, mon objectif principal serait principalement d'améliorer mes compétences en sécurité web, telles que la prévention des attaques XSS par exemple. Cela est très important puisque, de la même façon qu'un téléphone posé sur un banc toute une journée est amené à se faire voler, un site web non sécurisé et exposé sur internet est amené à se faire pirater un jour ou l'autre. Il est donc essentiel d'apprendre à sécuriser un site internet, et cela passe par quelques connaissances en cybersécurité. À cet effet, je prévois de suivre une formation sur la sécurité web ainsi que d'apprendre à l'aide d'une plateforme en ligne nommée HackTheBox.</p>
 </section>
 
-<section>
-    <h3>Réalisations liées</h3>
-    <ul>
-        <li><a href="realisation1.html">Réalisation 1</a></li>
-        <li><a href="realisation3.html">Réalisation 3</a></li>
-    </ul>
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="autopen.html" class="mini-project">
+            <img src="../assets/img/autopen.png" alt="Autopen" class="mini-project-icon">
+            <span>Autopen</span>
+        </a>
+        <a href="wixlearn.html" class="mini-project">
+            <img src="../assets/img/wixlearn.png" alt="WixLearn" class="mini-project-icon">
+            <span>WixLearn</span>
+        </a>
+    </div>
 </section>
-    </main>
+	</main>
 
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>

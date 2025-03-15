@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
+			{
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
+
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
+			{
+				document.addEventListener('contextmenu', function(e)
+				{
+					e.preventDefault();
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
+
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+<main>
+ <h2>Compétence Humaine - Communication</h2>
+<section>
+	<h3>Définition</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;La communication sur les réseaux sociaux est un moyen de se démarquer, de promouvoir, d'attirer un public et parfois même, tout simplement, de transmettre ses connaissances. C'est une compétence humaine qui peut s'avérer fortement utile dans le monde professionnel afin d'attirer de nouveaux clients, se faire connaître et booster ses ventes. C'est notamment une compétence essentielle pour les auto-entrepreneurs, les startups ou les chargés de communication pour qui la clientèle se trouve essentiellement sur Internet.</p>
+</section>
+
+<section>
+	<h3>Éléments de preuve</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Il m'est arrivé à plusieurs reprises d'avoir à développer et à mettre en pratique mes compétences de communications digitales, l'une d'entre elles s'est déroulée lors de ma première année d'étude. L'objectif était de maintenir les réseaux sociaux d'une vendeuse de produits de beauté afin d'améliorer sa communication ainsi que de promouvoir un petit évènement qu'elle souhaitait réaliser. La difficulté résidait dans le fait que, par manque de temps, elle n'avait qu'une faible présence sur les réseaux sociaux. Notre groupe a donc entrepris la gestion de ses différents réseaux sociaux. J'ai cocréé le calendrier éditorial et ai été responsable de la gestion de ce dernier. J'ai également réalisé plusieurs publications visuelles afin d'attirer davantage de potentiels clients. Grâce à cela, la vendeuse a pu réaliser son évènement et obtenir une solide base pour ses futures publications, ce qui lui permet aujourd'hui de partager ses produits et ses expériences avec un public plus large.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Une seconde expérience, cette fois-ci, davantage liée à l'informatique, s'est déroulée lors de ma deuxième année d'étude. Il était question de réaliser une petite compétition, auto-financée, entre plusieurs passionnées d'informatique afin d'éduquer les participants à la cybersécurité et aux potentielles attaques. Pour ce faire, la stratégie était similaire à notre projet de communication numérique pour la vendeuse de produits de beauté, mais à cela s'ajoutait aussi la recherche d'un sponsor. Associé à un collègue, j'ai réalisé plusieurs lettres de sponsoring et ai également pris l'initiative d'inclure des publications de recherche de sponsoring à notre communication. La communication réalisée nous a permis de faire l'évènement, mais cela a aussi été bénéfique pour nos abonnés puisque notre communication incluait des conseils et bonnes pratiques pour se protéger des menaces d'Internet afin d'éduquer le plus grand nombre à la cybersécurité.</p>
+</section>
+
+<section>
+	<h3>Autocritique</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Je considère que mon niveau de maîtrise de la communication numérique se situe à un niveau intermédiaire. Je suis capable de mettre en place et de maintenir un planning de publication ainsi qu'attirer un public réduit afin de promouvoir un évènement ou une cause. Toutefois, je ne pense pas avoir acquis suffisamment d'expérience dans ce domaine. Certains points sur lesquels je n'ai que peu de maîtrise sont le référencement et la production de contenu vidéo. En effet, mes compétences actuelles se concentrent majoritairement autour de la gestion et la production de contenu visuels sous forme d'images ou de publications, ce qui est, certes, une partie importante de la communication notamment lorsque l'on souhaite être chargé de communication, cependant, les contenus vidéo courts sont aussi devenus un format très prisés ces dernières années et c'est un point sur lequel il me reste encore à apprendre.</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Selon moi, la communication numérique est une compétence dont au moins les bases méritent d'être apprises. Cela pourrait permettre d'attirer davantage de clients en se démarquant et ainsi obtenir un gain de revenu significatif pour une entreprise ou un particulier. Pour finir, je conseillerai de maitriser les différentes facettes de la communication digitale, mais uniquement lorsque cela s'applique directement à la profession de la personne. Je pense notamment à des personnes en freelance dont la clientèle se trouve essentiellement sur Internet ainsi qu'aux vendeurs ou métiers du commerce.</p>
+</section>
+
+<section>
+	<h3>Évolution</h3>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Enfin, même si je suis plutôt satisfait de mon niveau de maîtrise actuel et ne pense pas avoir besoin de parfaire mes connaissances dans ce domaine, je me suis tout de même fixé un objectif sur lequel j'aimerais travailler à l'avenir, le référencement en ligne. En effet, si j'ai majoritairement mis en place mes compétences sur les réseaux sociaux, le référencement reste intimement lié et pourrait m'être utile si je souhaite m'orienter vers un métier qui se rapproche de celui des influenceurs, tels que conseiller en cybersécurité. Cela me permettrait de rendre ma communication plus visible et ainsi de me faire remarquer par de potentiels clients ou entreprises dans le secteur. À cet effet, j'ai déjà recherché plusieurs formations sur les thèmes de la stratégie de référencement digitale et également le fonctionnement des moteurs de recherche tels que Google, Bing et Yahoo afin de mieux comprendre et utiliser ces puissants outils.</p>
+</section>
+
+<section class="related-projects">
+    <h3>Réalisations associées</h3>
+    <div class="mini-projects-container">
+        <a href="pentech.html" class="mini-project">
+            <img src="../assets/img/pentech.png" alt="Pentech" class="mini-project-icon">
+            <span>Pentech</span>
+        </a>
+        <a href="wixlearn.html" class="mini-project">
+            <img src="../assets/img/wixlearn.png" alt="WixLearn" class="mini-project-icon">
+            <span>WixLearn</span>
+        </a>
+    </div>
+</section>
+
+
+</main>
+
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
+
+</body>
+</html>
