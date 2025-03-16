@@ -109,7 +109,7 @@
 		<section>
 			<h3>Avant-propos</h3>
 				<p>
-					&nbsp;&nbsp;&nbsp;&nbsp;Le projet Autopen a été réalisé à ma propre initiative durant mon alternance afin d’automatiser la génération d’un inventaire des machines du parc informatique de l’entreprise. S’il a d’abord été réalisé en Bash [insérer lien vers la compétence] avec un export au format texte, le projet s’est rapidement transformé et a pris de l’importance. Par la suite, avec l’utilisation du langage Python [insérer lien vers la compétence], d’une base de données ainsi que du langage web PHP [insérer lien vers la compétence], cet inventaire s’est transformé en réel « hub » pour centraliser les données concernant le parc informatique. Aujourd’hui, le projet est en constante amélioration et je forme mes collègues à l’utilisation d’un tel inventaire afin de leur permettre de contacter les APIs pour récupérer les informations des machines.
+					&nbsp;&nbsp;&nbsp;&nbsp;Le projet Autopen a été réalisé à ma propre initiative durant mon alternance afin d’automatiser la génération de l'inventaire des machines du parc informatique de l’entreprise. S’il a d’abord été réalisé en <a href="bash.html">Bash</a> avec un export au format texte, le projet s’est rapidement transformé et a pris de l’importance. Par la suite, avec l’utilisation du langage <a href="python.html">Python</a>, d’une base de données ainsi que du langage web <a href="php.html">PHP</a>, cet inventaire s’est transformé en réel « hub » pour centraliser les données concernant le parc informatique. Aujourd’hui, le projet est en constante évolution et je forme mes collègues à l’utilisation d’un tel inventaire afin de leur permettre de contacter les APIs pour récupérer les informations des machines.
 				</p>
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;Ce projet vise donc à inventorier chacune des machines présentes dans un parc informatique.
@@ -129,37 +129,37 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;En premier lieu, qu’est-ce qu’une API ? Concrètement, une API est un intermédiaire entre la personne qui fait la demande et la personne qui exécute cette demande. Pour donner un exemple, dans le cadre d’un restaurant, le client va faire une demande à l’API qui est ici le serveur s’occupant des commandes des clients et ce serveur va ensuite passer les instructions au chef qui va ensuite préparer le repas demandé. On voit bien ici que l’API est seulement un intermédiaire entre un client et la personne exécutant les instructions.
 			</p>
 			<p>
-				Dans le cas d’une API informatique, lorsque l’on visite un site de vente comme Amazon, on va pouvoir filtrer les articles par couleur, par prix, par taille, etc. On clique sur des boutons pour filtrer, mais concrètement, le serveur qui agit derrière ne comprend pas ce que tel ou tel bouton fait. Par conséquent, il y a, derrière, ce qu’on appelle une API. Elle va traduire une action ou une demande de sorte que le serveur puisse comprendre et réaliser.
+				Dans le cas d’une API informatique, lorsque l’on visite un site de vente comme Amazon, on va pouvoir filtrer les articles par couleur, par prix, par taille, etc. On clique sur des boutons pour filtrer, mais concrètement, le serveur qui agit derrière ne comprend pas ce que tel ou tel bouton fait. Par conséquent, il y a, derrière, ce qu’on appelle une API. Elle va traduire une action ou une demande de sorte que le serveur puisse comprendre et réaliser l'action.
 			</p>
 			<p>
-				Par ailleurs, lorsque l’on souhaite automatiser une tâche avec un script, comme récupérer tous les vêtements roses de taille M sur Amazon, le script ne pouvant pas cliquer sur les boutons, il va faire appel à l’API d’Amazon qui elle va contacter le serveur, puis l’API va renvoyez les résultats à notre script.
-			</p>
-
-			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Une base de données est très simplement une façon organisée de stocker les données. Si l’on devait faire une comparaison, on pourrait parler d’une bibliothèque. En effet, dans une bibliothèque, chaque ouvrage est rangé dans une étagère et est souvent groupé par thème. De plus, il y a souvent un registre qui est maintenu de sorte à savoir où se trouvent chaque ouvrage et afin d’obtenir plus d’informations le concernant.
-			</p>
-			<p>
-				Pour une base de données, c’est exactement la même chose, à la différence que l’indexer, ou la liste, est beaucoup plus automatisé puisque les données sont déjà rangées. Cela veut dire que si l’on veut récupérer la liste de tous les films sur le thème de l’informatique, on peut le faire en une seule commande.
+				Par ailleurs, lorsque l’on souhaite réaliser un script pour automatiser une tâche, comme récupérer tous les vêtements roses de taille M sur Amazon, le script ne pouvant pas cliquer sur les boutons, il va faire appel à l’API d’Amazon qui elle va contacter le serveur, puis l’API va renvoyer les résultats à notre script.
 			</p>
 
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Le concept de machines virtuelles est souvent très abstrait pour quelqu’un de non-technique. Par ailleurs, il est très difficile de l’expliquer sans expliquer un autre concept que sont les hyperviseurs.
+				&nbsp;&nbsp;&nbsp;&nbsp;Une base de données est très simplement une façon organisée de stocker les données. Si l’on devait faire une comparaison, on pourrait parler d’une bibliothèque. En effet, dans une bibliothèque, chaque ouvrage est rangé dans une étagère et est souvent groupé par thème. De plus, il y a généralement un registre qui est maintenu de sorte à savoir où se trouve chaque ouvrage et afin d’obtenir plus d’informations le concernant.
 			</p>
 			<p>
-				De la même façon que pour les autres définitions, on va imaginer, cette fois-ci, un navigateur. Chrome, Firefox ou Safari, ça n’a pas d’importance. Notre navigateur est comme un serveur, on va pouvoir avoir plusieurs onglets qui seront associés à des machines virtuelles. Les onglets peuvent avoir des tâches différentes ou être plusieurs fois la même page, on peut fermer ou ouvrir un onglet et chacun de ces onglets augmente la consommation de ressources de notre navigateur.
-			</p>
-			<p>
-				Dans le cas d’un hyperviseur, on va avoir un serveur très puissant portant un grand nombre de petits ordinateurs virtualisés. Chacun de ces mini-ordinateurs pourra avoir des tâches différentes telles que mettre en ligne des sites différents, stocker les données des utilisateurs, servir de routeur internet.
-			</p>
-			<p>
-				L’intérêt d’un tel système plutôt que d’acheter plusieurs petits serveurs est la gestion physique des équipements. En effet, il est beaucoup plus efficace d’avoir un seul serveur très puissant plutôt qu’une cinquantaine de petits serveurs physique.
+				Pour une base de données, c’est exactement la même chose, à la différence que l’indexeur, ou la liste, est beaucoup plus automatisé puisque les données sont déjà rangées. Cela veut dire que si l’on veut récupérer la liste de tous les films sur le thème de l’informatique, on peut le faire en une seule commande.
 			</p>
 
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, notre dernière définition sera le cloud. En termes concrets, c’est un espace en ligne, sur Internet, que l’on va pouvoir utiliser pour stocker des données. Par exemple, Google Drive est un service cloud. Gmail ou Outlook le sont également puisque nos mails sont stockés sur Internet et non pas sur notre ordinateur ou téléphone. En règle générale, un cloud va permettre de stocker des données en ligne, mais pas que.
+				&nbsp;&nbsp;&nbsp;&nbsp;Le concept de machines virtuelles est généralement très abstrait pour quelqu’un de non-technique. Par ailleurs, il est très difficile de l’expliquer sans expliquer un autre concept que sont les hyperviseurs.
 			</p>
 			<p>
-				En effet, dans un environnement d’entreprise, il y a des clouds qui sont spécialisés dans la gestion de machines virtuelles dont on a parlé précédemment. Cela évite d’avoir à acheter des physiques puisque les entreprises gérant ces clouds ont eux-mêmes des serveurs tellement puissants qu’ils peuvent être utilisés par plusieurs entreprises en même temps.
+				De la même façon que pour les autres définitions, on va imaginer, cette fois-ci, un navigateur. Chrome, Firefox ou Safari, ça n’a pas d’importance. Notre navigateur est comme un serveur, on va pouvoir avoir plusieurs onglets qui seront associés à des machines virtuelles. Les onglets peuvent avoir des pages différentes ou être plusieurs fois la même page. On peut fermer ou ouvrir un onglet et chacun de ces onglets augmente la consommation de ressources de notre navigateur.
+			</p>
+			<p>
+				Dans le cas d’un hyperviseur, on va avoir un serveur très puissant portant un grand nombre de petits ordinateurs virtualisés. Chacun de ces mini-ordinateurs pourra avoir des tâches différentes telles que mettre en ligne des sites, stocker les données des utilisateurs, servir de routeur internet.
+			</p>
+			<p>
+				L’intérêt d’un tel système plutôt que d’acheter plusieurs petits serveurs est la gestion physique des équipements. En effet, il est beaucoup plus efficace d’avoir un seul serveur très puissant plutôt qu’une cinquantaine de petits serveurs physiques.
+			</p>
+
+			<p>
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, notre dernière définition sera le cloud. En termes concrets, c’est un espace en ligne, sur Internet, que l’on va pouvoir utiliser pour stocker des données. Par exemple, Google Drive est un service cloud. Gmail ou Outlook le sont également, puisque nos e-mails sont stockés sur Internet et non pas sur notre ordinateur ou notre téléphone. En règle générale, un cloud va permettre de stocker des données en ligne, mais pas que.
+			</p>
+			<p>
+				En effet, dans un environnement d’entreprise, il y a des clouds qui sont spécialisés dans la gestion de machines virtuelles dont on a parlé précédemment. Cela évite d’avoir à acheter des physiques puisque les entreprises gérant ces clouds ont elles-mêmes des serveurs tellement puissants qu’ils peuvent être utilisés par plusieurs entreprises en même temps.
 			</p>
 		</section>
 
@@ -171,14 +171,14 @@
 	<!-- 1. CONTEXTE -->
 			<h4>Contexte</h4>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Je travaille actuellement au sein d’une entreprise informatique de plus de 70 employés, en tant qu’alternant, et nous sommes une équipe infrastructure et réseaux composée de cinq personnes.
+				&nbsp;&nbsp;&nbsp;&nbsp;Je travaille actuellement alternant au sein d’une entreprise informatique de plus de 70 employés et nous sommes une équipe infrastructure et réseaux composée de cinq personnes.
 			</p>
 				</br>
 			<p>
 				&nbsp;&nbsp;&nbsp;&nbsp;L’entreprise ayant été créée il y a plus de 30 ans, de nombreuses machines virtuelles ont été créées et il n’y avait pas forcément le temps de faire un tri ou de labelliser chacune des machines. Par conséquent, le parc informatique n’a cessé de grandir et cela rend un peu plus complexe la gestion de ces machines virtuelles. Pour pallier, il a été décidé de mettre en place un inventaire manuel des machines qui serait mis à jour régulièrement.
 			</p>
 			<p>
-				Toutefois, qui dit tâche manuelle dit risque d’erreurs humaine. De plus, le parc totalisant plus de 300 machines virtuelles, le temps nécessaire pour réaliser et mettre à jour un tel inventaire était très important, ce qui rendait le travail laborieux et long. Par ailleurs, puisque l’inventaire prenait plusieurs heures à être mis à jour, il fallait trouver le temps de le faire quand il y a d’autres tâches prioritaires, ce qui rendait la fréquence de mise à jour de l’inventaire assez irrégulière.
+				Toutefois, qui dit tâche manuelle dit risque d’erreurs humaines. De plus, le parc totalisant plus de 300 machines virtuelles, le temps nécessaire pour réaliser et mettre à jour un tel inventaire était très important, ce qui rendait le travail long et laborieux. Par ailleurs, puisque l’inventaire prenait plusieurs heures à être mis à jour, il fallait trouver le temps de le faire quand il y a d’autres tâches prioritaires, ce qui rendait la fréquence de mise à jour de l’inventaire assez irrégulière.
 			</p>
 			<p>
 				&nbsp;&nbsp;&nbsp;&nbsp;Après plusieurs mois à comprendre le parc informatique de l’entreprise et ayant des compétences en langage de script, j’ai décidé d’automatiser cet inventaire qui prenait du temps et qui, au final, n’était jamais vraiment à jour lorsque nous en avions besoin puisqu’il était impossible de le mettre à jour de façon journalière.
@@ -192,13 +192,13 @@
 			</p>
 				</br>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;En premier lieu, l’objectif numéro un était d’avoir un inventaire. Avec plus de 300 machines, il est presque impossible de savoir sur quel serveur chacune des machines se trouvait, ce qui faisait perdre du temps lorsqu’il fallait modifier sa configuration ou se connecter à l’une d’entre elle. Automatiser la génération de l’inventaire était donc un gain de temps précieux, mais avoir un inventaire à jour et fiable faisait aussi gagner du temps à l’ensemble de l’équipe.
+				&nbsp;&nbsp;&nbsp;&nbsp;En premier lieu, l’objectif numéro un était d’avoir un inventaire. Avec plus de 300 machines, il est presque impossible de savoir sur quel serveur chacune des machines se trouvait, ce qui faisait perdre du temps lorsqu’il fallait modifier une configuration ou se connecter à l’une d’entre elles. Automatiser la génération de l’inventaire était donc un gain de temps précieux et avoir un inventaire à jour et fiable faisait aussi gagner du temps à l’ensemble de l’équipe.
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Par ailleurs, la génération d’un inventaire de ces plus de 300 machines permettrait d’avoir une vue d’ensemble sur le parc et ainsi de faire un tri. En effet, l’entreprise existant depuis plus de 30 ans, il est possible de trouver des machines ayant plus d’une dizaine d’années qui ne sont, souvent, même plus utilisés, voire complètement éteinte depuis des années. Cela occasionne un gaspillage des ressources des serveurs hébergeant ces machines. Notre second majeur objectif était donc de réaliser un grand tri de ces machines.
+				&nbsp;&nbsp;&nbsp;&nbsp;Par ailleurs, la génération d’un inventaire de ces plus de 300 machines permettrait d’avoir une vue d’ensemble sur le parc et ainsi de faire un tri. En effet, l’entreprise existant depuis plus de 30 ans, il est possible de trouver des machines ayant plus d’une dizaine d’années qui ne sont, souvent, même plus utilisées, voire complètement éteintes depuis des années. Cela occasionne un gaspillage des ressources des serveurs hébergeant ces machines. Notre second objectif était donc de réaliser un grand tri de ces machines.
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, et c’est l’objectif d’un inventaire, il fallait labelliser ces machines. En relation avec les deux précédents objectifs, certaines fois il était compliqué de les trouver parce qu’on ne savait pas sur quel serveur elles étaient, mais également parce qu’il fallait connaître le nom de la machine pour savoir ce à quoi elle servait. C’est comme si au lieu d’exposer ses produits dans les rayons, un magasin décidait d’exposer des boites contenant chaque produit et mettait une étiquette avec un nom. Cela rallonge le temps pour trouver ce que l’on cherche et oblige à retenir de mémoire la position de chacun des produits. Ainsi, notre troisième et dernier objectif était de dresser une liste des fonctions de chaque machine.
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, et c’est l’objectif d’un inventaire, il fallait labelliser ces machines. En relation avec les deux précédents objectifs, il était parfois compliqué de trouver une machine parce qu’on ne savait pas sur quel serveur elle était, mais également parce qu’il fallait connaître le nom de la machine pour savoir ce à quoi elle servait. C’est comme si, au lieu d’exposer ses produits dans les rayons, un magasin décidait d’exposer des boites contenant chaque produit et mettait une étiquette avec un nom. Cela rallonge le temps pour trouver ce que l’on cherche et oblige à retenir de mémoire la position de chacun des produits. Ainsi, notre troisième et dernier objectif était de dresser une liste des fonctions de chaque machine.
 			</p>
 
 
@@ -206,20 +206,20 @@
 	<!-- 3. ENJEUX & RISQUES -->
 			<h4>Enjeux & Risques</h4>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Les objectifs du projet étaient donc très clairs et nous dégageaient directement ses enjeux. Premièrement, le gain de temps. En effet, comme dit précédemment, on ne cherche jamais à automatiser quelque chose en informatique si cela ne nous apporte aucun bénéfice et le temps en est le facteur le plus déterminant. Automatiser la génération de l’inventaire économiserait du temps pour la personne le réalisant manuellement, mais également pour les membres de l’équipe puisqu’il serait ainsi plus facile de trouver sur quel serveur se connecter pour accéder à telle machine.
+				&nbsp;&nbsp;&nbsp;&nbsp;Les objectifs du projet étaient donc très clairs et dégageaient directement plusieurs enjeux. Premièrement, le gain de temps. En effet, comme dit précédemment, on ne cherche jamais à automatiser quelque chose en informatique si cela ne nous apporte aucun bénéfice et le temps en est le facteur le plus déterminant. Automatiser la génération de l’inventaire économiserait du temps pour la personne le réalisant manuellement, mais également pour les autres membres de l’équipe, puisqu’il serait ainsi plus facile de trouver sur quel serveur se connecter pour accéder à telle machine.
 			</p>
 			<p>
 				&nbsp;&nbsp;&nbsp;&nbsp;Un autre enjeu est le gain, ou plutôt l’économie d’argent. Ayant accumulé un grand nombre de machines au cours des années, les serveurs ont commencé à saturer et il fallait par conséquent acheter de nouveaux serveurs. En ayant un inventaire à jour et automatisé, cela laisserait plus de temps pour réaliser un tri massif des machines virtuelles, ce qui éviterait de faire de réaliser des dépenses inutiles.
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, un enjeu un peu plus complexe à réaliser, mais qui pourrait être très important pour le futur de l’entreprise. Puisque nos scripts vont soit réaliser une tâche directement sur la machine d’où est exécuté le script ou alors réaliser des actions sur une ou plusieurs machines, l’inventaire pourrait devenir une référence pour tous nos scripts. Si les informations de contact de la machine cible change, il faut changer l’information dans tous nos scripts et cela prend du temps. Par conséquent, modifier nos scripts afin qu’ils utilisent les informations dans cet inventaire nous permettrait de ne pas avoir à modifier ces informations puisqu’elle serait centralisée dans un inventaire généré automatiquement. Cela occasionnerait un gain de temps et réduirait le risque qu’un de nos scripts arrête de fonctionner.
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, un enjeu un peu plus complexe à réaliser, mais qui pourrait être très important pour le futur de l’entreprise. Puisque nos scripts vont soit réaliser une tâche directement sur la machine d’où est exécuté le script ou réaliser des actions sur une ou plusieurs machines, l’inventaire pourrait devenir une référence pour tous nos scripts. Si les informations de contact de la machine cible changent, il faut changer l’information dans tous nos scripts et cela prend du temps. Par conséquent, modifier nos scripts afin qu’ils utilisent les informations dans cet inventaire nous permettrait de ne pas avoir à modifier ces informations puisqu’elles seraient centralisées dans un inventaire mis à jour automatiquement. Cela occasionnerait un gain de temps et réduirait le risque qu’un de nos scripts arrête de fonctionner.
 			</p>
 				</br>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Heureusement pour nous, ce projet ne présente peu de risques à court terme. Le seul réel risque se déroule durant la réalisation du script de génération d’inventaire. Cela sera développé dans les sections suivantes, mais afin de récupérer les informations concernant les machines, il faut appeler les APIs des serveurs et il y a toujours un risque qu’au lieu de récupérer les informations, je me trompe et, à la place, de récupérer les informations, je les écrase. Le risque était donc de supprimer des machines.
+				&nbsp;&nbsp;&nbsp;&nbsp;Heureusement pour nous, ce projet ne présente que peu de risques à court terme. Le seul réel risque se déroule durant la réalisation du script de génération d’inventaire. Cela sera développé dans les sections suivantes, mais afin de récupérer les informations concernant les machines, il faut appeler les APIs des serveurs et il y a toujours un risque qu’au lieu de récupérer les informations, je me trompe et, à la place de récupérer les informations, je les écrase. Le risque était donc de supprimer des machines.
 			</p>
 			<p>
-				Deux autres risques que nous courions étaient que j’ai mal développé le site et qu’il récupère les mauvaises informations. Cela posait surtout un risque si d’autres scripts venait à utiliser ces informations à leur tour. Par exemple, si le script devait réaliser une action sur un serveur de test et qu’il venait à exécuter une tâche sur un serveur production, car les informations de l’inventaire étaient erronées. En fonction de l’action à réaliser, nous pourrions perdre des données sur le serveur. Le second risque était le fait que je sois le seul à réaliser ce script et, par conséquent, le seul à avoir une expertise sur le fonctionnement de l’inventaire. En effet, si je venais à partir ou que j’étais tout simplement absent et qu’il y avait un problème avec le script, personne n’avait l’expertise pour le reprendre. De plus, si, encore une fois, d’autres scripts utilisaient cet inventaire, cela voudrait dire qu’il faudrait corriger chacun des scripts.
+				Deux autres risques que nous courions étaient que j’ai mal développé le site et qu’il récupère les mauvaises informations. Cela posait surtout un risque si d’autres scripts venaient à utiliser ces informations à leur tour. Par exemple, si le script devait réaliser une action sur un serveur de test et qu’il venait à exécuter une tâche sur un serveur de production, car les informations de l’inventaire étaient erronées. En fonction de l’action à réaliser, nous pourrions perdre des données sur le serveur. Le second risque était le fait que je sois le seul à réaliser ce script et, par conséquent, le seul à avoir une expertise sur le fonctionnement de l’inventaire. En effet, si je venais à partir ou que j’étais tout simplement absent et qu’il y avait un problème avec le script, personne n’avait l’expertise pour le reprendre.
 			</p>
 		</section>
 
@@ -232,7 +232,9 @@
 		<!-- 1. LA GENERATION DE L'INVENTAIRE -->
 			<h4>La génération de l'inventaire</h4>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Lorsque l’on réalise un script, il est souvent coutume de réaliser d’abord les actions manuellement afin de comprendre l’ordre dans lequel chacune des actions doit être exécuté. J’ai donc commencé par me connecter aux différents serveurs et lire les informations d’une des machines via l’interface graphique du serveur. Après cela, j’ai commencé par utiliser l’API du serveur pour obtenir la liste des machines. La plupart des APIs fonctionnent par identifiants (ID), c’est-à-dire qu’au lieu d’appeler une machine par son nom, la machine aura un identifiant unique tel que 107, 108 ou 109 par exemple. Concrètement, le processus est le suivant :
+				&nbsp;&nbsp;&nbsp;&nbsp;Lorsque l’on réalise un script, il est souvent coutume de réaliser d’abord les actions manuellement afin de comprendre l’ordre dans lequel chacune des actions doit être exécutée. J’ai donc commencé par me connecter aux différents serveurs et lire les informations des machines via l’interface graphique du serveur. Après cela, j’ai commencé par utiliser l’API du serveur pour obtenir la liste des machines. La plupart des APIs fonctionnent par identifiants (ID), c’est-à-dire qu’au lieu d’appeler une machine par son nom, la machine aura un identifiant unique tel que 107, 108 ou 109 par exemple.
+			</p>
+			<p>Lorsque l’on fait le même trajet tous les jours pour aller travailler, s’il y a des travaux sur la route, on devra adapter notre trajet. Sauf que dans le cas des serveurs, ils ne savent pas s’adapter à un changement de nom de machine, c’est pour cette raison qu’ils préfèrent un fonctionnement par identifiant qui, lui, ne changera pas contrairement au nom de la machine qui peut être changé par l’administrateur. Concrètement, le processus est le suivant :
 			</p>
 			<ol>
 				<li>Récupération de la liste des IDs des machines</li>
@@ -241,14 +243,11 @@
 				<li>Grâce à cet ID, on peut récupérer davantage d’informations tel que la date de création ou l’espace disque</li>
 			</ol>
 			<p>
-				Lorsque l’on fait le même trajet tous les jours pour aller travailler, s’il y a des travaux sur la route, on devra adapter notre trajet. Sauf que dans le cas des serveurs, ils ne savent pas s’adapter à un changement de nom de machine, c’est pour cette raison qu’ils préfèrent un fonctionnement par identifiant qui, lui, ne changera pas contrairement au nom de la machine qui peut être changé par l’administrateur.
-			</p>
-			<p>
 				J’ai ainsi récupéré plusieurs informations telles que le nom des machines, leur adresse de connexion, si elles sont allumées ou éteintes, le serveur sur lequel elle se trouve ainsi que d’autres informations sur les ressources telles que l’usage du processeur, de la mémoire et du disque.
 			</p>
 				</br>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Après m’être assuré que je comprenais l’ordre dans lequel récupérer les informations manuellement, j’ai réalisé un script en Bash [insérer lien vers la compétence]. Ce script se connectait à chacun de nos serveurs et récupérait la liste des identifiants, puis pour chaque identifiant, récupérait les informations citées dans le paragraphe précédent.
+				&nbsp;&nbsp;&nbsp;&nbsp;Après m’être assuré que je comprenais l’ordre dans lequel récupérer les informations manuellement, j’ai réalisé un script en <a href="bash.html">Bash</a>. Ce script se connectait à chacun de nos serveurs et récupérait la liste des identifiants, puis pour chaque identifiant, récupérait les informations citées dans le paragraphe précédent.
 			</p>
 			<p>
 				Afin de sauvegarder le résultat, j’ai fait en sorte d’afficher le résultat sous forme CSV, c’est-à-dire avec chaque information séparée par une virgule comme suit :
@@ -259,7 +258,7 @@
 		<!-- 2. DEVELOPPEMENT WEB -->
 			<h4>Développement web</h4>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;J’avais donc un script qui me permettait de générer automatiquement un inventaire avec les informations principales concernant les machines présentes sur nos serveurs. Mais le format CSV présenté ci-dessus n’est pas des plus lisibles, par conséquent, j’ai réalisé un second script qui lisait le fichier inventaire CSV et le convertissait en tableau HTML [insérer lien vers la compétence]. Voici un exemple du tableau qui pouvait être généré :
+				&nbsp;&nbsp;&nbsp;&nbsp;J’avais donc un script qui me permettait de générer automatiquement un inventaire avec les informations principales concernant les machines présentes sur nos serveurs. Mais le format CSV présenté ci-dessus n’est pas des plus lisibles, par conséquent, j’ai réalisé un second script qui lisait le fichier inventaire CSV et le convertissait en tableau <a href="html.html">HTML</a>. Voici un exemple du tableau qui pouvait être généré :
 			</p>
 				</br>
 			<p>
@@ -276,7 +275,7 @@
 			</ol>
 				</br>
 			<p>
-				Ayant changé d’un stockage sous forme de fichiers texte à une base de données, j’ai du modifié l’entièreté de mon script de génération d’inventaire en Bash [insérer lien vers la compétence] et le transformer en Python [insérer lien vers la compétence], ce qui me permettra de contacter cette base de données. Cela permettait ainsi de rajouter de nouvelles entrées et de modifier celles existantes si changées. De plus, si une machine avait été supprimée, elle serait aussi supprimée de mon inventaire.
+				Ayant changé d’un stockage sous forme de fichiers texte à une base de données, j’ai du modifié l’entièreté de mon script de génération d’inventaire en <a href="bash.html">Bash</a> et le transformer en <a href="python.html">Python</a>, ce qui me permettra de contacter cette base de données. Cela permettait ainsi de rajouter de nouvelles entrées et de modifier celles existantes si changées. De plus, si une machine avait été supprimée, elle serait aussi supprimée de mon inventaire.
 			</p>
 			<p>
 				&nbsp;&nbsp;&nbsp;&nbsp;Je stockais donc mon inventaire dans une base de données plutôt qu’un simple fichier CSV. Le fonctionnement de la génération de l’inventaire ayant changé, il fallait que je modifie la page du site HTML afin qu’il contacte la base de données que j’ai créée pour récupérer les informations. Le souci étant que le langage HTML n’est pas capable d’appeler une base de données.
@@ -285,7 +284,7 @@
 				Par ailleurs, ayant déjà utilisé à de nombreuses reprises cette fonctionnalité, j’ai pu la présenter et former mes collègues à son utilisation et ainsi, le choix du langage Python a été retenu pour débuter notre projet.
 			</p>
 			<p>
-				J’ai donc dû utiliser le langage web PHP [insérer lien vers la compétence], qui lui est capable de lire les informations d’une base de données et de les afficher sous forme de tableau. Après avoir modifié ma page web, j’ai pu obtenir le même tableau que lors de la génération HTML [insérer lien vers la compétence]. À la différence que cette fois-ci, l’affichage du tableau changerait en direct si une machine venait à être modifiée.
+				J’ai donc dû utiliser le langage web <a href="php.html">PHP</a>, qui lui est capable de lire les informations d’une base de données et de les afficher sous forme de tableau. Après avoir modifié ma page web, j’ai pu obtenir le même tableau que lors de la génération <a href="html.html">HTML</a>. À la différence que cette fois-ci, l’affichage du tableau changerait en direct si une machine venait à être modifiée.
 			</p>
 				</br>
 			<p>
@@ -309,7 +308,7 @@
 				Ce projet est toujours en cours et sera en continuelle évolution pendant un long moment.
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, j’ai adapté le code du site afin de rajouter la possibilité d’associer un ou plusieurs tags (ou une étiquette) à une machine dans l’inventaire pour indiquer sa fonction. Cette fonctionnalité n’est pas encore très utilisée dans nos scripts, mais cela pourrait permettre de lancer une action sur tous les serveurs de tests par exemple, ou de lancer une sauvegarde sur la totalité des machines ayant l’étiquette « IMPORTANT ». J’ai par ailleurs vulgarisé [insérer lien vers la compétence] le fonctionnement du script à un collègue afin de le former au cas où il y ait des modifications à réaliser.
+				&nbsp;&nbsp;&nbsp;&nbsp;Enfin, j’ai adapté le code du site afin de rajouter la possibilité d’associer un ou plusieurs tags (ou une étiquette) à une machine dans l’inventaire pour indiquer sa fonction. Cette fonctionnalité n’est pas encore très utilisée dans nos scripts, mais cela pourrait permettre de lancer une action sur tous les serveurs de tests par exemple, ou de lancer une sauvegarde sur la totalité des machines ayant l’étiquette « IMPORTANT ». J’ai par ailleurs <a href="vulgarisation.html">vulgarisé</a> le fonctionnement du script à un collègue afin de le former au cas où il y ait des modifications à réaliser.
 			</p>
 			<p>
 				En clair, le but de ce projet est de clairement distinguer la fonction de chaque serveur et de permettre à notre script de lancer une action sur un groupe de serveurs spécifique.
@@ -380,7 +379,7 @@
 				Par ailleurs, bien que j’aie ajouté de nombreuses fonctionnalités telles que le tri des colonnes et la barre de recherche, il y a toujours des fonctionnalités de personnalisation possibles. Par exemple, je pourrais ajouter la possibilité de sélectionner les colonnes qui apparaissent ou mettre en surbrillance les lignes contenant le terme recherché.
 			</p>
 			<p>
-				&nbsp;&nbsp;&nbsp;&nbsp;Je suis quand même satisfait du travail que j’ai pu réaliser. De plus, nous ne sommes que deux dans l’équipe à maîtriser les langages de script et je suis le seul à maîtriser les librairies Python [insérer lien vers la compétence] nécessaires pour réaliser un tel projet et j’avais déjà de l’expérience avec la combinaison du langage PHP [insérer lien vers la compétence] et des bases de données, j’ai donc pu mettre à profit mes connaissances lors de ce projet.
+				&nbsp;&nbsp;&nbsp;&nbsp;Je suis quand même satisfait du travail que j’ai pu réaliser. De plus, nous ne sommes que deux dans l’équipe à maîtriser les langages de script et je suis le seul à maîtriser les librairies <a href="python.html">Python</a> nécessaires pour réaliser un tel projet et j’avais déjà de l’expérience avec la combinaison du langage <a href="php.html">PHP</a> et des bases de données, j’ai donc pu mettre à profit mes connaissances lors de ce projet.
 			</p>
 				</br>
 			<p>
