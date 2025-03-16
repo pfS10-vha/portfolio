@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<script>
+			// block user-agent from bots
+			(function()
+			{
+				var userAgent = navigator.userAgent.toLowerCase();
+				if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+				{
+					document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+				}
+			})();
+
+			// block developper console to avoid bots
+			document.addEventListener('DOMContentLoaded', function()
+			{
+				document.addEventListener('contextmenu', function(e)
+				{
+					e.preventDefault();
+				});
+				document.addEventListener('keydown', function(e)
+				{
+					if (e.which === 123 ||
+					(e.ctrlKey && e.shiftKey && e.which === 73) ||
+					(e.ctrlKey && e.shiftKey && e.which === 74) ||
+					(e.ctrlKey && e.which === 85)
+					)
+					{
+						e.preventDefault();
+						return false;
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<!-- main logo -->
+				<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
+
+				<!-- burger menu with checkbox and span -->
+				<input type="checkbox" id="nav-toggle" class="nav-toggle">
+				<label for="nav-toggle" class="nav-toggle-label">
+					<span></span>
+				</label>
+
+				<!-- nav-menu -->
+				<ul class="nav-menu">
+					<li><a href="../index.html">Accueil</a></li>
+					<li><a href="presentation.html">Présentation</a></li>
+
+					<!-- competences menu -->
+					<li class="dropdown">
+						<a href="competences.html">Compétences</a>
+						<ul class="dropdown-content">
+							<li class="sub-dropdown">
+								<a href="#">Humaines</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="communication.html">Communication</a></li>
+									<li><a href="evenementiel.html">Évènementiel</a></li>
+									<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+									<li><a href="vulgarisation.html">Vulgarisation</a></li>
+								</ul>
+							</li>
+							<li class="sub-dropdown">
+								<a href="#">Techniques</a>
+								<ul class="sub-dropdown-content">
+									<li><a href="bash.html">Bash</a></li>
+									<li><a href="git.html">Git</a></li>
+									<li><a href="html.html">HTML</a></li>
+									<li><a href="php.html">PHP</a></li>
+									<li><a href="python.html">Python</a></li>
+									<li><a href="supervision.html">Supervision</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<!-- realisations menu -->
+					<li class="dropdown">
+						<a href="realisations.html">Réalisations</a>
+						<ul class="dropdown-content">
+							<li><a href="autopen.html">Autopen</a></li>
+							<li><a href="datahealth.html">DataHealth</a></li>
+							<li><a href="pentech.html">Pentech</a></li>
+							<li><a href="winperf.html">WinPerf</a></li>
+							<li><a href="wixlearn.html">WixLearn</a></li>
+						</ul>
+					</li>
+
+					<li><a href="parcours.html">Parcours</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+    <main class="experience-page">
+        <div class="header-logo">
+            <img src="../assets/img/sei-lks-logo.png" alt="SEI LKS" class="company-logo">
+            <h1 class="company-name">SEI LKS</h1>
+        </div>
+        
+        <div class="experience-header">
+            <div class="experience-title">Réponsable Cybersécurité Jr.</div>
+            <div class="experience-period">De 2023 Sept. à 2025 Sept. (2 ans)</div>
+        </div>
+
+        <div class="experience-details">
+            <h2>Détails de l'expérience</h2>
+            <p class="experience-responsibility">Responsabilité : Cybersécurité (Junior)</p>
+            <p class="experience-status">Statut : Alternant</p>
+            <h3>Missions</h3>
+            <ul class="experience-missions">
+                <li>Amélioration de la sécurité du SI interne et du cloud</li>
+					<ul>
+					<li>Mise en place IPS/WAF</li>
+					<li>Gestion SIEM</li>
+					<li>Supervision du parc</li>
+					<li>Hardening des postes (chiffrement, filtrage USB, antivirus, etc.)</li>
+					</ul>
+				<li>Développement de solutions internes</li>
+					<ul>
+						<li>Inventaire automatique du parc informatique</li>
+						<li>Solution de déploiement et de mises à jour de logiciels</li>
+						<li>Récupération automatique de factures</li>
+					</ul>
+            </ul>
+            <h3>Ma place dans l'entreprise</h3>
+            <p>En tant qu'alternance en Cybersécurité, j'ai travaillé au sein de l'équipe infrastructure systèmes sous la direction du RSSI de l'entreprise. J'ai eu l'occasion de découvrir les différents métiers du monde informatique tels que développeur, chef de projet, support TMA, technicien, architecte Cloud et bien d'autres. De plus, j'ai pu réaliser des tâches en rapport avec la cybersécurité ainsi que des tâches sysadmin.</p>
+        </div>
+
+        <div class="experience-links">
+            <h2>Réalisations et compétences</h2>
+			<!-- related competences -->
+			<section class="related-skills">
+				<div class="mini-cards-container">
+					<a href="communication.html" class="mini-card humaine">
+						<img src="../assets/img/communication-logo.png" alt="communication" class="mini-card-icon">
+						<span>Communication</span>
+					</a>
+
+					<a href="gestion-de-projet.html" class="mini-card humaine">
+						<img src="../assets/img/gestion-de-projet-logo.png" alt="gestion-de-projet" class="mini-card-icon">
+						<span>Gestion de projet</span>
+					</a>
+
+					<a href="vulgarisation.html" class="mini-card humaine">
+						<img src="../assets/img/vulgarisation-logo.png" alt="vulgarisation" class="mini-card-icon">
+						<span>Vulgarisation</span>
+					</a>
+
+					<a href="bash.html" class="mini-card technique">
+						<img src="../assets/img/bash-logo.png" alt="bash" class="mini-card-icon">
+						<span>Bash</span>
+					</a>
+
+					<a href="html.html" class="mini-card technique">
+						<img src="../assets/img/html-logo.png" alt="html" class="mini-card-icon">
+						<span>HTML</span>
+					</a>
+
+					<a href="php.html" class="mini-card technique">
+						<img src="../assets/img/php-logo.png" alt="php" class="mini-card-icon">
+						<span>PHP</span>
+					</a>
+
+					<a href="python.html" class="mini-card technique">
+						<img src="../assets/img/python-logo.png" alt="python" class="mini-card-icon">
+						<span>Python</span>
+					</a>
+					<a href="supervision.html" class="mini-card technique">
+						<img src="../assets/img/supervision-logo.png" alt="supervision" class="mini-card-icon">
+						<span>Supervision</span>
+					</a>
+				</div>
+			</section>
+			<section class="related-projects">
+    <div class="mini-projects-container">
+        <a href="autopen.html" class="mini-project">
+            <img src="../assets/img/autopen.png" alt="Autopen" class="mini-project-icon">
+            <span>Autopen</span>
+        </a>
+    </div>
+</section>
+    </main>
+
+
+
+		<footer>
+			<p class="footer-name">Portfolio</p>
+			<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+		</footer>
+	</body>
+</html>
