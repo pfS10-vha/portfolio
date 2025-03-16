@@ -1,247 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Parcours</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <script>
-        // block user-agent from bots
-        (function()
-        {
-            var userAgent = navigator.userAgent.toLowerCase();
-            if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
-            {
-                document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
-            }
-        })();
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mon Parcours</title>
+	<link rel="stylesheet" href="../assets/css/styles.css">
+	<script>
+		// block user-agent from bots
+		(function()
+		{
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (!(userAgent.includes('chrome') || userAgent.includes('firefox') || userAgent.includes('mozilla')))
+			{
+				document.body.innerHTML = 'Access denied. Please use Chrome, Firefox, or Mozilla.';
+			}
+		})();
 
-        // block developper console to avoid bots
-        document.addEventListener('DOMContentLoaded', function()
-        {
-            document.addEventListener('contextmenu', function(e)
-            {
-                e.preventDefault();
-            });
-            document.addEventListener('keydown', function(e)
-            {
-                if (e.which === 123 ||
-                (e.ctrlKey && e.shiftKey && e.which === 73) ||
-                (e.ctrlKey && e.shiftKey && e.which === 74) ||
-                (e.ctrlKey && e.which === 85)
-                )
-                {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-        });
-    </script>
+		// block developper console to avoid bots
+		document.addEventListener('DOMContentLoaded', function()
+		{
+			document.addEventListener('contextmenu', function(e)
+			{
+				e.preventDefault();
+			});
+			document.addEventListener('keydown', function(e)
+			{
+				if (e.which === 123 ||
+				(e.ctrlKey && e.shiftKey && e.which === 73) ||
+				(e.ctrlKey && e.shiftKey && e.which === 74) ||
+				(e.ctrlKey && e.which === 85)
+				)
+				{
+					e.preventDefault();
+					return false;
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <!-- main logo -->
-            <div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
+	<header>
+		<nav>
+			<!-- main logo -->
+			<div class="logo"><img src="../assets/img/main-logo.png" alt="Logo" width="150" height="50"></div>
 
-            <!-- burger menu with checkbox and span -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-            </label>
+			<!-- burger menu with checkbox and span -->
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
 
-            <!-- nav-menu -->
-            <ul class="nav-menu">
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="presentation.html">Présentation</a></li>
+			<!-- nav-menu -->
+			<ul class="nav-menu">
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="presentation.html">Présentation</a></li>
 
-                <!-- competences menu -->
-                <li class="dropdown">
-                    <a href="competences.html">Compétences</a>
-                    <ul class="dropdown-content">
-                        <li class="sub-dropdown">
-                            <a href="#">Humaines</a>
-                            <ul class="sub-dropdown-content">
-                                <li><a href="communication.html">Communication</a></li>
-                                <li><a href="evenementiel.html">Évènementiel</a></li>
-                                <li><a href="gestion-de-projet.html">Gestion de projet</a></li>
-                                <li><a href="vulgarisation.html">Vulgarisation</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub-dropdown">
-                            <a href="#">Techniques</a>
-                            <ul class="sub-dropdown-content">
-                                <li><a href="bash.html">Bash</a></li>
-                                <li><a href="git.html">Git</a></li>
-                                <li><a href="html.html">HTML</a></li>
-                                <li><a href="php.html">PHP</a></li>
-                                <li><a href="python.html">Python</a></li>
-                                <li><a href="supervision.html">Supervision</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+				<!-- competences menu -->
+				<li class="dropdown">
+					<a href="competences.html">Compétences</a>
+					<ul class="dropdown-content">
+						<li class="sub-dropdown">
+							<a href="#">Humaines</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="communication.html">Communication</a></li>
+								<li><a href="evenementiel.html">Évènementiel</a></li>
+								<li><a href="gestion-de-projet.html">Gestion de projet</a></li>
+								<li><a href="vulgarisation.html">Vulgarisation</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown">
+							<a href="#">Techniques</a>
+							<ul class="sub-dropdown-content">
+								<li><a href="bash.html">Bash</a></li>
+								<li><a href="git.html">Git</a></li>
+								<li><a href="html.html">HTML</a></li>
+								<li><a href="php.html">PHP</a></li>
+								<li><a href="python.html">Python</a></li>
+								<li><a href="supervision.html">Supervision</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
 
-                <!-- realisations menu -->
-                <li class="dropdown">
-                    <a href="realisations.html">Réalisations</a>
-                    <ul class="dropdown-content">
-                        <li><a href="autopen.html">Autopen</a></li>
-                        <li><a href="datahealth.html">DataHealth</a></li>
-                        <li><a href="pentech.html">Pentech</a></li>
-                        <li><a href="winperf.html">WinPerf</a></li>
-                        <li><a href="wixlearn.html">WixLearn</a></li>
-                    </ul>
-                </li>
+				<!-- realisations menu -->
+				<li class="dropdown">
+					<a href="realisations.html">Réalisations</a>
+					<ul class="dropdown-content">
+						<li><a href="autopen.html">Autopen</a></li>
+						<li><a href="datahealth.html">DataHealth</a></li>
+						<li><a href="pentech.html">Pentech</a></li>
+						<li><a href="winperf.html">WinPerf</a></li>
+						<li><a href="wixlearn.html">WixLearn</a></li>
+					</ul>
+				</li>
 
-                <li><a href="parcours.html">Parcours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+				<li><a href="parcours.html">Parcours</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
-    <main>
-        <h1>Mon Parcours</h1>
-        <div class="timeline">
-            <div class="timeline-arrow"></div>
+	<main>
+		<h1>Mon Parcours</h1>
+		<div class="timeline">
+			<div class="timeline-arrow"></div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2023 Oct. - Présent</h3>
-                            <h4>Alternant - Responsable Cybersécurité Junior</h4>
-                            <p>SEI LKS, Bidart</p>
-                        </div>
-                        <a href="https://www.seilks.com" target="_blank"><img src="../assets/img/sei-lks-logo.png" alt="SEI LKS Logo" class="company-logo"></a>
-                    </div>
-                    <p><a href="sei-lks-alternance.html" class="btn-details">Voir détails</a></p>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2023 Oct. - Présent</h3>
+							<h4>Alternant - Responsable Cybersécurité Junior</h4>
+							<p>SEI LKS, Bidart</p>
+						</div>
+						<a href="https://www.seilks.com" target="_blank"><img src="../assets/img/sei-lks-logo.png" alt="SEI LKS Logo" class="company-logo"></a>
+					</div>
+					<p><a href="sei-lks-alternance.html" class="btn-details">Voir détails</a></p>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2020 Sept. - Présent</h3>
-                            <h4>Master Expert Cybersécurité et Infrastructure des Systèmes d'Information</h4>
-                            <p>École d'ingénieurs ESIEA, Dax</p>
-                        </div>
-                        <a href="https://www.esiea.fr" target="_blank"><img src="../assets/img/esiea-logo.png" alt="ESIEA Logo" class="company-logo"></a>
-                    </div>
-                    <p><a href="esiea.html" class="btn-details">Voir détails</a></p>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2020 Sept. - Présent</h3>
+							<h4>Master Expert Cybersécurité et Infrastructure des Systèmes d'Information</h4>
+							<p>École d'ingénieurs ESIEA, Dax</p>
+						</div>
+						<a href="https://www.esiea.fr" target="_blank"><img src="../assets/img/esiea-logo.png" alt="ESIEA Logo" class="company-logo"></a>
+					</div>
+					<p><a href="esiea.html" class="btn-details">Voir détails</a></p>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2024 Dec.</h3>
-                            <h4>CCNA Security</h4>
-                        </div>
-                        <img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
-                    </div>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2024 Dec.</h3>
+							<h4>CCNA Security</h4>
+						</div>
+						<img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
+					</div>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2024 Juin</h3>
-                            <h4>CCNA Cyber Ops</h4>
-                        </div>
-                        <img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
-                    </div>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2024 Juin</h3>
+							<h4>CCNA Cyber Ops</h4>
+						</div>
+						<img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
+					</div>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2023 Fév. - 2023 Août</h3>
-                            <h4>Stagiaire - Pentester</h4>
-                            <p>SEI LKS, Bidart</p>
-                        </div>
-                        <a href="https://www.seilks.com" target="_blank"><img src="../assets/img/sei-lks-logo.png" alt="SEI LKS Logo" class="company-logo"></a>
-                    </div>
-                    <p><a href="sei-lks-stage.html" class="btn-details">Voir détails</a></p>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2023 Fév. - 2023 Août</h3>
+							<h4>Stagiaire - Pentester</h4>
+							<p>SEI LKS, Bidart</p>
+						</div>
+						<a href="https://www.seilks.com" target="_blank"><img src="../assets/img/sei-lks-logo.png" alt="SEI LKS Logo" class="company-logo"></a>
+					</div>
+					<p><a href="sei-lks-stage.html" class="btn-details">Voir détails</a></p>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2023 Janv.</h3>
-                            <h4>CCNA: Switching, Routing and Wireless Essentials</h4>
-                        </div>
-                        <img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
-                    </div>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2023 Janv.</h3>
+							<h4>CCNA: Switching, Routing and Wireless Essentials</h4>
+						</div>
+						<img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
+					</div>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2022 Janv.</h3>
-                            <h4>CCNA: Introduction to Networks</h4>
-                        </div>
-                        <img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
-                    </div>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2022 Janv.</h3>
+							<h4>CCNA: Introduction to Networks</h4>
+						</div>
+						<img src="../assets/img/cisco-logo.png" alt="Cisco Logo" class="company-logo">
+					</div>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2021 Juin</h3>
-                            <h4>Certification Voltaire</h4>
-                        </div>
-                        <img src="../assets/img/projet-voltaire-logo.png" alt="Projet Voltaire Logo" class="company-logo">
-                    </div>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2021 Juin</h3>
+							<h4>Certification Voltaire</h4>
+						</div>
+						<img src="../assets/img/projet-voltaire-logo.png" alt="Projet Voltaire Logo" class="company-logo">
+					</div>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2020</h3>
-                            <h4>BAC S spé. SI</h4>
-                        </div>
-                        <img src="../assets/img/bac-logo.png" alt="BAC Logo" class="company-logo">
-                    </div>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2020</h3>
+							<h4>BAC S spé. SI</h4>
+						</div>
+						<img src="../assets/img/bac-logo.png" alt="BAC Logo" class="company-logo">
+					</div>
+				</div>
+			</div>
 
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <div class="timeline-content-header">
-                        <div class="timeline-text">
-                            <h3>2017 Sept. - 2020 Juillet</h3>
-                            <h4>Lycéen - Filière S spé. SI</h4>
-                            <p>Lycée Polyvalent Cantau, Anglet</p>
-                        </div>
-                        <a href="https://lycee-cantau.fr/" target="_blank"><img src="../assets/img/cantau-logo.png" alt="Cantau" class="company-logo"></a>
-                    </div>
-                    <p><a href="cantau.html" class="btn-details">Voir détails</a></p>
-                </div>
-            </div>
+			<div class="timeline-item">
+				<div class="timeline-content">
+					<div class="timeline-content-header">
+						<div class="timeline-text">
+							<h3>2017 Sept. - 2020 Juillet</h3>
+							<h4>Lycéen - Filière S spé. SI</h4>
+							<p>Lycée Polyvalent Cantau, Anglet</p>
+						</div>
+						<a href="https://lycee-cantau.fr/" target="_blank"><img src="../assets/img/cantau-logo.png" alt="Cantau" class="company-logo"></a>
+					</div>
+					<p><a href="cantau.html" class="btn-details">Voir détails</a></p>
+				</div>
+			</div>
 
-        </div>
-    </main>
+		</div>
+	</main>
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-name">Portfolio</p>
-        <p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
-    </footer>
+	<footer>
+		<p class="footer-name">Portfolio</p>
+		<p>&copy; 2025 HAMID Vincent. Tous droits réservés.</p>
+	</footer>
 
 </body>
 </html>
