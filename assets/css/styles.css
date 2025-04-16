@@ -113,6 +113,12 @@ main
 	border-radius: 10px;
 }
 
+/* couleur des liens */
+main section p a[href]:hover
+{
+    color: #ffa500;
+}
+
 /* HEADER 1 */
 h1
 {
@@ -1471,6 +1477,14 @@ h3 {
 .experience-links ul, .formation-links ul {
   list-style-type: none;
   padding: 0;
+}
+
+/* a href color */
+main section p a[href]
+{
+  color: #1e90ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .experience-links a, .formation-links a {
